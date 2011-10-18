@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2B1C9460-1F49-4BA0-A172-6130B2059241}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ShareBillIOS</RootNamespace>
+    <AssemblyName>ShareBillIOS</AssemblyName>
+    <StartupObject>ShareBillAndroid.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG, IPHONE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>Full</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <ConsolePause>false</ConsolePause>
+    <MtouchI18n />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <ConsolePause>false</ConsolePause>
+    <DefineConstants>IPHONE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG, IPHONE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <ConsolePause>false</ConsolePause>
+    <IpaPackageName />
+    <MtouchLink>Full</MtouchLink>
+    <MtouchI18n />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DefineConstants>IPHONE</DefineConstants>
+    <MtouchLink>None</MtouchLink>
+    <MtouchI18n />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Distribution|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\DistributionIOS</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution: Syderis Technologies</CodesignKey>
+    <MtouchI18n />
+    <CodesignProvision>9DF1B5C6-E568-454D-A4A6-72DE4D7D2333</CodesignProvision>
+    <DefineConstants>IPHONE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Distribution|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Distribution</OutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="OpenTK" />
+    <Reference Include="FarseerPhysics_331.IOS">
+      <HintPath>..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Libraries\FarseerPhysics_331.IOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework.iOS">
+      <HintPath>..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Libraries\MonoGame.Framework.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syderis.CellSDK.IOS.Common">
+      <HintPath>..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Libraries\Syderis.CellSDK.IOS.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Syderis.CellSDK.IOS.Core">
+      <HintPath>..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Libraries\Syderis.CellSDK.IOS.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Syderis.CellSDK.IOS.Launcher">
+      <HintPath>..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Libraries\Syderis.CellSDK.IOS.Launcher.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="..\..\source\Application.cs">
+      <Link>Application.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Content Include="shareBill114x114.png" />
+    <Content Include="shareBill57x57.png" />
+    <Content Include="shareBill72x72.png" />
+    <Content Include="Content\Images\appBackground.jpg" />
+    <Content Include="Content\Images\minusButtonPressed.png" />
+    <Content Include="Content\Images\minusButtonReleased.png" />
+    <Content Include="Content\Images\napkin.png" />
+    <Content Include="Content\Images\pen.png" />
+    <Content Include="Content\Images\plusButtonPressed.png" />
+    <Content Include="Content\Images\plusButtonReleased.png" />
+    <Content Include="Content\Sounds\Writing.wav" />
+    <Content Include="Content\Fonts\LargeFontMonospaced.xnb" />
+    <Content Include="Content\Fonts\SmallFontMonospaced.xnb" />
+    <Content Include="..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\blobcursor.png">
+      <Link>Content\Skin\blobcursor.png</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\Button.png">
+      <Link>Content\Skin\Button.png</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\ButtonPressed.png">
+      <Link>Content\Skin\ButtonPressed.png</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\CheckBox_over.png">
+      <Link>Content\Skin\CheckBox_over.png</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\CheckBox.png">
+      <Link>Content\Skin\CheckBox.png</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\KeyboardAlt_pressed.png">
+      <Link>Content\Skin\KeyboardAlt_pressed.png</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\KeyboardAlt.png">
+      <Link>Content\Skin\KeyboardAlt.png</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\ProgressBarEmpty.png">
+      <Link>Content\Skin\ProgressBarEmpty.png</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\ProgressBarFilled.png">
+      <Link>Content\Skin\ProgressBarFilled.png</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\RadioButtonChecked.png">
+      <Link>Content\Skin\RadioButtonChecked.png</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\RadioButtonUnchecked.png">
+      <Link>Content\Skin\RadioButtonUnchecked.png</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\SliderBackground.png">
+      <Link>Content\Skin\SliderBackground.png</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\SliderLeft.png">
+      <Link>Content\Skin\SliderLeft.png</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\SliderRight.png">
+      <Link>Content\Skin\SliderRight.png</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\SliderTab.png">
+      <Link>Content\Skin\SliderTab.png</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\TextAreaBackground.png">
+      <Link>Content\Skin\TextAreaBackground.png</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\WhitePixel.png">
+      <Link>Content\Skin\WhitePixel.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Sounds\" />
+    <Folder Include="Content\Skin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\Arial_Black.xnb">
+      <Link>Content\Skin\Arial_Black.xnb</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\Skin.xml">
+      <Link>Content\Skin\Skin.xml</Link>
+    </None>
+  </ItemGroup>
+</Project>
