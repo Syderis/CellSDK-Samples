@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{277C2A2E-97ED-4C9B-819A-1B37668B15EC}</ProjectGuid>
+    <ProjectTypeGuids>{96E2B04D-8817-42c6-938A-82C39BA4D311};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <OutputPath>bin\$(Platform)\$(Configuration)</OutputPath>
+    <ContentRootDirectory>Content</ContentRootDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Windows Phone'">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Windows Phone'">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>WP7TouchTalesContent</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.EffectImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.FBXImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.TextureImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.XImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.AudioImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.VideoImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\Skin.xml">
+      <Link>Skin\Skin.xml</Link>
+      <Name>Skin</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="Images\animated_ball.png">
+      <Name>animated_ball</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Images\animated_bird.png">
+      <Name>animated_bird</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Images\bg.jpg">
+      <Name>bg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Images\blue_ball.png">
+      <Name>blue_ball</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Images\doll.png">
+      <Name>doll</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Images\green_ball.png">
+      <Name>green_ball</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Images\purpel_ball.png">
+      <Name>purpel_ball</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Images\red_ball.png">
+      <Name>red_ball</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Images\rope.png">
+      <Name>rope</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Images\train_off.png">
+      <Name>train_off</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Images\train_on.png">
+      <Name>train_on</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Images\yellow_ball.png">
+      <Name>yellow_ball</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\audio_bola_arbol.wav">
+      <Name>audio_bola_arbol</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\audio_bote_pelota.wav">
+      <Name>audio_bote_pelota</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\audio_cuerda_cort.wav">
+      <Name>audio_cuerda_cort</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\audio_muñeca_love.wav">
+      <Name>audio_muñeca_love</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\audio_pajaro.wav">
+      <Name>audio_pajaro</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\audio_pelota.wav">
+      <Name>audio_pelota</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\audio_risa_muñeca.wav">
+      <Name>audio_risa_muñeca</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\audio_tren_juguete.wav">
+      <Name>audio_tren_juguete</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\Arial_Black.spritefont">
+      <Link>Skin\Arial_Black.spritefont</Link>
+      <Name>Arial_Black</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\blobcursor.png">
+      <Link>Skin\blobcursor.png</Link>
+      <Name>blobcursor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\Button.png">
+      <Link>Skin\Button.png</Link>
+      <Name>Button</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\ButtonPressed.png">
+      <Link>Skin\ButtonPressed.png</Link>
+      <Name>ButtonPressed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\CheckBox.png">
+      <Link>Skin\CheckBox.png</Link>
+      <Name>CheckBox</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\CheckBox_over.png">
+      <Link>Skin\CheckBox_over.png</Link>
+      <Name>CheckBox_over</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\KeyboardAlt.png">
+      <Link>Skin\KeyboardAlt.png</Link>
+      <Name>KeyboardAlt</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\KeyboardAlt_pressed.png">
+      <Link>Skin\KeyboardAlt_pressed.png</Link>
+      <Name>KeyboardAlt_pressed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\ProgressBarEmpty.png">
+      <Link>Skin\ProgressBarEmpty.png</Link>
+      <Name>ProgressBarEmpty</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\ProgressBarFilled.png">
+      <Link>Skin\ProgressBarFilled.png</Link>
+      <Name>ProgressBarFilled</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\RadioButtonChecked.png">
+      <Link>Skin\RadioButtonChecked.png</Link>
+      <Name>RadioButtonChecked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\RadioButtonUnchecked.png">
+      <Link>Skin\RadioButtonUnchecked.png</Link>
+      <Name>RadioButtonUnchecked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\SliderBackground.png">
+      <Link>Skin\SliderBackground.png</Link>
+      <Name>SliderBackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\SliderLeft.png">
+      <Link>Skin\SliderLeft.png</Link>
+      <Name>SliderLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\SliderRight.png">
+      <Link>Skin\SliderRight.png</Link>
+      <Name>SliderRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\SliderTab.png">
+      <Link>Skin\SliderTab.png</Link>
+      <Name>SliderTab</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\TextAreaBackground.png">
+      <Link>Skin\TextAreaBackground.png</Link>
+      <Name>TextAreaBackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\WhitePixel.png">
+      <Link>Skin\WhitePixel.png</Link>
+      <Name>WhitePixel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
+  <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
