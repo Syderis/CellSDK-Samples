@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WP7TouchyBooks", "WP7TouchyBooks\WP7TouchyBooks\WP7TouchyBooks.csproj", "{FDC42316-3053-4297-AA5C-5ECDDC4312E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WP7TouchyBooksContent", "WP7TouchyBooks\WP7TouchyBooksContent\WP7TouchyBooksContent.contentproj", "{3C775EFA-E7EA-480D-9C3B-2885D0B7F33C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidTouchyBooks", "AndroidTouchyBooks\AndroidTouchyBooks.csproj", "{452E7EF5-6D4D-4BC3-98D2-7665256033C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDC42316-3053-4297-AA5C-5ECDDC4312E9}.Debug|Any CPU.ActiveCfg = Debug|Windows Phone
+		{FDC42316-3053-4297-AA5C-5ECDDC4312E9}.Debug|Mixed Platforms.ActiveCfg = Debug|Windows Phone
+		{FDC42316-3053-4297-AA5C-5ECDDC4312E9}.Debug|Mixed Platforms.Build.0 = Debug|Windows Phone
+		{FDC42316-3053-4297-AA5C-5ECDDC4312E9}.Debug|Mixed Platforms.Deploy.0 = Debug|Windows Phone
+		{FDC42316-3053-4297-AA5C-5ECDDC4312E9}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{FDC42316-3053-4297-AA5C-5ECDDC4312E9}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{FDC42316-3053-4297-AA5C-5ECDDC4312E9}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{FDC42316-3053-4297-AA5C-5ECDDC4312E9}.Release|Any CPU.ActiveCfg = Release|Windows Phone
+		{FDC42316-3053-4297-AA5C-5ECDDC4312E9}.Release|Mixed Platforms.ActiveCfg = Release|Windows Phone
+		{FDC42316-3053-4297-AA5C-5ECDDC4312E9}.Release|Mixed Platforms.Build.0 = Release|Windows Phone
+		{FDC42316-3053-4297-AA5C-5ECDDC4312E9}.Release|Mixed Platforms.Deploy.0 = Release|Windows Phone
+		{FDC42316-3053-4297-AA5C-5ECDDC4312E9}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{FDC42316-3053-4297-AA5C-5ECDDC4312E9}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{FDC42316-3053-4297-AA5C-5ECDDC4312E9}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{3C775EFA-E7EA-480D-9C3B-2885D0B7F33C}.Debug|Any CPU.ActiveCfg = Debug|Windows Phone
+		{3C775EFA-E7EA-480D-9C3B-2885D0B7F33C}.Debug|Mixed Platforms.ActiveCfg = Debug|Windows Phone
+		{3C775EFA-E7EA-480D-9C3B-2885D0B7F33C}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{3C775EFA-E7EA-480D-9C3B-2885D0B7F33C}.Release|Any CPU.ActiveCfg = Release|Windows Phone
+		{3C775EFA-E7EA-480D-9C3B-2885D0B7F33C}.Release|Mixed Platforms.ActiveCfg = Release|Windows Phone
+		{3C775EFA-E7EA-480D-9C3B-2885D0B7F33C}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{452E7EF5-6D4D-4BC3-98D2-7665256033C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{452E7EF5-6D4D-4BC3-98D2-7665256033C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{452E7EF5-6D4D-4BC3-98D2-7665256033C2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{452E7EF5-6D4D-4BC3-98D2-7665256033C2}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{452E7EF5-6D4D-4BC3-98D2-7665256033C2}.Debug|Windows Phone.ActiveCfg = Debug|Any CPU
+		{452E7EF5-6D4D-4BC3-98D2-7665256033C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{452E7EF5-6D4D-4BC3-98D2-7665256033C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{452E7EF5-6D4D-4BC3-98D2-7665256033C2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{452E7EF5-6D4D-4BC3-98D2-7665256033C2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{452E7EF5-6D4D-4BC3-98D2-7665256033C2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{452E7EF5-6D4D-4BC3-98D2-7665256033C2}.Release|Mixed Platforms.Deploy.0 = Release|Any CPU
+		{452E7EF5-6D4D-4BC3-98D2-7665256033C2}.Release|Windows Phone.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
