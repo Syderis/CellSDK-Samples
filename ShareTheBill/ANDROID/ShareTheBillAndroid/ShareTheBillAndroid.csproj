@@ -49,32 +49,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FarseerPhysics.Android">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Android\Libraries\FarseerPhysics.Android.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Android\Libraries\FarseerPhysics.Android.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android">
       <Private>True</Private>
     </Reference>
     <Reference Include="MonoGame.Framework">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Android\Libraries\MonoGame.Framework.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Android\Libraries\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="OpenTK">
       <Private>True</Private>
     </Reference>
     <Reference Include="Syderis.CellSDK.Android.Common">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Android\Libraries\Syderis.CellSDK.Android.Common.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Android\Libraries\Syderis.CellSDK.Android.Common.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.Android.Core">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Android\Libraries\Syderis.CellSDK.Android.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Syderis.CellSDK.Android.IO.TouchSystem">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Android\Libraries\Syderis.CellSDK.Android.IO.TouchSystem.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Android\Libraries\Syderis.CellSDK.Android.Core.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.Android.Launcher">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Android\Libraries\Syderis.CellSDK.Android.Launcher.dll</HintPath>
-    </Reference>
-    <Reference Include="Syderis.CellSDK.Android.PhysicsControls">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Android\Libraries\Syderis.CellSDK.Android.PhysicsControls.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Android\Libraries\Syderis.CellSDK.Android.Launcher.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -116,9 +110,6 @@
     <AndroidAsset Include="Assets\Content\Skin\WhitePixel.png" />
     <Content Include="Properties\AndroidManifest.xml" />
     <AndroidResource Include="Resources\Drawable\Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Content\Fonts\Arial_Black.xnb" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Content\Fonts\LargeFontMonospaced.xnb" />
