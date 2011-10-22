@@ -3,7 +3,7 @@ using System;
 using Syderis.CellSDK.WindowsPhone.Launcher;
 using TouchyTales;
 
-namespace WP7TouchTales
+namespace TouchyTales
 {
     public class Program : Kernel
     {

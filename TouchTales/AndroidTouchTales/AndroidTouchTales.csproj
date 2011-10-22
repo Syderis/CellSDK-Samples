@@ -96,40 +96,40 @@
     <AndroidAsset Include="Assets\Content\Skin\WhitePixel.png" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Content\Images\animated_ball.png" />
+    <AndroidAsset Include="Assets\Content\Images\animated_ball.png" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Content\Images\animated_bird.png" />
+    <AndroidAsset Include="Assets\Content\Images\animated_bird.png" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Content\Images\bg.jpg" />
+    <AndroidAsset Include="Assets\Content\Images\bg.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Content\Images\blue_ball.png" />
+    <AndroidAsset Include="Assets\Content\Images\blue_ball.png" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Content\Images\doll.png" />
+    <AndroidAsset Include="Assets\Content\Images\doll.png" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Content\Images\green_ball.png" />
+    <AndroidAsset Include="Assets\Content\Images\green_ball.png" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Content\Images\purpel_ball.png" />
+    <AndroidAsset Include="Assets\Content\Images\purpel_ball.png" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Content\Images\red_ball.png" />
+    <AndroidAsset Include="Assets\Content\Images\red_ball.png" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Content\Images\rope.png" />
+    <AndroidAsset Include="Assets\Content\Images\rope.png" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Content\Images\train_off.png" />
+    <AndroidAsset Include="Assets\Content\Images\train_off.png" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Content\Images\train_on.png" />
+    <AndroidAsset Include="Assets\Content\Images\train_on.png" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Content\Images\yellow_ball.png" />
+    <AndroidAsset Include="Assets\Content\Images\yellow_ball.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

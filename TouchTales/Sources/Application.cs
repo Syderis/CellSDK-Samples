@@ -206,6 +206,12 @@ namespace TouchyTales
             }
             base.Dispose();
         }
+
+        public override void BackButtonPressed()
+        {
+            Program.Instance.Exit();
+        }
+
         #endregion
         #region Events
 
