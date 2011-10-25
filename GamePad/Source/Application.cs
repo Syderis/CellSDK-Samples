@@ -42,7 +42,7 @@ namespace GamePad
             AddComponentPercentage(lBackground, .5f, .5f);
 
             #region Moi
-            aiMoi = AnimatedImage.CreateImage("animacion_step_full_tamaño_final");
+            aiMoi = AnimatedImage.CreateImage("animacion_step_full_tamano_final");
 
             int width = aiMoi.Width;
             int height = aiMoi.Height;

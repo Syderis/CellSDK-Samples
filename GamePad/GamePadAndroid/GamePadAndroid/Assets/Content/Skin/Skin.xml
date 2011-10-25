@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Skin Name="Default" xmlns="http://www.syderis.com/cellsdk">
+  <Blob>
+    <ImageFile>blobcursor</ImageFile>
+  </Blob>
+  <Label>
+
+    <BackgroundImageFile>TextAreaBackground</BackgroundImageFile>
+    <TextColor B="0" R="0" G="0" A="255"/>
+  </Label>
+  <Button>
+    <PressedImageFile>ButtonPressed</PressedImageFile>
+    <ReleasedImageFile>Button</ReleasedImageFile>
+    <TextColor B="0" R="0" G="0"  A="255"/>
+    <BackgroundColor B="255" R="255" G="255" A="255" />
+  </Button>
+
+  <CheckBox>
+    <UncheckedImageFile>CheckBox</UncheckedImageFile>
+    <PressedImageFile>CheckBox_over</PressedImageFile>
+    <CheckedImageFile>CheckBox_over</CheckedImageFile>
+  </CheckBox>
+
+  <ToggleButton>
+    <UncheckedImageFile>Button</UncheckedImageFile>
+    <CheckedImageFile>ButtonPressed</CheckedImageFile>
+    <TextColor B="0" R="0" G="0"  A="255"/>
+  </ToggleButton>
+
+  <RadioButton>
+    <UncheckedImageFile>RadioButtonUnchecked</UncheckedImageFile>
+    <CheckedImageFile>RadioButtonChecked</CheckedImageFile>
+  </RadioButton>
+  <TextArea>
+
+    <KeyboardReleasedImageFile>KeyboardAlt</KeyboardReleasedImageFile>
+    <KeyboardPressedImageFile>KeyboardAlt_pressed</KeyboardPressedImageFile>
+    <BackgroundImageFile>TextAreaBackground</BackgroundImageFile>
+    <TextColor R="0" G="0" B="0"  A="255"/>
+    <CursorColor R="128" G="128" B="128" A="255" />
+
+  </TextArea>
+  <ProgressBar>
+    <BackgroundImageFile>ProgressBarEmpty</BackgroundImageFile>
+    <FillImageFile>ProgressBarFilled</FillImageFile>
+
+    <BulletInkColor R="255" G="255" B="255" A="0"/>
+    <TextForegroundColor R="255" G="255" B="255" A="0"/>
+    <TextFilledColor B="0" R="0" G="0" A="0"/>
+  </ProgressBar>
+  <SlideBar>
+    <BackgroundImageFile>SliderBackground</BackgroundImageFile>
+    <LeftBorderImageFile>SliderLeft</LeftBorderImageFile>
+    <RightBorderImageFile>SliderRight</RightBorderImageFile>
+    <TabImageFile>SliderTab</TabImageFile>
+  </SlideBar>
+
+  <Container>
+    <BackgroundImageFile>WhitePixel</BackgroundImageFile>
+  </Container>
+
+
+</Skin>
