@@ -1,14 +1,15 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using TouchyBooks;
-using Syderis.CellSDK.WindowsPhone.Launcher;
 
-namespace WP7TouchyBooks
+using Syderis.CellSDK.WindowsPhone.Launcher;
+using TouchyTales;
+
+namespace TouchyTales
 {
     public class Program : Kernel
     {
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
         protected override void Initialize()
         {
             MyApplication application = new MyApplication();
@@ -17,3 +18,4 @@ namespace WP7TouchyBooks
         }
     }
 }
+

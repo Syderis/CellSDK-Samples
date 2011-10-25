@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ProjectGuid>{FDC42316-3053-4297-AA5C-5ECDDC4312E9}</ProjectGuid>
+    <ProjectGuid>{5BA7FFBF-FD25-4BBE-9CAB-989BEA194052}</ProjectGuid>
     <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">Windows Phone</Platform>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WP7TouchyBooks</RootNamespace>
-    <AssemblyName>WP7TouchyBooks</AssemblyName>
+    <RootNamespace>WP7TouchTales</RootNamespace>
+    <AssemblyName>WP7TouchTales</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
@@ -20,7 +20,7 @@
     <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
     <XnaWindowsPhoneManifestTemplate>Properties\WMAppManifest.xml</XnaWindowsPhoneManifestTemplate>
     <TileImage>Background.png</TileImage>
-    <TileTitle>WP7TouchyBooks</TileTitle>
+    <TileTitle>WP7TouchTales</TileTitle>
     <SupportedCultures>
     </SupportedCultures>
     <Thumbnail>GameThumbnail.png</Thumbnail>
@@ -106,7 +106,6 @@
     <Compile Include="..\..\Sources\AudioLibrary.cs">
       <Link>AudioLibrary.cs</Link>
     </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="Properties\AppManifest.xml">
       <XnaPlatformSpecific>true</XnaPlatformSpecific>
@@ -114,6 +113,7 @@
     <None Include="Properties\WMAppManifest.xml">
       <XnaPlatformSpecific>true</XnaPlatformSpecific>
     </None>
+    <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="GameThumbnail.png" />
@@ -122,8 +122,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WP7TouchyBooksContent\WP7TouchyBooksContent.contentproj">
-      <Name>WP7TouchyBooksContent</Name>
+    <ProjectReference Include="..\WP7TouchTalesContent\WP7TouchTalesContent.contentproj">
+      <Name>WP7TouchTalesContent</Name>
       <XnaReferenceType>Content</XnaReferenceType>
     </ProjectReference>
   </ItemGroup>

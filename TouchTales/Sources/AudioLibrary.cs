@@ -12,7 +12,7 @@ using System.Text;
 using Syderis.CellSDK.Core.Sounds; 
 #endregion
 
-namespace TouchyBooks
+namespace TouchyTales
 {
     public class AudioLibrary
     {

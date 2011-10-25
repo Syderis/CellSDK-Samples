@@ -294,9 +294,6 @@ namespace ShareBillAndroid
         /// Update
         /// </summary>
         /// <param name="gameTime"></param>
-        //public override void Update(GameTime gameTime)
-        
-
 		public override void Update(GameTime gameTime)
 		{
             base.Update(gameTime);
@@ -450,9 +447,7 @@ namespace ShareBillAndroid
         /// </summary>
         public override void BackButtonPressed()
         {
-#if !IPHONE
             Program.Instance.Exit();
-#endif
 		}	
     }
 }
