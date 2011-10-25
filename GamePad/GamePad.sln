@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamePad", "GamePadWindowsPhone\GamePad\GamePad.csproj", "{2EA4AEEF-F6E7-4311-9E7C-960AADF44BF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamePadContent", "GamePadWindowsPhone\GamePadContent\GamePadContent.contentproj", "{3ECA63F7-022F-4BEC-ACE6-2C4161172B7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EA4AEEF-F6E7-4311-9E7C-960AADF44BF7}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{2EA4AEEF-F6E7-4311-9E7C-960AADF44BF7}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{2EA4AEEF-F6E7-4311-9E7C-960AADF44BF7}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{2EA4AEEF-F6E7-4311-9E7C-960AADF44BF7}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{2EA4AEEF-F6E7-4311-9E7C-960AADF44BF7}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{2EA4AEEF-F6E7-4311-9E7C-960AADF44BF7}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{3ECA63F7-022F-4BEC-ACE6-2C4161172B7A}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{3ECA63F7-022F-4BEC-ACE6-2C4161172B7A}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
