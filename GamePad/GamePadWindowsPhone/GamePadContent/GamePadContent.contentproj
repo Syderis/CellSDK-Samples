@@ -42,16 +42,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="bg_stage_IOS.jpg">
-      <Name>bg_stage_IOS</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="animacion_step_full_tamano_final.png">
-      <Name>animacion_step_full_tamano_final</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="GamePadSpriteSheet.png">
       <Name>GamePadSpriteSheet</Name>
       <Importer>TextureImporter</Importer>
@@ -173,6 +163,16 @@
     <Compile Include="..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\WhitePixel.png">
       <Link>Skin\WhitePixel.png</Link>
       <Name>WhitePixel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Background.jpg">
+      <Name>Background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="MoiWalkingStripAnimation.png">
+      <Name>MoiWalkingStripAnimation</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

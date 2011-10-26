@@ -38,11 +38,11 @@ namespace GamePad
 
             IsTouchVisible = false;
 
-            Label lBackground = new Label(Image.CreateImage("bg_stage_IOS")) { Pivot = Vector2.One / 2, BringToFront = false, Rotation = MathHelper.PiOver2 };
+            Label lBackground = new Label(Image.CreateImage("Background")) { Pivot = Vector2.One / 2, BringToFront = false, Rotation = MathHelper.PiOver2 };
             AddComponentPercentage(lBackground, .5f, .5f);
 
             #region Moi
-            aiMoi = AnimatedImage.CreateImage("animacion_step_full_tamano_final");
+            aiMoi = AnimatedImage.CreateImage("MoiWalkingStripAnimation");
 
             int width = aiMoi.Width;
             int height = aiMoi.Height;
@@ -68,8 +68,8 @@ namespace GamePad
             #endregion Game pad
 
 #if DEBUG
-            lDebug = new Label("N/A", Color.Black, Color.White);
-            AddComponentPercentage(lDebug, 0, 0);
+            lDebug = new Label("N/A", Color.Black, Color.White) { Rotation = MathHelper.PiOver2 };
+            AddComponentPercentage(lDebug, 1, 0);
 #endif
         }
 
@@ -96,6 +96,7 @@ namespace GamePad
             lMoi.Position = temp;
             #endregion Moi position
 
+            // TODO: Let just vertical and horizontal movement (X = 0 and Y <> 0, or X <> 0 and Y = 0)
             #region Moi animation
             MoiAnimationStates current = MoiAnimationStates.FrontRight;
 

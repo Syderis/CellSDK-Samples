@@ -126,8 +126,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GamePadContent\GamePadContent.contentproj">
-      <Name>GamePadContent</Name>
+      <Name>GamePadContent %28Content%29</Name>
       <XnaReferenceType>Content</XnaReferenceType>
+      <Project>{3ECA63F7-022F-4BEC-ACE6-2C4161172B7A}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

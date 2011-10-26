@@ -99,13 +99,13 @@
     <AndroidAsset Include="Assets\Content\Skin\WhitePixel.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Content\animacion_step_full_tamano_final.png" />
+    <AndroidAsset Include="Assets\Content\MoiWalkingStripAnimation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Background.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Content\GamePadSpriteSheet.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Content\bg_stage_IOS.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
