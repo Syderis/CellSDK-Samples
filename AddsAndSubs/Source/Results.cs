@@ -28,9 +28,9 @@ namespace AddsAndSubs
             // These images will hold each number pressed independently
             Image[] iPressed = new Image[11];
             // Sprite sheet with released numbers
-            Image iReleasedSheet = Image.CreateImage("panel_inact_resized");
+            Image iReleasedSheet = Image.CreateImage("Images/ResultsReleased");
             // Sprite sheet with pressed numbers
-            Image iPressedSheet = Image.CreateImage("panel_act_resized");
+            Image iPressedSheet = Image.CreateImage("Images/ResultsPressed");
             // 6 is the amount of sprites per row on the sprite sheet
             int numberX = iReleasedSheet.Width / 6;
             // 2 is the amount of rows

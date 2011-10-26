@@ -7,11 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Android", "Android", "{D45E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iOS", "iOS", "{DD59133F-2569-40E3-B9CE-F0D7E3FCE1D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddsAndSubs", "WindowsPhone\AddsAndSubs\AddsAndSubs.csproj", "{5918201C-C74B-4DD2-8B73-584C389F5453}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddsAndSubsContent", "WindowsPhone\AddsAndSubsContent\AddsAndSubsContent.contentproj", "{F57BB5FA-5D3D-4DE3-B7AC-119B4BBC63F3}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddsAndSubsAndroid", "Android\AddsAndSubsAndroid\AddsAndSubsAndroid.csproj", "{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddsAndSubs", "AddsAndSubsWindowsPhone\AddsAndSubs\AddsAndSubs.csproj", "{5918201C-C74B-4DD2-8B73-584C389F5453}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddsAndSubsContent", "AddsAndSubsWindowsPhone\AddsAndSubsContent\AddsAndSubsContent.contentproj", "{F57BB5FA-5D3D-4DE3-B7AC-119B4BBC63F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +23,20 @@ Global
 		Release|Windows Phone = Release|Windows Phone
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Debug|Mixed Platforms.Deploy.0 = Debug|Any CPU
+		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Debug|Windows Phone.ActiveCfg = Debug|Any CPU
+		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Release|Mixed Platforms.Deploy.0 = Release|Any CPU
+		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Release|Windows Phone.ActiveCfg = Release|Any CPU
 		{5918201C-C74B-4DD2-8B73-584C389F5453}.Debug|Any CPU.ActiveCfg = Debug|Windows Phone
 		{5918201C-C74B-4DD2-8B73-584C389F5453}.Debug|Mixed Platforms.ActiveCfg = Debug|Windows Phone
 		{5918201C-C74B-4DD2-8B73-584C389F5453}.Debug|Mixed Platforms.Build.0 = Debug|Windows Phone
@@ -43,20 +57,6 @@ Global
 		{F57BB5FA-5D3D-4DE3-B7AC-119B4BBC63F3}.Release|Any CPU.ActiveCfg = Release|Windows Phone
 		{F57BB5FA-5D3D-4DE3-B7AC-119B4BBC63F3}.Release|Mixed Platforms.ActiveCfg = Release|Windows Phone
 		{F57BB5FA-5D3D-4DE3-B7AC-119B4BBC63F3}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
-		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Debug|Mixed Platforms.Deploy.0 = Debug|Any CPU
-		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Debug|Windows Phone.ActiveCfg = Debug|Any CPU
-		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Release|Mixed Platforms.Deploy.0 = Release|Any CPU
-		{AC7C126E-846E-4BA9-B8DE-73DFAF2722EC}.Release|Windows Phone.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

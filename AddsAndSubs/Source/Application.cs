@@ -41,20 +41,20 @@ namespace AddsAndSubs
             // Board background
             // Instead of calling SetBackground(), I make use of a same image placing it in the middle of the screen
             // SetBackground could have a parameter like POSITIONING.CENTER
-            lBackground = new Label(Image.CreateImage("bg")) { Pivot = Vector2.One / 2, BringToFront = false };
+            lBackground = new Label(Image.CreateImage("Images/Background")) { Pivot = Vector2.One / 2, BringToFront = false };
             AddComponentDeviceAgnostic(lBackground, Width / 2, Height / 2);
 
             // Top background for masking the operations done
-            lTopBackground = new Label(Image.CreateImage("bg_top_wp7")) { BringToFront = false };
+            lTopBackground = new Label(Image.CreateImage("Images/BackgroundTop")) { BringToFront = false };
             AddComponentDeviceAgnostic(lTopBackground, 0, 0);
 
             // Bottom background for masking the following operations
-            lBottomBackground = new Label(Image.CreateImage("bg_bottom_wp7")) { BringToFront = false };
+            lBottomBackground = new Label(Image.CreateImage("Images/BackgroundBottom")) { BringToFront = false };
             AddComponentDeviceAgnostic(lBottomBackground, 0, 572);
             #endregion Background
 
             // Frame where the operation will take place
-            lFrame = new Label(Image.CreateImage("marco")) { BringToFront = false };
+            lFrame = new Label(Image.CreateImage("Images/Frame")) { BringToFront = false };
             AddComponentDeviceAgnostic(lFrame, 0, 218);
 
             results = new Results() { BringToFront = false };
@@ -103,11 +103,11 @@ namespace AddsAndSubs
             }
 
             operations = new Operation[temporalOperations.Length];
-            Font font = Font.CreateFont("Numero_op_movil");
+            Font font = Font.CreateFont("Fonts/Numbers");
             Image[] iNumbers = new Image[11];
 
             for (int i = 0; i < iNumbers.Length; i++)
-                iNumbers[i] = Image.CreateImage(i.ToString());
+                iNumbers[i] = Image.CreateImage("Images/" + i.ToString());
 
             for (int i = 0; i < operations.Length; i++)
                 operations[i] = new Operation(temporalOperations[i], font, iNumbers) { Visible = false, BringToFront = false };
@@ -129,12 +129,10 @@ namespace AddsAndSubs
             ReorderComponents();
         }
 
-#if WINDOWS_PHONE
         public override void BackButtonPressed()
         {
             Program.Instance.Exit();
         }
-#endif
 
         void results_OnSelect(Results source, ResultsEventArgs e)
         {
