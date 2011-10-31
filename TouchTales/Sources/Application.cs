@@ -18,7 +18,7 @@ using Syderis.CellSDK.Common;
 
 namespace TouchyTales
 {
-    public class MyApplication : MultitouchApplication
+    public class Application : MultitouchApplication
     {
         #region Consts and statis
         private static string imagePath = "Images/";

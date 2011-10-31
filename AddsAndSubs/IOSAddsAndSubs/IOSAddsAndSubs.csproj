@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{40C03363-0F6E-4287-A16A-BCC1B2411965}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>IOSAddsAndSubs</RootNamespace>
+    <AssemblyName>IOSAddsAndSubs</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;IPHONE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="OpenTK" />
+    <Reference Include="FarseerPhysics_331.IOS">
+      <HintPath>/Library\Frameworks\CellSDK.framework\Libraries\FarseerPhysics_331.IOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework.iOS">
+      <HintPath>/Library\Frameworks\CellSDK.framework\Libraries\MonoGame.Framework.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syderis.CellSDK.IOS.Common">
+      <HintPath>/Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Syderis.CellSDK.IOS.Core">
+      <HintPath>/Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Syderis.CellSDK.IOS.Launcher">
+      <HintPath>/Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.Launcher.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="..\Source\Application.cs">
+      <Link>Application.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Operation.cs">
+      <Link>Operation.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Results.cs">
+      <Link>Results.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Skin\Arial_Black.xnb" />
+    <Content Include="Content\Skin\Button.png" />
+    <Content Include="Content\Skin\ButtonPressed.png" />
+    <Content Include="Content\Skin\CheckBox.png" />
+    <Content Include="Content\Skin\CheckBox_over.png" />
+    <Content Include="Content\Skin\KeyboardAlt.png" />
+    <Content Include="Content\Skin\KeyboardAlt_pressed.png" />
+    <Content Include="Content\Skin\ProgressBarEmpty.png" />
+    <Content Include="Content\Skin\ProgressBarFilled.png" />
+    <Content Include="Content\Skin\RadioButtonChecked.png" />
+    <Content Include="Content\Skin\RadioButtonUnchecked.png" />
+    <Content Include="Content\Skin\Skin.xml" />
+    <Content Include="Content\Skin\SliderBackground.png" />
+    <Content Include="Content\Skin\SliderLeft.png" />
+    <Content Include="Content\Skin\SliderRight.png" />
+    <Content Include="Content\Skin\SliderTab.png" />
+    <Content Include="Content\Skin\TextAreaBackground.png" />
+    <Content Include="Content\Skin\WhitePixel.png" />
+    <Content Include="Content\Skin\blobcursor.png" />
+    <Content Include="Content\Images\0.png" />
+    <Content Include="Content\Images\1.png" />
+    <Content Include="Content\Images\10.png" />
+    <Content Include="Content\Images\2.png" />
+    <Content Include="Content\Images\3.png" />
+    <Content Include="Content\Images\4.png" />
+    <Content Include="Content\Images\5.png" />
+    <Content Include="Content\Images\6.png" />
+    <Content Include="Content\Images\7.png" />
+    <Content Include="Content\Images\8.png" />
+    <Content Include="Content\Images\9.png" />
+    <Content Include="Content\Images\Background.png" />
+    <Content Include="Content\Images\BackgroundBottom.png" />
+    <Content Include="Content\Images\BackgroundTop.png" />
+    <Content Include="Content\Images\Frame.png" />
+    <Content Include="Content\Images\ResultsPressed.png" />
+    <Content Include="Content\Images\ResultsReleased.png" />
+    <Content Include="Content\Fonts\Numbers.xnb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Fonts\" />
+  </ItemGroup>
+</Project>

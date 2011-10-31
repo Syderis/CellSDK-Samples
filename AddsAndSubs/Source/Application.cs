@@ -26,6 +26,8 @@ namespace AddsAndSubs
         private Operation[] operations;
         private OperationBridge[] temporalOperations;
         private Animation[] animations;
+		
+		private Vector2 offset=new Vector2(81,79);
 
         /// <summary>
         /// The main method for loading controls and resources.
@@ -42,15 +44,15 @@ namespace AddsAndSubs
             // Instead of calling SetBackground(), I make use of a same image placing it in the middle of the screen
             // SetBackground could have a parameter like POSITIONING.CENTER
             lBackground = new Label(Image.CreateImage("Images/Background")) { Pivot = Vector2.One / 2, BringToFront = false };
-            AddComponentDeviceAgnostic(lBackground, Width / 2, Height / 2);
+            AddComponent(lBackground, Width / 2, Height / 2);
 
             // Top background for masking the operations done
             lTopBackground = new Label(Image.CreateImage("Images/BackgroundTop")) { BringToFront = false };
-            AddComponentDeviceAgnostic(lTopBackground, 0, 0);
+            AddComponentDeviceAgnostic(lTopBackground, 0, -1);
 
             // Bottom background for masking the following operations
             lBottomBackground = new Label(Image.CreateImage("Images/BackgroundBottom")) { BringToFront = false };
-            AddComponentDeviceAgnostic(lBottomBackground, 0, 572);
+            AddComponentDeviceAgnostic(lBottomBackground, 0, 573);
             #endregion Background
 
             // Frame where the operation will take place
@@ -155,7 +157,7 @@ namespace AddsAndSubs
                 animations[3].Play(operations[2]);
 
                 operations[3].Visible = true;
-                operations[3].Position = new Vector2(0, 589);
+                operations[3].Position = GetAgnosticPosition(0, 589);
             }
             // Focus the operation at index currentOperation
             else if (currentOperation > 1 && currentOperation < operations.Length - 2)
@@ -168,7 +170,7 @@ namespace AddsAndSubs
                 //animations[3].EndEvent += new Animation.AnimationHandler(MatePlusAddAndSubScreen_EndEvent);
 
                 operations[currentOperation + 2].Visible = true;
-                operations[currentOperation + 2].Position = new Vector2(0, 589);
+                operations[currentOperation + 2].Position = GetAgnosticPosition(0, 589);
             }
             // Focus the operation just before the last one
             else if (currentOperation == operations.Length - 2)
@@ -199,11 +201,34 @@ namespace AddsAndSubs
 
         void AddComponentDeviceAgnostic(Component c, float x, float y)
         { 
-#if IPHONE
-            AddComponent(c, x + 81, y + 79);
-#endif
-            AddComponent(c, x, y);
+			Vector2 position= new Vector2(x,y);
+
+            position=GetAgnosticPosition(position);
+
+			
+			  AddComponent(c, position.X, position.Y);
         }
+		
+		
+		
+		private Vector2 GetAgnosticPosition(Vector2 position)
+		{
+#if IPHONE	
+			return position+offset;
+#else
+			return position;
+#endif
+		}
+		
+		private Vector2 GetAgnosticPosition(float x, float y)
+		{
+			Vector2 position= new Vector2(x,y);
+#if IPHONE
+            position=GetAgnosticPosition(position);
+#endif
+			return position;
+			
+		}
 
         void ReorderComponents()
         {
