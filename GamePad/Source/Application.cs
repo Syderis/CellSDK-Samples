@@ -14,9 +14,7 @@ namespace GamePad
 {
     class Application : MultitouchApplication
     {
-#if DEBUG
-        private Label lDebug;
-#endif
+
         private ThumbStick thumbStick;
         private Label lMoi;
         private AnimatedImage aiMoi;
@@ -67,17 +65,12 @@ namespace GamePad
             AddComponent(buttons, .015f * Width, Height - .015f * Height - buttons.Size.Y);
             #endregion Game pad
 
-#if DEBUG
-            lDebug = new Label("N/A", Color.Black, Color.White) { Rotation = MathHelper.PiOver2 };
-            AddComponentPercentage(lDebug, 1, 0);
-#endif
+
         }
 
         public override void Update(GameTime gameTime)
         {
-#if DEBUG
-            lDebug.Text = string.Format("ThumbStick.X/Y: ({0}, {1})", thumbStick.X, thumbStick.Y);
-#endif
+
             #region Moi position
             Vector2 temp = lMoi.Position;
 
