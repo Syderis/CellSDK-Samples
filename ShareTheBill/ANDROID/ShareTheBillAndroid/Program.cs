@@ -12,7 +12,7 @@ using Android.Widget;
 using Android.OS;
 using Syderis.CellSDK.Android.Launcher;
 #endif
-namespace ShareBillAndroid
+namespace ShareBill
 {
 
 #if WINDOWS || XBOX

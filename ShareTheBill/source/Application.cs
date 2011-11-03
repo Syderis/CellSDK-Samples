@@ -8,7 +8,7 @@ using Syderis.CellSDK.Core.Sounds;
 using System;
 #endregion
 
-namespace ShareBillAndroid
+namespace ShareBill
 {
     /// <summary>
     /// Application

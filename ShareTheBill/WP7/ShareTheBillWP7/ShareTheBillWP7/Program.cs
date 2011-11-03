@@ -12,7 +12,7 @@ using Android.Widget;
 using Android.OS;
 using Launcher.Android;
 #endif
-namespace ShareBillAndroid
+namespace ShareBill
 {
 
 #if WINDOWS || XBOX
