@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>icono_Apple_3_57x57.png</string>
+		<string>icono_Apple_3_114x114.png</string>
+		<string>icono_Apple_3_72x72.png</string>
+		<string>icono_Apple_3_512x512.png</string>
+	</array>
 	<key>UIDeviceFamily</key>
 	<array>
 		<string>1</string>
