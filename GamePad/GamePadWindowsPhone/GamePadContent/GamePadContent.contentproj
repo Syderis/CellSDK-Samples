@@ -49,7 +49,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\Arial_Black.spritefont">
+    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\Arial_Black.spritefont">
       <Link>Skin\Arial_Black.spritefont</Link>
       <Name>Arial_Black</Name>
       <Importer>FontDescriptionImporter</Importer>
@@ -57,110 +57,110 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\blobcursor.png">
+    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\blobcursor.png">
       <Link>Skin\blobcursor.png</Link>
       <Name>blobcursor</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\Button.png">
+    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\Button.png">
       <Link>Skin\Button.png</Link>
       <Name>Button</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\ButtonPressed.png">
+    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\ButtonPressed.png">
       <Link>Skin\ButtonPressed.png</Link>
       <Name>ButtonPressed</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\CheckBox.png">
+    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\CheckBox.png">
       <Link>Skin\CheckBox.png</Link>
       <Name>CheckBox</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\CheckBox_over.png">
+    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\CheckBox_over.png">
       <Link>Skin\CheckBox_over.png</Link>
       <Name>CheckBox_over</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\KeyboardAlt.png">
+    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\KeyboardAlt.png">
       <Link>Skin\KeyboardAlt.png</Link>
       <Name>KeyboardAlt</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\KeyboardAlt_pressed.png">
+    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\KeyboardAlt_pressed.png">
       <Link>Skin\KeyboardAlt_pressed.png</Link>
       <Name>KeyboardAlt_pressed</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\ProgressBarEmpty.png">
+    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\ProgressBarEmpty.png">
       <Link>Skin\ProgressBarEmpty.png</Link>
       <Name>ProgressBarEmpty</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\ProgressBarFilled.png">
+    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\ProgressBarFilled.png">
       <Link>Skin\ProgressBarFilled.png</Link>
       <Name>ProgressBarFilled</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\RadioButtonChecked.png">
+    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\RadioButtonChecked.png">
       <Link>Skin\RadioButtonChecked.png</Link>
       <Name>RadioButtonChecked</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\RadioButtonUnchecked.png">
+    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\RadioButtonUnchecked.png">
       <Link>Skin\RadioButtonUnchecked.png</Link>
       <Name>RadioButtonUnchecked</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Content Include="..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\Skin.xml">
+    <Content Include="$(CellSDK)Versions\0.8\Common\Skins\Default\Skin.xml">
       <Link>Skin\Skin.xml</Link>
       <Name>Skin</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Compile Include="..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\SliderBackground.png">
+    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\SliderBackground.png">
       <Link>Skin\SliderBackground.png</Link>
       <Name>SliderBackground</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\SliderLeft.png">
+    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\SliderLeft.png">
       <Link>Skin\SliderLeft.png</Link>
       <Name>SliderLeft</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\SliderRight.png">
+    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\SliderRight.png">
       <Link>Skin\SliderRight.png</Link>
       <Name>SliderRight</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\SliderTab.png">
+    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\SliderTab.png">
       <Link>Skin\SliderTab.png</Link>
       <Name>SliderTab</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\TextAreaBackground.png">
+    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\TextAreaBackground.png">
       <Link>Skin\TextAreaBackground.png</Link>
       <Name>TextAreaBackground</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\WhitePixel.png">
+    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\WhitePixel.png">
       <Link>Skin\WhitePixel.png</Link>
       <Name>WhitePixel</Name>
       <Importer>TextureImporter</Importer>
