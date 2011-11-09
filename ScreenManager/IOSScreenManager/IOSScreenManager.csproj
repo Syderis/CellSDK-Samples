@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{40C03363-0F6E-4287-A16A-BCC1B2411965}</ProjectGuid>
+    <ProjectGuid>{CCA0E3AA-778E-46C9-B3B1-890FEB047327}</ProjectGuid>
     <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>IOSAddsAndSubs</RootNamespace>
-    <AssemblyName>IOSAddsAndSubs</AssemblyName>
+    <RootNamespace>IOSScreenManager</RootNamespace>
+    <AssemblyName>IOSScreenManager</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,14 +31,13 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchLink>None</MtouchLink>
-    <DefineConstants>IPHONE</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\iPhone\Debug</OutputPath>
-    <DefineConstants>DEBUG;IPHONE</DefineConstants>
+    <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
@@ -53,8 +52,6 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <IpaPackageName />
-    <DefineConstants>IPHONE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -80,14 +77,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <Compile Include="..\Source\Application.cs">
+    <Compile Include="..\Sources\Application.cs">
       <Link>Application.cs</Link>
     </Compile>
-    <Compile Include="..\Source\Operation.cs">
-      <Link>Operation.cs</Link>
+    <Compile Include="..\Sources\InitScreen.cs">
+      <Link>InitScreen.cs</Link>
     </Compile>
-    <Compile Include="..\Source\Results.cs">
-      <Link>Results.cs</Link>
+    <Compile Include="..\Sources\IScreen.cs">
+      <Link>IScreen.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\LevelScreen.cs">
+      <Link>LevelScreen.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\OptionsScreen.cs">
+      <Link>OptionsScreen.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\ScreenManager.cs">
+      <Link>ScreenManager.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -110,34 +116,26 @@
     <Content Include="Content\Skin\TextAreaBackground.png" />
     <Content Include="Content\Skin\WhitePixel.png" />
     <Content Include="Content\Skin\blobcursor.png" />
-    <Content Include="Content\Images\0.png" />
-    <Content Include="Content\Images\1.png" />
-    <Content Include="Content\Images\10.png" />
-    <Content Include="Content\Images\2.png" />
-    <Content Include="Content\Images\3.png" />
-    <Content Include="Content\Images\4.png" />
-    <Content Include="Content\Images\5.png" />
-    <Content Include="Content\Images\6.png" />
-    <Content Include="Content\Images\7.png" />
-    <Content Include="Content\Images\8.png" />
-    <Content Include="Content\Images\9.png" />
-    <Content Include="Content\Images\Background.png" />
-    <Content Include="Content\Images\BackgroundBottom.png" />
-    <Content Include="Content\Images\BackgroundTop.png" />
-    <Content Include="Content\Images\Frame.png" />
-    <Content Include="Content\Images\ResultsPressed.png" />
-    <Content Include="Content\Images\ResultsReleased.png" />
-    <Content Include="Content\Fonts\Numbers.xnb" />
-    <Content Include="icono_Apple_3_114x114.png" />
-    <Content Include="icono_Apple_3_512x512.png" />
-    <Content Include="icono_Apple_3_57x57.png" />
-    <Content Include="icono_Apple_3_72x72.png" />
+    <Content Include="Content\Level\background_level.png" />
+    <Content Include="Content\Level\bt_back.png" />
+    <Content Include="Content\Level\bt_back_pressed.png" />
+    <Content Include="Content\Options\background_options.png" />
+    <Content Include="Content\Options\bt_back.png" />
+    <Content Include="Content\Options\bt_back_pressed.png" />
+    <Content Include="Content\title\background_titlepage.png" />
+    <Content Include="Content\title\bt_exit.png" />
+    <Content Include="Content\title\bt_exit_pressed.png" />
+    <Content Include="Content\title\bt_options.png" />
+    <Content Include="Content\title\bt_options_pressed.png" />
+    <Content Include="Content\title\bt_start.png" />
+    <Content Include="Content\title\bt_start_pressed.png" />
+    <Content Include="icon_Apple_3_57x57.png" />
+    <Content Include="icon_Apple_3_72x72.png" />
+    <Content Include="icon_Apple_3_114x114.png" />
+    <Content Include="icon_Apple_3_512x512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <None Include="Info.plist" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Content\Fonts\" />
   </ItemGroup>
 </Project>
