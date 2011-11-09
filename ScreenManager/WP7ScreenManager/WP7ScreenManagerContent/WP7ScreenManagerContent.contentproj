@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{2EEB273E-537F-4FAF-848C-98C40ADDB95A}</ProjectGuid>
+    <ProjectTypeGuids>{96E2B04D-8817-42c6-938A-82C39BA4D311};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <OutputPath>bin\$(Platform)\$(Configuration)</OutputPath>
+    <ContentRootDirectory>Content</ContentRootDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Windows Phone'">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Windows Phone'">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>WP7ScreenManagerContent</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.EffectImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.FBXImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.TextureImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.XImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.AudioImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.VideoImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\Skin.xml">
+      <Link>Skin\Skin.xml</Link>
+      <Name>Skin</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="title\background_titlepage.png">
+      <Name>background_titlepage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="title\bt_exit.png">
+      <Name>bt_exit</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="title\bt_exit_pressed.png">
+      <Name>bt_exit_pressed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="title\bt_options.png">
+      <Name>bt_options</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="title\bt_options_pressed.png">
+      <Name>bt_options_pressed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="title\bt_start.png">
+      <Name>bt_start</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="title\bt_start_pressed.png">
+      <Name>bt_start_pressed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Level\background_level.png">
+      <Name>background_level</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Level\bt_back.png">
+      <Name>bt_back</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Level\bt_back_pressed.png">
+      <Name>bt_back_pressed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Options\background_options.png">
+      <Name>background_options</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Options\bt_back.png">
+      <Name>bt_back</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Options\bt_back_pressed.png">
+      <Name>bt_back_pressed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\Arial_Black.spritefont">
+      <Link>Skin\Arial_Black.spritefont</Link>
+      <Name>Arial_Black</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\blobcursor.png">
+      <Link>Skin\blobcursor.png</Link>
+      <Name>blobcursor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\Button.png">
+      <Link>Skin\Button.png</Link>
+      <Name>Button</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\ButtonPressed.png">
+      <Link>Skin\ButtonPressed.png</Link>
+      <Name>ButtonPressed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\CheckBox.png">
+      <Link>Skin\CheckBox.png</Link>
+      <Name>CheckBox</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\CheckBox_over.png">
+      <Link>Skin\CheckBox_over.png</Link>
+      <Name>CheckBox_over</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\KeyboardAlt.png">
+      <Link>Skin\KeyboardAlt.png</Link>
+      <Name>KeyboardAlt</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\KeyboardAlt_pressed.png">
+      <Link>Skin\KeyboardAlt_pressed.png</Link>
+      <Name>KeyboardAlt_pressed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\ProgressBarEmpty.png">
+      <Link>Skin\ProgressBarEmpty.png</Link>
+      <Name>ProgressBarEmpty</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\ProgressBarFilled.png">
+      <Link>Skin\ProgressBarFilled.png</Link>
+      <Name>ProgressBarFilled</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\RadioButtonChecked.png">
+      <Link>Skin\RadioButtonChecked.png</Link>
+      <Name>RadioButtonChecked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\RadioButtonUnchecked.png">
+      <Link>Skin\RadioButtonUnchecked.png</Link>
+      <Name>RadioButtonUnchecked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\SliderBackground.png">
+      <Link>Skin\SliderBackground.png</Link>
+      <Name>SliderBackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\SliderLeft.png">
+      <Link>Skin\SliderLeft.png</Link>
+      <Name>SliderLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\SliderRight.png">
+      <Link>Skin\SliderRight.png</Link>
+      <Name>SliderRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\SliderTab.png">
+      <Link>Skin\SliderTab.png</Link>
+      <Name>SliderTab</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\TextAreaBackground.png">
+      <Link>Skin\TextAreaBackground.png</Link>
+      <Name>TextAreaBackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="C:\Program Files\Syderis\CellSDK.framework\Versions\0.8\Common\Skins\Default\WhitePixel.png">
+      <Link>Skin\WhitePixel.png</Link>
+      <Name>WhitePixel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
+  <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
