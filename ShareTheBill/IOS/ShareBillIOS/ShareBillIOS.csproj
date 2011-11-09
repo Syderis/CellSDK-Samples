@@ -85,19 +85,19 @@
     <Reference Include="monotouch" />
     <Reference Include="OpenTK" />
     <Reference Include="FarseerPhysics_331.IOS">
-      <HintPath>..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Libraries\FarseerPhysics_331.IOS.dll</HintPath>
+      <HintPath>/Library\Frameworks\CellSDK.framework\Libraries\FarseerPhysics_331.IOS.dll</HintPath>
     </Reference>
     <Reference Include="MonoGame.Framework.iOS">
-      <HintPath>..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Libraries\MonoGame.Framework.iOS.dll</HintPath>
+      <HintPath>/Library\Frameworks\CellSDK.framework\Libraries\MonoGame.Framework.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.IOS.Common">
-      <HintPath>..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.Common.dll</HintPath>
+      <HintPath>/Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.Common.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.IOS.Core">
-      <HintPath>..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.Core.dll</HintPath>
+      <HintPath>/Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.Core.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.IOS.Launcher">
-      <HintPath>..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.Launcher.dll</HintPath>
+      <HintPath>/Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.Launcher.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -121,61 +121,61 @@
     <Content Include="Content\Sounds\Writing.wav" />
     <Content Include="Content\Fonts\LargeFontMonospaced.xnb" />
     <Content Include="Content\Fonts\SmallFontMonospaced.xnb" />
-    <Content Include="..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\blobcursor.png">
+    <Content Include="..\..\/Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\blobcursor.png">
       <Link>Content\Skin\blobcursor.png</Link>
     </Content>
-    <Content Include="..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\Button.png">
+    <Content Include="..\..\/Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\Button.png">
       <Link>Content\Skin\Button.png</Link>
     </Content>
-    <Content Include="..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\ButtonPressed.png">
+    <Content Include="..\..\/Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\ButtonPressed.png">
       <Link>Content\Skin\ButtonPressed.png</Link>
     </Content>
-    <Content Include="..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\CheckBox_over.png">
+    <Content Include="..\..\/Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\CheckBox_over.png">
       <Link>Content\Skin\CheckBox_over.png</Link>
     </Content>
-    <Content Include="..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\CheckBox.png">
+    <Content Include="..\..\/Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\CheckBox.png">
       <Link>Content\Skin\CheckBox.png</Link>
     </Content>
-    <Content Include="..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\KeyboardAlt_pressed.png">
+    <Content Include="..\..\/Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\KeyboardAlt_pressed.png">
       <Link>Content\Skin\KeyboardAlt_pressed.png</Link>
     </Content>
-    <Content Include="..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\KeyboardAlt.png">
+    <Content Include="..\..\/Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\KeyboardAlt.png">
       <Link>Content\Skin\KeyboardAlt.png</Link>
     </Content>
-    <Content Include="..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\ProgressBarEmpty.png">
+    <Content Include="..\..\/Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\ProgressBarEmpty.png">
       <Link>Content\Skin\ProgressBarEmpty.png</Link>
     </Content>
-    <Content Include="..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\ProgressBarFilled.png">
+    <Content Include="..\..\/Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\ProgressBarFilled.png">
       <Link>Content\Skin\ProgressBarFilled.png</Link>
     </Content>
-    <Content Include="..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\RadioButtonChecked.png">
+    <Content Include="..\..\/Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\RadioButtonChecked.png">
       <Link>Content\Skin\RadioButtonChecked.png</Link>
     </Content>
-    <Content Include="..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\RadioButtonUnchecked.png">
+    <Content Include="..\..\/Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\RadioButtonUnchecked.png">
       <Link>Content\Skin\RadioButtonUnchecked.png</Link>
     </Content>
-    <Content Include="..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\SliderBackground.png">
+    <Content Include="..\..\/Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\SliderBackground.png">
       <Link>Content\Skin\SliderBackground.png</Link>
     </Content>
-    <Content Include="..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\SliderLeft.png">
+    <Content Include="..\..\/Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\SliderLeft.png">
       <Link>Content\Skin\SliderLeft.png</Link>
     </Content>
-    <Content Include="..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\SliderRight.png">
+    <Content Include="..\..\/Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\SliderRight.png">
       <Link>Content\Skin\SliderRight.png</Link>
     </Content>
-    <Content Include="..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\SliderTab.png">
+    <Content Include="..\..\/Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\SliderTab.png">
       <Link>Content\Skin\SliderTab.png</Link>
     </Content>
-    <Content Include="..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\TextAreaBackground.png">
+    <Content Include="..\..\/Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\TextAreaBackground.png">
       <Link>Content\Skin\TextAreaBackground.png</Link>
     </Content>
-    <Content Include="..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\WhitePixel.png">
+    <Content Include="..\..\/Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\WhitePixel.png">
       <Link>Content\Skin\WhitePixel.png</Link>
     </Content>
-    <Content Include="..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\Arial_Black.xnb">
+    <Content Include="..\..\/Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\Arial_Black.xnb">
       <Link>Content\Skin\Arial_Black.xnb</Link>
     </Content>
-    <Content Include="..\..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\Skin.xml">
+    <Content Include="..\..\/Library\Frameworks\CellSDK.framework\Versions\0.8\Skins\Default\Skin.xml">
       <Link>Content\Skin\Skin.xml</Link>
     </Content>
   </ItemGroup>
