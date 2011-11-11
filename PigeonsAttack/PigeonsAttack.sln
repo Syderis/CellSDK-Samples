@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PigeonsAttack", "PigeonsAttack\PigeonsAttack\PigeonsAttack.csproj", "{A5723F7D-C0EB-42B3-A199-18CFBC740388}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PigeonsAttackIOS", "PigeonsAttackIOS\PigeonsAttackIOS.csproj", "{1ECD6290-A34E-4141-BCE7-F406197FB612}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1ECD6290-A34E-4141-BCE7-F406197FB612}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{1ECD6290-A34E-4141-BCE7-F406197FB612}.Debug|iPhone.Build.0 = Debug|iPhone
+		{1ECD6290-A34E-4141-BCE7-F406197FB612}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{1ECD6290-A34E-4141-BCE7-F406197FB612}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{1ECD6290-A34E-4141-BCE7-F406197FB612}.Debug|Windows Phone.ActiveCfg = Debug|iPhoneSimulator
+		{1ECD6290-A34E-4141-BCE7-F406197FB612}.Debug|Windows Phone.Build.0 = Debug|iPhoneSimulator
+		{1ECD6290-A34E-4141-BCE7-F406197FB612}.Release|iPhone.ActiveCfg = Release|iPhone
+		{1ECD6290-A34E-4141-BCE7-F406197FB612}.Release|iPhone.Build.0 = Release|iPhone
+		{1ECD6290-A34E-4141-BCE7-F406197FB612}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{1ECD6290-A34E-4141-BCE7-F406197FB612}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{1ECD6290-A34E-4141-BCE7-F406197FB612}.Release|Windows Phone.ActiveCfg = Release|iPhoneSimulator
+		{1ECD6290-A34E-4141-BCE7-F406197FB612}.Release|Windows Phone.Build.0 = Release|iPhoneSimulator
+		{A5723F7D-C0EB-42B3-A199-18CFBC740388}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{A5723F7D-C0EB-42B3-A199-18CFBC740388}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{A5723F7D-C0EB-42B3-A199-18CFBC740388}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{A5723F7D-C0EB-42B3-A199-18CFBC740388}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{A5723F7D-C0EB-42B3-A199-18CFBC740388}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{A5723F7D-C0EB-42B3-A199-18CFBC740388}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{8E995AB0-CEA0-41CB-BC69-2100F525DF13}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{8E995AB0-CEA0-41CB-BC69-2100F525DF13}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = PigeonsAttack\PigeonsAttack\PigeonsAttack.csproj
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
