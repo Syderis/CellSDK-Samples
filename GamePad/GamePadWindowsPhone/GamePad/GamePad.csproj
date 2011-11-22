@@ -83,19 +83,19 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="FarseerPhysics.WindowsPhone">
-      <HintPath>$(CellSDK)Versions\0.8\WindowsPhone\Libraries\FarseerPhysics.WindowsPhone.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.0-alpha\WindowsPhone\Libraries\FarseerPhysics.WindowsPhone.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Syderis.CellSDK.WindowsPhone.Common">
-      <HintPath>$(CellSDK)Versions\0.8\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Common.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.0-alpha\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Syderis.CellSDK.WindowsPhone.Core">
-      <HintPath>$(CellSDK)Versions\0.8\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Core.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.0-alpha\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Syderis.CellSDK.WindowsPhone.Launcher">
-      <HintPath>$(CellSDK)Versions\0.8\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Launcher.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.0-alpha\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Launcher.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
