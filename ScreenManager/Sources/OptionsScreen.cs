@@ -28,7 +28,7 @@ namespace ScreenManager
         public OptionsScreen(ScreenManager manager)
         {
             this.manager = manager;
-            content = new ContentManager(MultitouchStaticContent.Services, MultitouchStaticContent.Content.RootDirectory);
+            content = new ContentManager(StaticContent.Services, StaticContent.Content.RootDirectory);
         }
 
         #region IScreen Members

@@ -42,7 +42,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="$(CellSDK)Versions\0.8\Common\Skins\Default\Skin.xml">
+    <Content Include="$(CellSDK)Versions\1.0-alpha\Common\Skins\Default\Skin.xml">
       <Link>Skin\Skin.xml</Link>
       <Name>Skin</Name>
       <Importer>XmlImporter</Importer>
@@ -116,113 +116,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\Arial_Black.spritefont">
-      <Link>Skin\Arial_Black.spritefont</Link>
-      <Name>Arial_Black</Name>
+    <Compile Include="$(CellSDK)Versions\1.0-alpha\Common\Skins\Default\StandardFont.spritefont">
+      <Link>Skin\StandardFont.spritefont</Link>
+      <Name>StandardFont</Name>
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\blobcursor.png">
-      <Link>Skin\blobcursor.png</Link>
-      <Name>blobcursor</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\Button.png">
-      <Link>Skin\Button.png</Link>
-      <Name>Button</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\ButtonPressed.png">
-      <Link>Skin\ButtonPressed.png</Link>
-      <Name>ButtonPressed</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\CheckBox.png">
-      <Link>Skin\CheckBox.png</Link>
-      <Name>CheckBox</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\CheckBox_over.png">
-      <Link>Skin\CheckBox_over.png</Link>
-      <Name>CheckBox_over</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\KeyboardAlt.png">
-      <Link>Skin\KeyboardAlt.png</Link>
-      <Name>KeyboardAlt</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\KeyboardAlt_pressed.png">
-      <Link>Skin\KeyboardAlt_pressed.png</Link>
-      <Name>KeyboardAlt_pressed</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\ProgressBarEmpty.png">
-      <Link>Skin\ProgressBarEmpty.png</Link>
-      <Name>ProgressBarEmpty</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\ProgressBarFilled.png">
-      <Link>Skin\ProgressBarFilled.png</Link>
-      <Name>ProgressBarFilled</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\RadioButtonChecked.png">
-      <Link>Skin\RadioButtonChecked.png</Link>
-      <Name>RadioButtonChecked</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\RadioButtonUnchecked.png">
-      <Link>Skin\RadioButtonUnchecked.png</Link>
-      <Name>RadioButtonUnchecked</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\SliderBackground.png">
-      <Link>Skin\SliderBackground.png</Link>
-      <Name>SliderBackground</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\SliderLeft.png">
-      <Link>Skin\SliderLeft.png</Link>
-      <Name>SliderLeft</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\SliderRight.png">
-      <Link>Skin\SliderRight.png</Link>
-      <Name>SliderRight</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\SliderTab.png">
-      <Link>Skin\SliderTab.png</Link>
-      <Name>SliderTab</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\TextAreaBackground.png">
-      <Link>Skin\TextAreaBackground.png</Link>
-      <Name>TextAreaBackground</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="$(CellSDK)Versions\0.8\Common\Skins\Default\WhitePixel.png">
-      <Link>Skin\WhitePixel.png</Link>
-      <Name>WhitePixel</Name>
+    <Compile Include="$(CellSDK)Versions\1.0-alpha\Common\Skins\Default\skin_standart.png">
+      <Link>Skin\skin_standart.png</Link>
+      <Name>skin_standart</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
