@@ -12,7 +12,7 @@ using Syderis.CellSDK.Core.Animations;
 
 namespace AddsAndSubs
 {
-    class Application : MultitouchApplication
+    class Application : MobileApplication
     {
         const int FRAMES = 10;
         const int OPERATIONS = 25;
