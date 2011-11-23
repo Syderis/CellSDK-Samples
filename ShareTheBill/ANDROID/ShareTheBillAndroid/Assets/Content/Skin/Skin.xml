@@ -1,61 +1,93 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Skin Name="Default" xmlns="http://www.syderis.com/cellsdk">
-  <Blob>
-    <ImageFile>blobcursor</ImageFile>
-  </Blob>
+<?xml version="1.0" encoding="utf-8" ?>
 
-  <Label>
-    <BackgroundImageFile>TextAreaBackground</BackgroundImageFile>
-    <TextColor B="0" R="0" G="0" A="255"/>
-  </Label>
-
-  <Button>
-    <PressedImageFile>ButtonPressed</PressedImageFile>
-    <ReleasedImageFile>Button</ReleasedImageFile>
-    <TextColor B="0" R="0" G="0"  A="255"/>
-    <BackgroundColor B="255" R="255" G="255" A="255" />
-  </Button>
-
-  <CheckBox>
-    <UncheckedImageFile>CheckBox</UncheckedImageFile>
-    <PressedImageFile>CheckBox_over</PressedImageFile>
-    <CheckedImageFile>CheckBox_over</CheckedImageFile>
-  </CheckBox>
-
-  <ToggleButton>
-    <UncheckedImageFile>Button</UncheckedImageFile>
-    <CheckedImageFile>ButtonPressed</CheckedImageFile>
-    <TextColor B="0" R="0" G="0"  A="255"/>
-  </ToggleButton>
-
-  <RadioButton>
-    <UncheckedImageFile>RadioButtonUnchecked</UncheckedImageFile>
-    <CheckedImageFile>RadioButtonChecked</CheckedImageFile>
-  </RadioButton>
-  <TextArea>
-    <KeyboardReleasedImageFile>KeyboardAlt</KeyboardReleasedImageFile>
-    <KeyboardPressedImageFile>KeyboardAlt_pressed</KeyboardPressedImageFile>
-    <BackgroundImageFile>TextAreaBackground</BackgroundImageFile>
-    <TextColor R="0" G="0" B="0"  A="255"/>
-    <CursorColor R="128" G="128" B="128" A="255" />
-  </TextArea>
-
-  <ProgressBar>
-    <BackgroundImageFile>ProgressBarEmpty</BackgroundImageFile>
-    <FillImageFile>ProgressBarFilled</FillImageFile>
-    <BulletInkColor R="255" G="255" B="255" A="0"/>
-    <TextForegroundColor R="255" G="255" B="255" A="0"/>
-    <TextFilledColor B="0" R="0" G="0" A="0"/>
-  </ProgressBar>
-
-  <SlideBar>
-    <BackgroundImageFile>SliderBackground</BackgroundImageFile>
-    <LeftBorderImageFile>SliderLeft</LeftBorderImageFile>
-    <RightBorderImageFile>SliderRight</RightBorderImageFile>
-    <TabImageFile>SliderTab</TabImageFile>
-  </SlideBar>
-
-  <Container>
-    <BackgroundImageFile>WhitePixel</BackgroundImageFile>
-  </Container>
+<Skin Name="Default" SpriteSheet="skin_standart" LoadType="EAGER">
+    <Font SpriteFont="StandardFont" />
+    <Components Id="Blob" Width="30" Height="30">
+        <ImageProperties>
+            
+        </ImageProperties>
+        <ColorProperties />
+    </Components>
+    <Components Id="Label" Width="124" Height="53">
+        <ImageProperties>
+            <ImageProperty Name="Image" SpriteSheet="skin_standart" Width="426" Height="39" X="0" Y="0" />
+        </ImageProperties>
+        <ColorProperties>
+            <ColorProperty Name="TextColor" R="0" G="0" B="0"  A="255"/>
+            <ColorProperty Name="BackgroundColor" R="255" G="255" B="255" A="255" />
+        </ColorProperties>
+    </Components>
+    <Components Id="Button" Width="124" Height="53">
+        <ImageProperties>
+            <ImageProperty Name="ReleasedImage" SpriteSheet="skin_standart" Width="124" Height="53" X="0" Y="217" />
+            <ImageProperty Name="PressedImage" SpriteSheet="skin_standart" Width="124" Height="53" X="0" Y="272" />
+        </ImageProperties>
+        <ColorProperties>
+            <ColorProperty Name="TextColor" R="0" G="0" B="0" A="255" />
+            <ColorProperty Name="BackgroundColor" R="0" G="255" B="0" A="255" />
+        </ColorProperties>
+    </Components>
+    <Components Id="CheckBox" Width="33" Height="33">
+        <ImageProperties>
+            <ImageProperty Name="CheckedImage" SpriteSheet="skin_standart" Width="33" Height="33" X="0" Y="352" />
+            <ImageProperty Name="UncheckedImage" SpriteSheet="skin_standart" Width="33" Height="33" X="126" Y="217" />
+            <ImageProperty Name="PressedImage"  SpriteSheet="skin_standart" Width="33" Height="33" X="126" Y="217" />
+        </ImageProperties>
+        <ColorProperties />
+    </Components>
+    <Components Id="Container" Width="320" Height="320">
+        <ImageProperties>
+            <ImageProperty Name="BackgroundImage" SpriteSheet="skin_standart" Width="91" Height="51" X="410" Y="41" />
+        </ImageProperties>
+        <ColorProperties />
+    </Components>
+    <Components Id="ProgressBar" Width="404" Height="23">
+        <ImageProperties>
+            <ImageProperty Name="BackgroundImage" SpriteSheet="skin_standart" Width="404" Height="23" X="0" Y="41" />
+            <ImageProperty Name="FillImage" SpriteSheet="skin_standart" Width="404" Height="23" X="0" Y="66" />
+            <!--<ImageProperty Name="BulletImage" SpriteSheet="skin_standart" Width="408" Height="27" X="0" Y="148" />-->
+        </ImageProperties>
+        <ColorProperties>
+            <ColorProperty Name="FillInkColor" R="255" G="255" B="255" A="255" />
+            <ColorProperty Name="BulletInkColor" R="255" G="255" B="255" A="255" />
+            <ColorProperty Name="TextForegroundColor" R="255" G="255" B="255" A="255" />
+            <ColorProperty Name="TextFilledColor" R="255" G="255" B="255" A="255" />
+        </ColorProperties>
+    </Components>
+    <Components Id="ToggleButton" Width="124" Height="53">
+        <ImageProperties>
+            <ImageProperty Name="CheckedImage" SpriteSheet="skin_standart" Width="124" Height="53" X="0" Y="272" />
+            <ImageProperty Name="UncheckedImage"  SpriteSheet="skin_standart" Width="124" Height="53" X="0" Y="217" />
+        </ImageProperties>
+        <ColorProperties>
+            <ColorProperty Name="TextColor" R="0" G="0" B="0" A="255" />
+        </ColorProperties>
+    </Components>
+    <Components Id="RadioButton" Width="32" Height="32">
+        <ImageProperties>
+            <ImageProperty Name="CheckedImage" SpriteSheet="skin_standart" Width="32" Height="32" X="161" Y="217" />
+            <ImageProperty Name="UncheckedImage" SpriteSheet="skin_standart" Width="32" Height="32" X="126" Y="252" />
+        </ImageProperties>
+        <ColorProperties />
+    </Components>
+    <Components Id="Slider" Width="300" Height="14">
+        <ImageProperties>
+            <ImageProperty Name="Background" SpriteSheet="skin_standart" Width="1" Height="14" X="63" Y="327" />
+            <ImageProperty Name="LeftBorderImage" SpriteSheet="skin_standart" Width="13" Height="14" X="35" Y="352" />
+            <ImageProperty Name="RightBorderImage" SpriteSheet="skin_standart" Width="13" Height="14" X="0" Y="387" />
+            <ImageProperty Name="BulletImage" SpriteSheet="skin_standart" Width="61" Height="23" X="0" Y="327" />
+        </ImageProperties>
+        <ColorProperties >
+            <ColorProperty Name="FillColor" R="255" G="255" B="128" A="255"/>
+        </ColorProperties>
+    </Components>
+    <Components Id="TextArea" Width="400" Height="124">
+        <ImageProperties>
+            <ImageProperty Name="Background" SpriteSheet="skin_standart" Width="426" Height="39" X="0" Y="0" />
+        </ImageProperties>
+        <ColorProperties>
+            <ColorProperty Name="TextColor" R="0" G="0" B="0" A="255" />
+            <ColorProperty Name="CursorColor" R="0" G="0" B="0" A="255" />
+        </ColorProperties>
+    </Components>
 </Skin>
