@@ -13,7 +13,7 @@ namespace ShareBill
     /// <summary>
     /// Application
     /// </summary>
-    public class Application : MultitouchApplication
+    public class Application : MobileApplication
     {
         // Consts
         private const int MIN_GAP_INCREMENT = 50;
@@ -77,7 +77,7 @@ namespace ShareBill
 
             // Config Application
             base.IsTouchVisible = false;
-            base.SetBackground(this.iApplicationBackground, true);
+            base.SetBackground(this.iApplicationBackground, Adjustment.STRETCH);
 
             // Controls
             // Main Container
