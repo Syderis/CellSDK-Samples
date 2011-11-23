@@ -18,7 +18,7 @@ using Syderis.CellSDK.Common;
 
 namespace TouchyTales
 {
-    public class Application : MultitouchApplication
+    public class Application : MobileApplication
     {
         #region Consts and statis
         private static string imagePath = "Images/";
@@ -44,7 +44,7 @@ namespace TouchyTales
             random = new Random();
        //     audioLibrary = AudioLibrary.GetInstance();
 
-            SetBackground(Image.CreateImage(imagePath + "bg"), false);
+            SetBackground(Image.CreateImage(imagePath + "bg"), Adjustment.NONE);            
 
             //Rope
             rope = new Label(Image.CreateImage(imagePath + "rope"));
@@ -303,7 +303,7 @@ namespace TouchyTales
         /// <returns></returns>
         private float TransformXCoordinate(float x)
         {
-            return x * MultitouchStaticContent.Width;
+            return x * Preferences.Width;
         }
 
         /// <summary>
@@ -313,7 +313,7 @@ namespace TouchyTales
         /// <returns></returns>
         private float TransformYCoordinate(float y)
         {
-            return y * MultitouchStaticContent.Height;
+            return y * Preferences.Height;
         }
         #endregion
     }

@@ -37,7 +37,7 @@ namespace ScreenManager
 
         protected Dictionary<Screens, IScreen> screens; //Available screens
         protected Screens currentScreen; //Current sreen.
-        private MultitouchApplication app; //Main Application reference.
+        private MobileApplication app; //Main Application reference.
         private Vector2 offset;
 
         #endregion
@@ -47,7 +47,7 @@ namespace ScreenManager
         /// <summary>
         /// Main application reference.
         /// </summary>
-        public MultitouchApplication App
+        public MobileApplication App
         {
             get { return app; }
             set { app = value; }
@@ -60,7 +60,7 @@ namespace ScreenManager
         /// <summary>
         /// Constructor.
         /// </summary>
-        public ScreenManager(MultitouchApplication app)
+        public ScreenManager(MobileApplication app)
         {
 #if IPHONE
             offset= Vector2.Zero;

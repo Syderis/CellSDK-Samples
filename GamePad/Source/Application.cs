@@ -12,7 +12,7 @@ using Syderis.CellSDK.Core.Animations;
 
 namespace GamePad
 {
-    class Application : MultitouchApplication
+    class Application : MobileApplication
     {
 
         private ThumbStick thumbStick;

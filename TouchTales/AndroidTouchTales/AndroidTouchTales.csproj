@@ -38,22 +38,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FarseerPhysics.Android">
-      <HintPath>$(CellSDK)Versions\0.8\Android\Libraries\FarseerPhysics.Android.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\FarseerPhysics.Android.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="MonoGame.Framework">
-      <HintPath>$(CellSDK)Versions\0.8\Android\Libraries\MonoGame.Framework.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK" />
     <Reference Include="mscorlib" />
     <Reference Include="Syderis.CellSDK.Android.Common">
-      <HintPath>$(CellSDK)Versions\0.8\Android\Libraries\Syderis.CellSDK.Android.Common.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\Syderis.CellSDK.Android.Common.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.Android.Core">
-      <HintPath>$(CellSDK)Versions\0.8\Android\Libraries\Syderis.CellSDK.Android.Core.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\Syderis.CellSDK.Android.Core.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.Android.Launcher">
-      <HintPath>$(CellSDK)Versions\0.8\Android\Libraries\Syderis.CellSDK.Android.Launcher.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\Syderis.CellSDK.Android.Launcher.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -73,27 +73,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Content\Skin\Arial_Black.xnb" />
-    <AndroidAsset Include="Assets\Content\Skin\blobcursor.png" />
-    <AndroidAsset Include="Assets\Content\Skin\Button.png" />
-    <AndroidAsset Include="Assets\Content\Skin\ButtonPressed.png" />
-    <AndroidAsset Include="Assets\Content\Skin\CheckBox.png" />
-    <AndroidAsset Include="Assets\Content\Skin\CheckBox_over.png" />
-    <AndroidAsset Include="Assets\Content\Skin\KeyboardAlt.png" />
-    <AndroidAsset Include="Assets\Content\Skin\KeyboardAlt_pressed.png" />
-    <AndroidAsset Include="Assets\Content\Skin\ProgressBarEmpty.png" />
-    <AndroidAsset Include="Assets\Content\Skin\ProgressBarFilled.png" />
-    <AndroidAsset Include="Assets\Content\Skin\RadioButtonChecked.png" />
-    <AndroidAsset Include="Assets\Content\Skin\RadioButtonUnchecked.png" />
-    <AndroidAsset Include="Assets\Content\Skin\Skin.xml" />
-    <AndroidAsset Include="Assets\Content\Skin\SliderBackground.png" />
-    <AndroidAsset Include="Assets\Content\Skin\SliderLeft.png" />
-    <AndroidAsset Include="Assets\Content\Skin\SliderRight.png" />
-    <AndroidAsset Include="Assets\Content\Skin\SliderTab.png" />
-    <AndroidAsset Include="Assets\Content\Skin\TextAreaBackground.png" />
-    <AndroidAsset Include="Assets\Content\Skin\WhitePixel.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Content\Images\animated_ball.png" />
@@ -130,6 +109,15 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Content\Images\yellow_ball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Skin\Skin.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Skin\skin_standart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Skin\StandardFont.xnb" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

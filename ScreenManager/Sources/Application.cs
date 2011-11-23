@@ -16,7 +16,7 @@ namespace ScreenManager
     /// <summary>
     /// Application class
     /// </summary>
-    class Application : MultitouchApplication
+    class Application : MobileApplication
     {
         #region Variables
         ScreenManager screenManager; //ScreenManager Instance
