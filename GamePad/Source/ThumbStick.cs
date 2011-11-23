@@ -39,8 +39,8 @@ namespace GamePad
         {
             iGamePadSpriteSheet = Image.CreateImage("GamePadSpriteSheet");
 
-            spriteBatch = MultitouchStaticContent.SpriteBatch;
-            graphicsDevice = MultitouchStaticContent.Graphics.GraphicsDevice;
+            spriteBatch = StaticContent.SpriteBatch;
+            graphicsDevice = StaticContent.Graphics.GraphicsDevice;
 
             padBackground = new Rectangle(198, 0, 180, 180);
             pad = new Rectangle(0, 180, 180, 180);
