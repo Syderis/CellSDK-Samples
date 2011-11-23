@@ -62,9 +62,6 @@
     <Reference Include="FarseerPhysics_331.IOS">
       <HintPath>\Library\Frameworks\CellSDK.framework\Libraries\FarseerPhysics_331.IOS.dll</HintPath>
     </Reference>
-    <Reference Include="MonoGame.Framework.iOS">
-      <HintPath>\Library\Frameworks\CellSDK.framework\Libraries\MonoGame.Framework.iOS.dll</HintPath>
-    </Reference>
     <Reference Include="Syderis.CellSDK.IOS.Common">
       <HintPath>\Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.Common.dll</HintPath>
     </Reference>
@@ -77,6 +74,9 @@
     <Reference Include="Syderis.CellSDK.IOS.IO.AccelerometerSystem">
       <HintPath>\Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.IO.AccelerometerSystem.dll</HintPath>
     </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Libraries\MonoGame.Framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -85,31 +85,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Skin\Arial_Black.xnb" />
-    <Content Include="Content\Skin\Button.png" />
-    <Content Include="Content\Skin\ButtonPressed.png" />
-    <Content Include="Content\Skin\CheckBox.png" />
-    <Content Include="Content\Skin\CheckBox_over.png" />
-    <Content Include="Content\Skin\KeyboardAlt.png" />
-    <Content Include="Content\Skin\KeyboardAlt_pressed.png" />
-    <Content Include="Content\Skin\ProgressBarEmpty.png" />
-    <Content Include="Content\Skin\ProgressBarFilled.png" />
-    <Content Include="Content\Skin\RadioButtonChecked.png" />
-    <Content Include="Content\Skin\RadioButtonUnchecked.png" />
-    <Content Include="Content\Skin\Skin.xml" />
-    <Content Include="Content\Skin\SliderBackground.png" />
-    <Content Include="Content\Skin\SliderLeft.png" />
-    <Content Include="Content\Skin\SliderRight.png" />
-    <Content Include="Content\Skin\SliderTab.png" />
-    <Content Include="Content\Skin\TextAreaBackground.png" />
-    <Content Include="Content\Skin\WhitePixel.png" />
-    <Content Include="Content\Skin\blobcursor.png" />
     <Content Include="Content\Images\spritesheet.png" />
     <Content Include="Content\Images\background_ios.jpg" />
     <Content Include="Content\Fonts\spritefont_0_9.xnb" />
+    <Content Include="Content\Skin\skin_standart.png" />
+    <Content Include="Content\Skin\Skin.xml" />
+    <Content Include="Content\Skin\StandardFont.xnb" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <None Include="Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Skin\" />
   </ItemGroup>
 </Project>

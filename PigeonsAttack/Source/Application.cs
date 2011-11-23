@@ -14,7 +14,7 @@ using Syderis.CellSDK.Core.Animations;
 
 namespace PigeonsAttack
 {
-    class Application : MultitouchApplication
+    class Application : MobileApplication
     {
         private TimeSpan PLAYING_TIME = TimeSpan.FromSeconds(60);
         private const int INTERVAL_BETWEEN_SHITS = 2;
