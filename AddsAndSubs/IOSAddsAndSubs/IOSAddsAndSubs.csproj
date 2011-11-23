@@ -63,19 +63,19 @@
     <Reference Include="monotouch" />
     <Reference Include="OpenTK" />
     <Reference Include="FarseerPhysics_331.IOS">
-      <HintPath>/Library\Frameworks\CellSDK.framework\Libraries\FarseerPhysics_331.IOS.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoGame.Framework.iOS">
-      <HintPath>/Library\Frameworks\CellSDK.framework\Libraries\MonoGame.Framework.iOS.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Libraries\FarseerPhysics_331.IOS.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.IOS.Common">
-      <HintPath>/Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.Common.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.Common.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.IOS.Core">
-      <HintPath>/Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.Core.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.Core.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.IOS.Launcher">
-      <HintPath>/Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.Launcher.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.Launcher.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Libraries\MonoGame.Framework.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -91,25 +91,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Skin\Arial_Black.xnb" />
-    <Content Include="Content\Skin\Button.png" />
-    <Content Include="Content\Skin\ButtonPressed.png" />
-    <Content Include="Content\Skin\CheckBox.png" />
-    <Content Include="Content\Skin\CheckBox_over.png" />
-    <Content Include="Content\Skin\KeyboardAlt.png" />
-    <Content Include="Content\Skin\KeyboardAlt_pressed.png" />
-    <Content Include="Content\Skin\ProgressBarEmpty.png" />
-    <Content Include="Content\Skin\ProgressBarFilled.png" />
-    <Content Include="Content\Skin\RadioButtonChecked.png" />
-    <Content Include="Content\Skin\RadioButtonUnchecked.png" />
-    <Content Include="Content\Skin\Skin.xml" />
-    <Content Include="Content\Skin\SliderBackground.png" />
-    <Content Include="Content\Skin\SliderLeft.png" />
-    <Content Include="Content\Skin\SliderRight.png" />
-    <Content Include="Content\Skin\SliderTab.png" />
-    <Content Include="Content\Skin\TextAreaBackground.png" />
-    <Content Include="Content\Skin\WhitePixel.png" />
-    <Content Include="Content\Skin\blobcursor.png" />
     <Content Include="Content\Images\0.png" />
     <Content Include="Content\Images\1.png" />
     <Content Include="Content\Images\10.png" />
@@ -132,6 +113,9 @@
     <Content Include="icono_Apple_3_512x512.png" />
     <Content Include="icono_Apple_3_57x57.png" />
     <Content Include="icono_Apple_3_72x72.png" />
+    <Content Include="Content\Skin\skin_standart.png" />
+    <Content Include="Content\Skin\Skin.xml" />
+    <Content Include="Content\Skin\StandardFont.xnb" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -139,5 +123,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Fonts\" />
+    <Folder Include="Content\Skin\" />
   </ItemGroup>
 </Project>
