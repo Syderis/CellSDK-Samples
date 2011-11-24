@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOSAddsAndSubs", "IOSAddsAndSubs.csproj", "{40C03363-0F6E-4287-A16A-BCC1B2411965}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOSAddsAndSubs", "IOSAddsAndSubs\IOSAddsAndSubs.csproj", "{40C03363-0F6E-4287-A16A-BCC1B2411965}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +21,6 @@ Global
 		{40C03363-0F6E-4287-A16A-BCC1B2411965}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = IOSAddsAndSubs.csproj
+		StartupItem = IOSAddsAndSubs\IOSAddsAndSubs.csproj
 	EndGlobalSection
 EndGlobal
