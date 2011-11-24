@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddsAndSubs", "AddsAndSubs\AddsAndSubs.csproj", "{5918201C-C74B-4DD2-8B73-584C389F5453}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddsAndSubsContent", "AddsAndSubsContent\AddsAndSubsContent.contentproj", "{F57BB5FA-5D3D-4DE3-B7AC-119B4BBC63F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5918201C-C74B-4DD2-8B73-584C389F5453}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{5918201C-C74B-4DD2-8B73-584C389F5453}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{5918201C-C74B-4DD2-8B73-584C389F5453}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{5918201C-C74B-4DD2-8B73-584C389F5453}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{5918201C-C74B-4DD2-8B73-584C389F5453}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{5918201C-C74B-4DD2-8B73-584C389F5453}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{F57BB5FA-5D3D-4DE3-B7AC-119B4BBC63F3}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{F57BB5FA-5D3D-4DE3-B7AC-119B4BBC63F3}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
