@@ -162,7 +162,7 @@ namespace PigeonsAttack
 		
 		private void AddComponentDeviceAgnostic(Component c, float x, float y)
 		{
-#if WINDOWS_PHONE
+#if WINDOWS_PHONE || ANDROID
 			AddComponent(c, x, y);
 #else
 			AddComponent(c, DeviceAgnosticX(x), DeviceAgnosticY(y));
@@ -171,7 +171,7 @@ namespace PigeonsAttack
 		
 		private Vector2 DeviceAgnosticPosition(float x, float y)
 		{
-#if WINDOWS_PHONE
+#if WINDOWS_PHONE || ANDROID
 			return new Vector2(x, y);
 #else
 			return new Vector2(DeviceAgnosticX(x), DeviceAgnosticY(y));
@@ -180,7 +180,7 @@ namespace PigeonsAttack
 		
 		private float DeviceAgnosticX(float x)
 		{
-#if WINDOWS_PHONE
+#if WINDOWS_PHONE || ANDROID
 			return x;
 #else
 			return x + 81;

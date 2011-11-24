@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WP7TouchTales", "WP7TouchTales\WP7TouchTales.csproj", "{5BA7FFBF-FD25-4BBE-9CAB-989BEA194052}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WP7TouchTalesContent", "WP7TouchTalesContent\WP7TouchTalesContent.contentproj", "{277C2A2E-97ED-4C9B-819A-1B37668B15EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BA7FFBF-FD25-4BBE-9CAB-989BEA194052}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{5BA7FFBF-FD25-4BBE-9CAB-989BEA194052}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{5BA7FFBF-FD25-4BBE-9CAB-989BEA194052}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{5BA7FFBF-FD25-4BBE-9CAB-989BEA194052}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{5BA7FFBF-FD25-4BBE-9CAB-989BEA194052}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{5BA7FFBF-FD25-4BBE-9CAB-989BEA194052}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{277C2A2E-97ED-4C9B-819A-1B37668B15EC}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{277C2A2E-97ED-4C9B-819A-1B37668B15EC}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2713E36E-9E7C-4962-BB98-5E4B1CE38DD6}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShareTheBillAndroid2</RootNamespace>
+    <AssemblyName>ShareTheBill</AssemblyName>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE;ANDROID</DefineConstants>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Android\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;ANDROID</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Android\Release\</OutputPath>
+    <DefineConstants>TRACE;ANDROID</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="OpenTK">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syderis.CellSDK.Android.Common">
+      <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\Syderis.CellSDK.Android.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Syderis.CellSDK.Android.Core">
+      <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\Syderis.CellSDK.Android.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Syderis.CellSDK.Android.Launcher">
+      <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\Syderis.CellSDK.Android.Launcher.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\source\Application.cs">
+      <Link>Application.cs</Link>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <AndroidAsset Include="Assets\Content\Sounds\Writing.wav" />
+    <AndroidAsset Include="Assets\Content\Images\appBackground.jpg" />
+    <AndroidAsset Include="Assets\Content\Images\minusButtonPressed.png" />
+    <AndroidAsset Include="Assets\Content\Images\minusButtonReleased.png" />
+    <AndroidAsset Include="Assets\Content\Images\napkin.png" />
+    <AndroidAsset Include="Assets\Content\Images\pen.png" />
+    <AndroidAsset Include="Assets\Content\Images\plusButtonPressed.png" />
+    <AndroidAsset Include="Assets\Content\Images\plusButtonReleased.png" />
+    <AndroidAsset Include="Assets\Content\Skin\Skin.xml" />
+    <AndroidAsset Include="Assets\Content\Skin\skin_standart.png" />
+    <Content Include="Properties\AndroidManifest.xml" />
+    <AndroidResource Include="Resources\Drawable\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Fonts\LargeFontMonospaced.xnb" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Fonts\SmallFontMonospaced.xnb" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Skin\StandardFont.xnb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
