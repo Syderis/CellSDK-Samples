@@ -37,9 +37,6 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FarseerPhysics.Android">
-      <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\FarseerPhysics.Android.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="MonoGame.Framework">
       <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\MonoGame.Framework.dll</HintPath>
@@ -61,10 +58,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Sources\Application.cs">
+    <Compile Include="..\..\Sources\Application.cs">
       <Link>Application.cs</Link>
     </Compile>
-    <Compile Include="..\Sources\AudioLibrary.cs">
+    <Compile Include="..\..\Sources\AudioLibrary.cs">
       <Link>AudioLibrary.cs</Link>
     </Compile>
     <Compile Include="Program.cs" />
