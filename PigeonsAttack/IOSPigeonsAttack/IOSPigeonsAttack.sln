@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOSPigeonsAttack", "IOSPigeonsAttack\IOSPigeonsAttack.csproj", "{1ECD6290-A34E-4141-BCE7-F406197FB612}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1ECD6290-A34E-4141-BCE7-F406197FB612}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{1ECD6290-A34E-4141-BCE7-F406197FB612}.Debug|iPhone.Build.0 = Debug|iPhone
+		{1ECD6290-A34E-4141-BCE7-F406197FB612}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{1ECD6290-A34E-4141-BCE7-F406197FB612}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{1ECD6290-A34E-4141-BCE7-F406197FB612}.Release|iPhone.ActiveCfg = Release|iPhone
+		{1ECD6290-A34E-4141-BCE7-F406197FB612}.Release|iPhone.Build.0 = Release|iPhone
+		{1ECD6290-A34E-4141-BCE7-F406197FB612}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{1ECD6290-A34E-4141-BCE7-F406197FB612}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = IOSPigeonsAttack\IOSPigeonsAttack.csproj
+	EndGlobalSection
+EndGlobal
