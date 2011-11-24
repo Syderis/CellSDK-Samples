@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectGuid>{A5723F7D-C0EB-42B3-A199-18CFBC740388}</ProjectGuid>
@@ -68,7 +68,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Syderis.CellSDK.WindowsPhone.IO.AccelerometerSystem">
-      <HintPath>$(CellSDK)Versions\0.8\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.IO.AccelerometerSystem.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.0-alpha\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.IO.AccelerometerSystem.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Private>False</Private>
@@ -85,24 +85,23 @@
     <Reference Include="System.Net">
       <Private>False</Private>
     </Reference>
-    <Reference Include="FarseerPhysics.WindowsPhone">
-      <HintPath>$(CellSDK)Versions\0.8\WindowsPhone\Libraries\FarseerPhysics.WindowsPhone.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Syderis.CellSDK.WindowsPhone.Common">
-      <HintPath>$(CellSDK)Versions\0.8\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Common.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.0-alpha\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Syderis.CellSDK.WindowsPhone.Core">
-      <HintPath>$(CellSDK)Versions\0.8\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Core.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.0-alpha\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Syderis.CellSDK.WindowsPhone.Launcher">
-      <HintPath>$(CellSDK)Versions\0.8\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Launcher.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.0-alpha\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Launcher.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\Source\Application.cs">
+      <Link>Application.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="Properties\AppManifest.xml">
       <XnaPlatformSpecific>true</XnaPlatformSpecific>
@@ -111,7 +110,6 @@
       <XnaPlatformSpecific>true</XnaPlatformSpecific>
     </None>
     <Compile Include="Program.cs" />
-    <Compile Include="Application.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="GameThumbnail.png" />
