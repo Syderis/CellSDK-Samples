@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareTheBillWP7", "ShareTheBillWP7\ShareTheBillWP7\ShareTheBillWP7.csproj", "{8966142D-FD27-4532-9A96-0905667656D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareTheBillWP7Content", "ShareTheBillWP7\ShareTheBillWP7Content\ShareTheBillWP7Content.contentproj", "{4D0FA7D9-C791-4C35-95B5-432337AB846E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8966142D-FD27-4532-9A96-0905667656D5}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{8966142D-FD27-4532-9A96-0905667656D5}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{8966142D-FD27-4532-9A96-0905667656D5}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{8966142D-FD27-4532-9A96-0905667656D5}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{8966142D-FD27-4532-9A96-0905667656D5}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{8966142D-FD27-4532-9A96-0905667656D5}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{4D0FA7D9-C791-4C35-95B5-432337AB846E}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{4D0FA7D9-C791-4C35-95B5-432337AB846E}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

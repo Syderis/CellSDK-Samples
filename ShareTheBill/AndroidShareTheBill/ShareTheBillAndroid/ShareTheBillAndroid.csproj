@@ -48,9 +48,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FarseerPhysics.Android">
-      <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\FarseerPhysics.Android.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.Android">
       <Private>True</Private>
     </Reference>
