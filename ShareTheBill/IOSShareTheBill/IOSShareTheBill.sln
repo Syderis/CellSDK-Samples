@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareTheBill", "ShareTheBill.csproj", "{85EF8E6D-1C09-4799-8FCD-B23354CC18F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareTheBill", "IOSShareTheBill\ShareTheBill.csproj", "{85EF8E6D-1C09-4799-8FCD-B23354CC18F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +21,6 @@ Global
 		{85EF8E6D-1C09-4799-8FCD-B23354CC18F7}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = ShareTheBill.csproj
+		StartupItem = IOSShareTheBill\ShareTheBill.csproj
 	EndGlobalSection
 EndGlobal
