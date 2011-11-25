@@ -75,7 +75,7 @@
       <HintPath>\Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.IO.AccelerometerSystem.dll</HintPath>
     </Reference>
     <Reference Include="MonoGame.Framework">
-      <HintPath>/Library\Frameworks\CellSDK.framework\Libraries\MonoGame.Framework.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Libraries\MonoGame.Framework.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +91,9 @@
     <Content Include="Content\Skin\skin_standart.png" />
     <Content Include="Content\Skin\Skin.xml" />
     <Content Include="Content\Skin\StandardFont.xnb" />
+    <Content Include="App_Icon_57x57.png" />
+    <Content Include="App_Icon_72x72.png" />
+    <Content Include="App_Icon_114x114.png" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
