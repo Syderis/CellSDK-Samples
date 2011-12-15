@@ -24,7 +24,6 @@ namespace ScreenManager
         private ScreenManager manager;
         private ContentManager content;
         private Image iBackground, iBack, iBack_Pressed;
-        private Label lblBackground;
         private Button bBack;
         
         #endregion
@@ -58,8 +57,7 @@ namespace ScreenManager
         
 
         public void ClearScreen()
-        {
-            manager.RemoveComponent(lblBackground);
+        {            
             manager.RemoveComponent(bBack);
             content.Unload();
         }

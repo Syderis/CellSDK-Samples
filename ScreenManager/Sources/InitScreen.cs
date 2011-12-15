@@ -20,7 +20,6 @@ namespace ScreenManager
         private ScreenManager manager;
         private ContentManager content;
         private Image iBackground, iStart, iStart_pressed, iOptions, iOptions_pressed, iExit, iExit_pressed;
-        private Label lblBackground;
         private Button bStart, bOptions, bExit;
 
         #endregion
@@ -69,8 +68,7 @@ namespace ScreenManager
         {
             manager.RemoveComponent(bStart);
             manager.RemoveComponent(bOptions);
-            manager.RemoveComponent(bExit);
-            manager.RemoveComponent(lblBackground);
+            manager.RemoveComponent(bExit);            
             content.Unload();
         }
 
