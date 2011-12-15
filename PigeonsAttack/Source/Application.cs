@@ -103,7 +103,10 @@ namespace PigeonsAttack
             AddComponentDeviceAgnostic(cCar, 24, 11);
 
             if (AccelerometerSensor.Instance.IsConnected)
+            {
                 accelerometerDetected = true;
+                AccelerometerSensor.Instance.Start();
+            }
 
             #region Shits
             Image iShit = iSpriteSheet.SubImage(0, 321, 44, 23);
