@@ -75,7 +75,7 @@
       <HintPath>\Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.IO.AccelerometerSystem.dll</HintPath>
     </Reference>
     <Reference Include="MonoGame.Framework">
-      <HintPath>..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Libraries\MonoGame.Framework.dll</HintPath>
+      <HintPath>/Library\Frameworks\CellSDK.framework\Libraries\MonoGame.Framework.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
