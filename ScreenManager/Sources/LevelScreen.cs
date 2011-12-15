@@ -45,15 +45,13 @@ namespace ScreenManager
             iBack_Pressed = Image.CreateImage("Level/bt_back_pressed", ref content);
 
             //Sets the background:
-            lblBackground = new Label(iBackground);
-            lblBackground.BringToFront = false;
+            manager.App.SetBackground(iBackground, MobileApplication.Adjustment.CENTER);
 
             //CreateButton
             bBack = new Button(iBack, iBack_Pressed);
             bBack.Released += new Component.ComponentEventHandler(bBack_Released);
             
-            //Add components to the screen
-            manager.AddComponent(lblBackground, 0, 0);
+            //Add components to the screen            
             manager.AddComponent(bBack, 105, 97);
         }
 

@@ -44,8 +44,7 @@ namespace ScreenManager
             iExit_pressed = Image.CreateImage("title/bt_exit_pressed", ref content);
 
             //Sets the background:
-            lblBackground = new Label(iBackground);
-            lblBackground.BringToFront = false;
+            manager.App.SetBackground(iBackground, MobileApplication.Adjustment.CENTER);
 
             //Create the buttons
             bStart = new Button(iStart, iStart_pressed);
@@ -55,8 +54,7 @@ namespace ScreenManager
             bExit = new Button(iExit, iExit_pressed);
             bExit.Released += new Component.ComponentEventHandler(bExit_Released);
 
-            //Add components to the screen
-            manager.AddComponent(lblBackground, 0, 0);
+            //Add components to the screen            
             manager.AddComponent(bStart, 250, 166);
             manager.AddComponent(bOptions, 178, 99);
             manager.AddComponent(bExit, 104, 232);
