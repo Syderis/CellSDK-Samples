@@ -14,6 +14,8 @@ namespace ScreenManager
             Application application = new Application();
             base.Application = application;
             base.Initialize();
+
+            FramesPerSecond = 50;
         }
     }
 }

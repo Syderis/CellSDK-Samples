@@ -12,6 +12,7 @@ namespace AddsAndSubs
         protected override void Initialize()
         {
             Application application = new Application();
+            FramesPerSecond = 50;
             base.Application = application;
             base.Initialize();
         }

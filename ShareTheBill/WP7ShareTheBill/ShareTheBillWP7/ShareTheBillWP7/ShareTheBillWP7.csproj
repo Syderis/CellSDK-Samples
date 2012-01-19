@@ -25,6 +25,7 @@
     </SupportedCultures>
     <ApplicationIcon>Game.ico</ApplicationIcon>
     <Thumbnail>GameThumbnail.png</Thumbnail>
+    <XnaRefreshLevel>1</XnaRefreshLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Windows Phone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,9 +51,6 @@
     <XnaCompressContent>false</XnaCompressContent>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FarseerPhysics.WindowsPhone">
-      <HintPath>$(CellSDK)Versions\1.0-alpha\WindowsPhone\Libraries\FarseerPhysics.WindowsPhone.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Xna.Framework">
       <Private>False</Private>
     </Reference>
@@ -71,14 +69,20 @@
     <Reference Include="mscorlib">
       <Private>False</Private>
     </Reference>
-    <Reference Include="Syderis.CellSDK.WindowsPhone.Common">
-      <HintPath>$(CellSDK)Versions\1.0-alpha\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Common.dll</HintPath>
+    <Reference Include="Syderis.CellSDK.WindowsPhone.Advertising">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Syderis\CellSDK.framework\Versions\1.0\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Advertising.dll</HintPath>
     </Reference>
-    <Reference Include="Syderis.CellSDK.WindowsPhone.Core">
-      <HintPath>$(CellSDK)Versions\1.0-alpha\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Core.dll</HintPath>
+    <Reference Include="Syderis.CellSDK.WindowsPhone.Common, Version=1.0.0.26983, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Syderis\CellSDK.framework\Versions\1.0\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Syderis.CellSDK.WindowsPhone.Launcher">
-      <HintPath>$(CellSDK)Versions\1.0-alpha\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Launcher.dll</HintPath>
+    <Reference Include="Syderis.CellSDK.WindowsPhone.Core, Version=1.0.0.26985, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Syderis\CellSDK.framework\Versions\1.0\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Syderis.CellSDK.WindowsPhone.Launcher, Version=1.0.0.26986, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Syderis\CellSDK.framework\Versions\1.0\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Launcher.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Private>False</Private>

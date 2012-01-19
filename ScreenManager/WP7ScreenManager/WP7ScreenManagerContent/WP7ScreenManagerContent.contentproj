@@ -42,13 +42,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="$(CellSDK)Versions\1.0-alpha\Common\Skins\Default\Skin.xml">
-      <Link>Skin\Skin.xml</Link>
-      <Name>Skin</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Compile Include="title\background_titlepage.png">
       <Name>background_titlepage</Name>
       <Importer>TextureImporter</Importer>
@@ -116,20 +109,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="$(CellSDK)Versions\1.0-alpha\Common\Skins\Default\StandardFont.spritefont">
-      <Link>Skin\StandardFont.spritefont</Link>
-      <Name>StandardFont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-    </Compile>
+    <Content Include="Skin\DefaultSkinFont.xnb">
+      <Name>DefaultSkinFont</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="$(CellSDK)Versions\1.0-alpha\Common\Skins\Default\skin_standart.png">
-      <Link>Skin\skin_standart.png</Link>
-      <Name>skin_standart</Name>
+    <Compile Include="Skin\DefaultSkinSpriteSheet.png">
+      <Name>DefaultSkinSpriteSheet</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Content Include="Skin\Skin.xml">
+      <Name>Skin</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 
