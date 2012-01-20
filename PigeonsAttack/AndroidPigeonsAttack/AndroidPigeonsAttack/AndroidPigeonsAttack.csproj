@@ -54,7 +54,7 @@
       <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\Syderis.CellSDK.Android.Core.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.Android.IO.AccelerometerSystem">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files\Syderis\CellSDK.framework\Versions\1.0-alpha\Android\Libraries\Syderis.CellSDK.Android.IO.AccelerometerSystem.dll</HintPath>
+      <HintPath>..\$(CellSDK)Versions\1.0\Android\Libraries\Syderis.CellSDK.Android.IO.AccelerometerSystem.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.Android.Launcher">
       <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\Syderis.CellSDK.Android.Launcher.dll</HintPath>
