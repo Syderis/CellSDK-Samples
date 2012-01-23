@@ -12,6 +12,7 @@
 	<key>UIDeviceFamily</key>
 	<array>
 		<string>1</string>
+		<string>2</string>
 	</array>
 </dict>
 </plist>
