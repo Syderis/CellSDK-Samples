@@ -1,20 +1,15 @@
-using System;
-
+#region Using Statements
 using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-
+using Microsoft.Xna.Framework;
 using Syderis.CellSDK.Android.Launcher;
-using Syderis.CellSDK.Core;
 using Syderis.CellSDK.Common;
+#endregion 
 
 namespace AddsAndSubs
 {
     [Activity(Label = "AddsAndSubsAndroid", MainLauncher = true, Icon = "@drawable/icon")]
-    public class Program : Activity
+    public class Program : AndroidGameActivity
     {
         public static Program Instance;
 
@@ -25,6 +20,7 @@ namespace AddsAndSubs
         {
             base.OnCreate(savedInstanceState);
 
+            Kernel.Activity = this;
             Kernel view = new Kernel(this);
             SetContentView(view.Window);
 
