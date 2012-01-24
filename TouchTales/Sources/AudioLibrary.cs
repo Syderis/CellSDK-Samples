@@ -4,11 +4,6 @@
  */
 
 #region Using Statements
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Syderis.CellSDK.Core.Sounds; 
 #endregion
 
@@ -65,31 +60,31 @@ namespace TouchyTales
 	        {
 		        case SBALL:
                     if (sounds[SBALL] == null)
-                        sounds[SBALL] = Sound.CreateSound(path + "audio_bola_arbol").CreateInstance();
+                        sounds[SBALL] = Sound.CreateSound(path + "Treeball").CreateInstance();
                  break;                
                 case SROPE:
                  if (sounds[SROPE] == null)
-                     sounds[SROPE] = Sound.CreateSound(path + "audio_cuerda_cort").CreateInstance();
+                     sounds[SROPE] = Sound.CreateSound(path + "RopeShort").CreateInstance();
                  break;
                 case SDOLL1:
                  if (sounds[SDOLL1] == null)
-                     sounds[SDOLL1] = Sound.CreateSound(path + "audio_muñeca_love").CreateInstance();
+                     sounds[SDOLL1] = Sound.CreateSound(path + "DollLove").CreateInstance();
                  break;
                 case SDOLL2:
                  if (sounds[SDOLL2] == null)
-                     sounds[SDOLL2] = Sound.CreateSound(path + "audio_risa_muñeca").CreateInstance();
+                     sounds[SDOLL2] = Sound.CreateSound(path + "DollLaught").CreateInstance();
                  break;
                 case SPIPIN:
                  if (sounds[SPIPIN] == null)
-                     sounds[SPIPIN] = Sound.CreateSound(path + "audio_pajaro").CreateInstance();
+                     sounds[SPIPIN] = Sound.CreateSound(path + "Bird").CreateInstance();
                  break;
                 case STRAIN:
                  if (sounds[STRAIN] == null)
-                     sounds[STRAIN] = Sound.CreateSound(path + "audio_tren_juguete").CreateInstance();
+                     sounds[STRAIN] = Sound.CreateSound(path + "ToyTrain").CreateInstance();
                  break;
                 case SBALL2:
                  if (sounds[SBALL2] == null)
-                     sounds[SBALL2] = Sound.CreateSound(path + "audio_pelota").CreateInstance();
+                     sounds[SBALL2] = Sound.CreateSound(path + "Ball").CreateInstance();
                  break;
             }
 

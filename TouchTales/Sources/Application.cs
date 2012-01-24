@@ -6,15 +6,15 @@
  * 
  */
 
-
+#region Using Statements
 using System;
-
 using Syderis.CellSDK.Core;
 using Syderis.CellSDK.Core.Controls;
 using Microsoft.Xna.Framework;
 using Syderis.CellSDK.Core.Graphics;
 using Syderis.CellSDK.Core.Animations;
 using Syderis.CellSDK.Common;
+#endregion
 
 namespace TouchyTales
 {
@@ -28,7 +28,7 @@ namespace TouchyTales
         private Label doll, rope, ball, orangeBall, purpleBall, blueBall, redBall, greenBall, lpipin, train;
         private Animation atrain, aball, arope;
         private StripAnimation anim_pipin, anim_ball;
-     //   private AudioLibrary audioLibrary;
+        private AudioLibrary audioLibrary;
         private Image itrain_on, itrain_off;
         private Random random;
         #endregion
@@ -42,7 +42,7 @@ namespace TouchyTales
             base.Initialize();
 
             random = new Random();
-       //     audioLibrary = AudioLibrary.GetInstance();
+            audioLibrary = AudioLibrary.GetInstance();
 
             SetBackground(Image.CreateImage(imagePath + "bg"), Adjustment.NONE);            
 
@@ -188,7 +188,7 @@ namespace TouchyTales
         /// </summary>
         public override void Dispose()
         {
-       //     audioLibrary.Dispose();
+            audioLibrary.Dispose();
             if (atrain != null)
             {
                 atrain.Dispose();
@@ -221,7 +221,7 @@ namespace TouchyTales
         /// <param name="source"></param>
         void ball_Released(Component source)
         {
-           // audioLibrary.Play(AudioLibrary.SBALL2);
+            audioLibrary.Play(AudioLibrary.SBALL2);
             anim_ball.Play();
         }
 
@@ -231,7 +231,7 @@ namespace TouchyTales
         /// <param name="source"></param>
         void lpipin_Released(Component source)
         {
-          //  audioLibrary.Play(AudioLibrary.SPIPIN);
+            audioLibrary.Play(AudioLibrary.SPIPIN);
             anim_pipin.Play();
         }
 
@@ -243,7 +243,7 @@ namespace TouchyTales
         {
             if (arope.State != AnimationState.Playing)
             {
-          //      audioLibrary.Play(AudioLibrary.SROPE);
+                audioLibrary.Play(AudioLibrary.SROPE);
                 arope.Play(rope);
             }
         }
@@ -254,11 +254,11 @@ namespace TouchyTales
         /// <param name="animation"></param>
         void arope_KeyEvent(Animation animation)
         {
-            //int r = random.Next(0, 100);
-            //if (r < 51)
-            //    audioLibrary.Play(AudioLibrary.SDOLL2);
-            //else
-            //    audioLibrary.Play(AudioLibrary.SDOLL1);
+            int r = random.Next(0, 100);
+            if (r < 51)
+                audioLibrary.Play(AudioLibrary.SDOLL2);
+            else
+                audioLibrary.Play(AudioLibrary.SDOLL1);
         }
 
         /// <summary>
@@ -267,7 +267,7 @@ namespace TouchyTales
         /// <param name="source"></param>
         void Ball_Released(Component source)
         {
-        //    audioLibrary.Play(AudioLibrary.SBALL);
+            audioLibrary.Play(AudioLibrary.SBALL);
             aball.Play(source);
         }
 
@@ -277,7 +277,7 @@ namespace TouchyTales
         /// <param name="source"></param>
         void train_Released(Component source)
         {
-        //    audioLibrary.Play(AudioLibrary.STRAIN);
+            audioLibrary.Play(AudioLibrary.STRAIN);
             train.Image = itrain_on;
             atrain.Play(train);
         }
@@ -289,7 +289,7 @@ namespace TouchyTales
         void atrain_EndEvent(Animation animation)
         {
             train.Image = itrain_off;
-         //   audioLibrary.Stop(AudioLibrary.STRAIN);
+            audioLibrary.Stop(AudioLibrary.STRAIN);
         }
 
        
