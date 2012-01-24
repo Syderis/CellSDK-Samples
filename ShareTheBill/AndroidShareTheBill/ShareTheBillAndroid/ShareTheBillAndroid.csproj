@@ -19,6 +19,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <AndroidLinkMode>None</AndroidLinkMode>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <DeployExternal>False</DeployExternal>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,10 +30,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidApplication>true</AndroidApplication>
-    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -42,30 +44,31 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidApplication>true</AndroidApplication>
-    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android">
       <Private>True</Private>
     </Reference>
     <Reference Include="MonoGame.Framework">
-      <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\MonoGame.Framework.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="OpenTK">
       <Private>True</Private>
     </Reference>
     <Reference Include="Syderis.CellSDK.Android.Common">
-      <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\Syderis.CellSDK.Android.Common.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\Syderis.CellSDK.Android.Common.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.Android.Core">
-      <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\Syderis.CellSDK.Android.Core.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\Syderis.CellSDK.Android.Core.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.Android.Launcher">
-      <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\Syderis.CellSDK.Android.Launcher.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\Syderis.CellSDK.Android.Launcher.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
