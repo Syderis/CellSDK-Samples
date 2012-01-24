@@ -23,8 +23,9 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -34,26 +35,27 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FarseerPhysics.Android">
-      <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\FarseerPhysics.Android.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\FarseerPhysics.Android.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="MonoGame.Framework">
-      <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\MonoGame.Framework.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK" />
     <Reference Include="mscorlib" />
     <Reference Include="Syderis.CellSDK.Android.Common">
-      <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\Syderis.CellSDK.Android.Common.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\Syderis.CellSDK.Android.Common.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.Android.Core">
-      <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\Syderis.CellSDK.Android.Core.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\Syderis.CellSDK.Android.Core.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.Android.Launcher">
-      <HintPath>$(CellSDK)Versions\1.0-alpha\Android\Libraries\Syderis.CellSDK.Android.Launcher.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\Syderis.CellSDK.Android.Launcher.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

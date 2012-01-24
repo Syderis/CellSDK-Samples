@@ -3,13 +3,7 @@
  * Use is subject to license terms.
  */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Syderis.CellSDK.Core;
-using Syderis.CellSDK.Core.Controls;
 
 namespace ScreenManager
 {

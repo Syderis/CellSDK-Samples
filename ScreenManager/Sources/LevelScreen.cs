@@ -2,10 +2,6 @@
  * Copyright 2011 Syderis Technologies S.L. All rights reserved.
  * Use is subject to license terms.
  */
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Microsoft.Xna.Framework.Content;
 using Syderis.CellSDK.Core.Graphics;
 using Syderis.CellSDK.Core.Controls;
