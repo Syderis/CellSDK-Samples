@@ -1,13 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+#region Using Statements
 using Microsoft.Xna.Framework;
-
 using Syderis.CellSDK.Core.Controls;
-using Syderis.CellSDK.Core.Layouts;
 using Syderis.CellSDK.Core.Graphics;
+using Syderis.CellSDK.Core.Layouts;
+#endregion
 
 namespace GamePad
 {
