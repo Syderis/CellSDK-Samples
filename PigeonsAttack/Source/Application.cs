@@ -1,16 +1,13 @@
+#region Using Statements
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Microsoft.Xna.Framework;
-
 using Syderis.CellSDK.Core;
+using Syderis.CellSDK.Core.Animations;
 using Syderis.CellSDK.Core.Controls;
 using Syderis.CellSDK.Core.Graphics;
 using Syderis.CellSDK.Core.Layouts;
 using Syderis.CellSDK.IO.AccelerometerSystem;
-using Syderis.CellSDK.Core.Animations;
+#endregion
 
 namespace PigeonsAttack
 {
