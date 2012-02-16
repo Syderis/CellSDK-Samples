@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WP7ImageLoader", "WP7ImageLoader\WP7ImageLoader.csproj", "{62C559F7-2065-4F18-9DF0-E219FB010699}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WP7ImageLoaderContent", "WP7ImageLoaderContent\WP7ImageLoaderContent.contentproj", "{8DF09D6A-3031-4B13-B934-CBAEA77420C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62C559F7-2065-4F18-9DF0-E219FB010699}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{62C559F7-2065-4F18-9DF0-E219FB010699}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{62C559F7-2065-4F18-9DF0-E219FB010699}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{62C559F7-2065-4F18-9DF0-E219FB010699}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{62C559F7-2065-4F18-9DF0-E219FB010699}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{62C559F7-2065-4F18-9DF0-E219FB010699}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{8DF09D6A-3031-4B13-B934-CBAEA77420C0}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{8DF09D6A-3031-4B13-B934-CBAEA77420C0}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

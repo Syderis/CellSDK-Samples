@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7D9DC059-8704-43CC-A961-1B88D02C0037}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>IOSTwitterSearch</RootNamespace>
+    <AssemblyName>IOSTwitterSearch</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;IPHONE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchProfiling>true</MtouchProfiling>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <DefineConstants>IPHONE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;IPHONE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchProfiling>true</MtouchProfiling>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DefineConstants>IPHONE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="OpenTK" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="MonoGame.Framework">
+      <HintPath>/Library\Frameworks\CellSDK.framework\Libraries\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Syderis.CellSDK.IOS.Common">
+      <HintPath>/Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Syderis.CellSDK.IOS.Core">
+      <HintPath>/Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Syderis.CellSDK.IOS.Launcher">
+      <HintPath>/Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.Launcher.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="..\..\Sources\Application.cs">
+      <Link>Application.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Sources\TwitterListItem.cs">
+      <Link>TwitterListItem.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Icon_57x57.png" />
+    <Content Include="App_Icon_72x72.png" />
+    <Content Include="App_Icon_114x114.png" />
+    <Content Include="Content\Skin\DefaultSkinSpriteSheet.png" />
+    <Content Include="Content\Skin\Skin.xml" />
+    <Content Include="Content\Skin\DefaultSkinFont.xnb" />
+    <Content Include="Content\Resources\bg_photo.png" />
+    <Content Include="Content\Resources\bg_tweet.png" />
+    <Content Include="Content\Resources\bt_search.png" />
+    <Content Include="Content\Resources\bt_search_press.png" />
+    <Content Include="Content\Resources\top_search.png" />
+    <Content Include="Content\Resources\bg.jpg" />
+    <Content Include="Content\Resources\TweetFont.xnb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOSTwitterSearch", "IOSTwitterSearch\IOSTwitterSearch.csproj", "{7D9DC059-8704-43CC-A961-1B88D02C0037}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D9DC059-8704-43CC-A961-1B88D02C0037}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{7D9DC059-8704-43CC-A961-1B88D02C0037}.Debug|iPhone.Build.0 = Debug|iPhone
+		{7D9DC059-8704-43CC-A961-1B88D02C0037}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{7D9DC059-8704-43CC-A961-1B88D02C0037}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{7D9DC059-8704-43CC-A961-1B88D02C0037}.Release|iPhone.ActiveCfg = Release|iPhone
+		{7D9DC059-8704-43CC-A961-1B88D02C0037}.Release|iPhone.Build.0 = Release|iPhone
+		{7D9DC059-8704-43CC-A961-1B88D02C0037}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{7D9DC059-8704-43CC-A961-1B88D02C0037}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = IOSTwitterSearch\IOSTwitterSearch.csproj
+	EndGlobalSection
+EndGlobal
