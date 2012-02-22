@@ -39,8 +39,8 @@ namespace TwitterSearch
         private ListBox listBox;
         private TextArea searchTextArea;
         private Button searchButton;
-        private bool requestFlag;
-        private Stream result;
+        //private bool requestFlag;
+        //private Stream result;
         private WebClient client;
         #endregion
 
@@ -60,18 +60,19 @@ namespace TwitterSearch
             searchTextArea.BackgroundImage = ResourceManager.CreateImage("Resources/top_search");
             searchTextArea.Padding = new Padding(25, 0, 0, 30);
             searchTextArea.Size = new Vector2(searchTextArea.BackgroundImage.Size.X, searchTextArea.BackgroundImage.Size.Y);
-            AddComponent(this.searchTextArea, Preferences.Width / 2 - searchTextArea.Size.X / 2, 0);
+            //AddComponent(this.searchTextArea, Preferences.Width / 2 - searchTextArea.Size.X / 2, 0);
+			AddComponent(searchTextArea,securityZone.X / 2 - searchTextArea.Size.X / 2,top);
 
             //Search Button
             searchButton = new Button(ResourceManager.CreateImage("Resources/bt_search"), ResourceManager.CreateImage("Resources/bt_search_press"));
             searchButton.Align = Label.AlignType.MIDDLECENTER;
             searchButton.Pressed -= HandleButtonPressed;
             searchButton.Pressed += new Component.ComponentEventHandler(HandleButtonPressed);
-            AddComponent(this.searchButton, 414 + offset.X, 13);
+            AddComponent(this.searchButton, 414 + offset.X, top+13);
 
             //Listbox
             listBox = new ListBox(Preferences.Width, (Preferences.Height - BUTTON_HEIGHT - SPACING), ListBox.Orientation.VERTICAL);
-            AddComponent(this.listBox, offset.X, searchTextArea.Position.Y + searchTextArea.Size.Y);
+            AddComponent(this.listBox, offset.X, top+searchTextArea.Position.Y + searchTextArea.Size.Y);
 
             // Set the response handler and send the request
             client = new WebClient();
