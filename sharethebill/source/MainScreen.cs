@@ -9,7 +9,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Syderis.CellSDK.Core.Screens;
-using System.Xml.Linq;
 using Syderis.CellSDK.Core.Controls;
 using System.Xml.Serialization;
 using Syderis.CellSDK.Core.Storage;
@@ -18,7 +17,8 @@ using Syderis.CellSDK.Core.Animations;
 using Microsoft.Xna.Framework;
 using Syderis.CellSDK.Core.Graphics;
 using Syderis.CellSDK.Common;
-using Syderis.CellSDK.Core.Sounds; 
+using Syderis.CellSDK.Core.Sounds;
+using System.Globalization; 
 #endregion
 
 namespace ShareBill
@@ -117,7 +117,9 @@ namespace ShareBill
             this.morePressed = false;
             this.interval = 0;
             this.gap = 500;
-            this.lTotal.Text = string.Format("{0:f2}", this.total / (float)this.heads);
+			
+			//Use a culture info that uses comma to separate decimal digits (es for instance)
+            this.lTotal.Text = string.Format(CultureInfo.GetCultureInfo("es-es"), "{0:f2}", this.total / (float)this.heads);
         }
 
         /// <summary>

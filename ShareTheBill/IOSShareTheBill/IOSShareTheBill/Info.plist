@@ -8,10 +8,12 @@
 		<string>shareBill114x114.png</string>
 		<string>shareBill72x72.png</string>
 	</array>
+	<key>MinimumOSVersion</key>
+	<string>4.2</string>
 	<key>UIDeviceFamily</key>
 	<array>
-		<string>1</string>
-		<string>2</string>
+		<integer>1</integer>
+		<integer>2</integer>
 	</array>
 </dict>
 </plist>
