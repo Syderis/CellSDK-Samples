@@ -40,22 +40,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FarseerPhysics.Android">
-      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\FarseerPhysics.Android.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.1\Android\Libraries\FarseerPhysics.Android.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="MonoGame.Framework">
-      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\MonoGame.Framework.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.1\Android\Libraries\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK" />
     <Reference Include="mscorlib" />
     <Reference Include="Syderis.CellSDK.Android.Common">
-      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\Syderis.CellSDK.Android.Common.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.1\Android\Libraries\Syderis.CellSDK.Android.Common.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.Android.Core">
-      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\Syderis.CellSDK.Android.Core.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.1\Android\Libraries\Syderis.CellSDK.Android.Core.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.Android.Launcher">
-      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\Syderis.CellSDK.Android.Launcher.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.1\Android\Libraries\Syderis.CellSDK.Android.Launcher.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -63,23 +63,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\Sources\AdjustedScreen.cs">
+      <Link>AdjustedScreen.cs</Link>
+    </Compile>
     <Compile Include="..\..\Sources\Application.cs">
       <Link>Application.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Sources\InitScreen.cs">
-      <Link>InitScreen.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Sources\IScreen.cs">
-      <Link>IScreen.cs</Link>
     </Compile>
     <Compile Include="..\..\Sources\LevelScreen.cs">
       <Link>LevelScreen.cs</Link>
     </Compile>
+    <Compile Include="..\..\Sources\MainScreen.cs">
+      <Link>MainScreen.cs</Link>
+    </Compile>
     <Compile Include="..\..\Sources\OptionsScreen.cs">
       <Link>OptionsScreen.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Sources\ScreenManager.cs">
-      <Link>ScreenManager.cs</Link>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
