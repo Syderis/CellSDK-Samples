@@ -9,7 +9,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Syderis.CellSDK.Core.Screens;
-using System.Xml.Linq;
 using Syderis.CellSDK.Core.Controls;
 using System.Xml.Serialization;
 using Syderis.CellSDK.Core.Storage;
@@ -23,7 +22,7 @@ using Syderis.CellSDK.IO.AccelerometerSystem;
 
 namespace PigeonsAttack
 {
-    public class MainScreen: Screen
+    public class MainScreen: AdjustedScreen
     {
         #region Variables
         private TimeSpan PLAYING_TIME = TimeSpan.FromSeconds(60);
@@ -63,13 +62,14 @@ namespace PigeonsAttack
             base.Initialize();
 
             // Background
-            Label lBackground = new Label(ResourceManager.CreateImage("Images/background_ios"))
+            /*Label lBackground = new Label(ResourceManager.CreateImage("Images/background_ios"))
             {
                 Pivot = Vector2.One / 2,
                 BringToFront = false
             };
-            AddComponent(lBackground, Preferences.Width / 2, Preferences.Height / 2);
-
+            AddComponent(lBackground, Preferences.Width / 2, Preferences.Height / 2);*/
+			SetBackground(ResourceManager.CreateImage("Images/background_ios"), Screen.Adjustment.CENTER);
+			
             // Sprite sheet image
             Image iSpriteSheet = ResourceManager.CreateImage("Images/spritesheet");
 
@@ -89,11 +89,11 @@ namespace PigeonsAttack
             lPigeons[3] = new Label(iPigeonLookingAtLeft);
             lPigeons[4] = new Label(iPigeonLookingAtRight);
 
-            AddComponentDeviceAgnostic(lPigeons[0], 401, 79);
-            AddComponentDeviceAgnostic(lPigeons[1], 398, 207);
-            AddComponentDeviceAgnostic(lPigeons[2], 397, 345);
-            AddComponentDeviceAgnostic(lPigeons[3], 397, 495);
-            AddComponentDeviceAgnostic(lPigeons[4], 406, 634);
+            AddComponent(lPigeons[0], 401, 79);
+            AddComponent(lPigeons[1], 398, 207);
+            AddComponent(lPigeons[2], 397, 345);
+            AddComponent(lPigeons[3], 397, 495);
+            AddComponent(lPigeons[4], 406, 634);
 
             // Car component
             cCar = new Container<CoordLayout>(new CoordLayout())
@@ -110,7 +110,7 @@ namespace PigeonsAttack
             cCar.Layout.AddComponent(lLeftTire, 0, 44);
             lRightTire = new Label(iTire);
             cCar.Layout.AddComponent(lRightTire, 0, 137);
-            AddComponentDeviceAgnostic(cCar, 24, 11);
+            AddComponent(cCar, 24, 11);
 
             if (AccelerometerSensor.Instance.IsConnected)
             {
@@ -126,10 +126,10 @@ namespace PigeonsAttack
             lShit.Visible = false;
 
             shitPositions = new Vector2[5];
-            shitPositions[0] = DeviceAgnosticPosition(390, 124);
-            shitPositions[2] = DeviceAgnosticPosition(390, 356);
-            shitPositions[3] = DeviceAgnosticPosition(389, 540);
-            shitPositions[4] = DeviceAgnosticPosition(403, 647);
+            shitPositions[0] = new Vector2(390, 124) + adjust;
+            shitPositions[2] = new Vector2(390, 356) + adjust;
+            shitPositions[3] = new Vector2(389, 540) + adjust;
+            shitPositions[4] = new Vector2(403, 647) + adjust;
 
             elapsedTimeBetweenShits = TimeSpan.Zero;
 
@@ -145,11 +145,11 @@ namespace PigeonsAttack
 
             // Semaphore lights
             lRed = new Label(iSpriteSheet.SubImage(0, 346, 28, 32));
-            AddComponentDeviceAgnostic(lRed, 265, 716);
+            AddComponent(lRed, 265, 716);
             lAmber = new Label(iSpriteSheet.SubImage(123, 240, 27, 32));
-            AddComponentDeviceAgnostic(lAmber, 238, 715);
+            AddComponent(lAmber, 238, 715);
             lGreen = new Label(iSpriteSheet.SubImage(69, 293, 27, 33));
-            AddComponentDeviceAgnostic(lGreen, 212, 717);
+            AddComponent(lGreen, 212, 717);
             lAmber.Visible = lGreen.Visible = false;
 
             // This var will hold the playing time
@@ -161,16 +161,16 @@ namespace PigeonsAttack
 #endif
 
             impacts = 0;
-            minClamp = DeviceAgnosticY(11);
+            minClamp = 11;
             // The car won't overpass the semaphore until it turns green
-            maxClamp = DeviceAgnosticY(545);
+            maxClamp = 545;
 
             Font fImpacts = ResourceManager.CreateFont("Fonts/spritefont_0_9");
             lImpacts = new Label("0", Color.White, Color.Transparent) { Font = fImpacts, Rotation = MathHelper.PiOver2 };
-            AddComponentDeviceAgnostic(lImpacts, 312, 107);
+            AddComponent(lImpacts, 312, 107);
             lImpacts.Visible = false;
             lImpactsBrand = new Label(iSpriteSheet.SubImage(166, 0, 130, 492));
-            AddComponentDeviceAgnostic(lImpactsBrand, 175, 201);
+            AddComponent(lImpactsBrand, 175, 201);
             lImpactsBrand.Visible = false;
         }
 
@@ -207,7 +207,7 @@ namespace PigeonsAttack
                 lGreen.Visible = true;
                 isGreen = true;
                 // This will allow the car to exit through the right side of the screen
-                maxClamp = DeviceAgnosticY(1000);
+                maxClamp = Preferences.Height + 200;
             }
 
             #region Shits
@@ -244,44 +244,6 @@ namespace PigeonsAttack
         public override void BackButtonPressed()
         {
             base.BackButtonPressed();
-        } 
-        #endregion
-
-        #region Private Methods
-        private void AddComponentDeviceAgnostic(Component c, float x, float y)
-        {
-#if WINDOWS_PHONE || ANDROID
-            AddComponent(c, x, y);
-#else
-			AddComponent(c, DeviceAgnosticX(x), DeviceAgnosticY(y));
-#endif
-        }
-
-        private Vector2 DeviceAgnosticPosition(float x, float y)
-        {
-#if WINDOWS_PHONE || ANDROID
-            return new Vector2(x, y);
-#else
-			return new Vector2(DeviceAgnosticX(x), DeviceAgnosticY(y));
-#endif
-        }
-
-        private float DeviceAgnosticX(float x)
-        {
-#if WINDOWS_PHONE || ANDROID
-            return x;
-#else
-			return x + 81;
-#endif
-        }
-
-        private float DeviceAgnosticY(float y)
-        {
-#if WINDOWS_PHONE
-            return y;
-#else
-			return y + 79;
-#endif
         } 
         #endregion
     }

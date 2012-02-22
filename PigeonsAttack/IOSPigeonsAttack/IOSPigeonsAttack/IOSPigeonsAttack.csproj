@@ -75,13 +75,19 @@
       <HintPath>\Library\Frameworks\CellSDK.framework\Libraries\Syderis.CellSDK.IOS.IO.AccelerometerSystem.dll</HintPath>
     </Reference>
     <Reference Include="MonoGame.Framework">
-      <HintPath>/Library\Frameworks\CellSDK.framework\Libraries\MonoGame.Framework.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Library\Frameworks\CellSDK.framework\Libraries\MonoGame.Framework.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="..\..\Source\Application.cs">
       <Link>Application.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Source\MainScreen.cs">
+      <Link>MainScreen.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Source\AdjustedScreen.cs">
+      <Link>AdjustedScreen.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>
