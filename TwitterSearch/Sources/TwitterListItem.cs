@@ -128,17 +128,17 @@ namespace TwitterSearch
             //Creation of the label containing the tweet message
             string formattedText = this.FormatText(Text, LINE_CHARS);
             Label contentLabel = new Label(formattedText);
-            contentLabel.Font = Application.Font;
+            contentLabel.Font = MainScreen.Font;
             contentLabel.TextColor = new Color(160, 160, 160);
             contentLabel.Padding = new Padding(15, 15, 15, 40);
             contentLabel.Font.LineSpacing = 25;
             contentLabel.Align = Label.AlignType.TOPLEFT;
-            contentLabel.Image = Image.CreateImage("Resources/bg_tweet");
+            contentLabel.Image = StaticContent.Resources.CreateImage("Resources/bg_tweet");
             contentLabel.Size = contentLabel.Image.Size;
             Layout.AddComponent(contentLabel, 128, 0);
 
             //Creation of the background icon Label;
-            this.backIconLabel = new Label(Image.CreateImage("Resources/bg_photo"));
+            this.backIconLabel = new Label(StaticContent.Resources.CreateImage("Resources/bg_photo"));
             Layout.AddComponent(this.backIconLabel, 0, 0);
 
             //Creation of the icon label (with a default pic)
@@ -154,7 +154,7 @@ namespace TwitterSearch
             userLabel.Image = Image.CreateImage(Color.Transparent, 1, 1);
             userLabel.Align = Label.AlignType.MIDDLECENTER;
             //userLabel.Pivot = Vector2.One;
-            userLabel.Font = Application.Font;
+            userLabel.Font = MainScreen.Font;
             userLabel.TextColor = new Color(113, 192, 239);
             Layout.AddComponent(userLabel, ITEM_WIDTH - userLabel.Size.X - 10, 195);
 
