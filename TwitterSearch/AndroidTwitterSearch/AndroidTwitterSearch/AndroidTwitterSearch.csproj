@@ -41,22 +41,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Lidgren.Network.Android">
-      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\Lidgren.Network.Android.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.1\Android\Libraries\Lidgren.Network.Android.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="MonoGame.Framework">
-      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\MonoGame.Framework.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.1\Android\Libraries\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK" />
     <Reference Include="mscorlib" />
     <Reference Include="Syderis.CellSDK.Android.Common">
-      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\Syderis.CellSDK.Android.Common.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.1\Android\Libraries\Syderis.CellSDK.Android.Common.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.Android.Core">
-      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\Syderis.CellSDK.Android.Core.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.1\Android\Libraries\Syderis.CellSDK.Android.Core.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.Android.Launcher">
-      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\Syderis.CellSDK.Android.Launcher.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.1\Android\Libraries\Syderis.CellSDK.Android.Launcher.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -66,8 +66,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\Sources\AdjustedScreen.cs">
+      <Link>AdjustedScreen.cs</Link>
+    </Compile>
     <Compile Include="..\..\Sources\Application.cs">
       <Link>Application.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Sources\MainScreen.cs">
+      <Link>MainScreen.cs</Link>
     </Compile>
     <Compile Include="..\..\Sources\TwitterListItem.cs">
       <Link>TwitterListItem.cs</Link>
