@@ -1,92 +1,88 @@
 ﻿/*
- * Copyright 2011 Syderis Technologies S.L. All rights reserved.
+ * Copyright 2012 Syderis Technologies S.L. All rights reserved.
  * Use is subject to license terms.
  */
 
 #region Using Statements
-using Syderis.CellSDK.Core.Sounds; 
+using Syderis.CellSDK.Core.Sounds;
+using Syderis.CellSDK.Core;
 #endregion
 
 namespace TouchyTales
 {
     public class AudioLibrary
     {
+        #region Constants and Statics
         /// <summary>
-        /// Constantes
+        /// Constants
         /// </summary>
         private const string path = "Sounds/";
-        public const int SBALL = 0;        
+        public const int SBALL = 0;
         public const int SROPE = 1;
-        public const int SDOLL1= 2;
+        public const int SDOLL1 = 2;
         public const int SDOLL2 = 3;
-        public const int SPIPIN = 4;        
+        public const int SPIPIN = 4;
         public const int STRAIN = 5;
         public const int SBALL2 = 6;
-
+        private const int NUM_SOUNDS = 7;
         /// <summary>
-        /// Atributos
+        /// Statics
         /// </summary>
         private static AudioLibrary instance;
-        private SoundInstance[] sounds;
-        private const int NUM_SOUNDS = 7;
+        #endregion
 
+        #region Variables
+        private SoundInstance[] sounds; 
+        #endregion
+
+        #region Properties
         /// <summary>
-        /// Constructor privado (Singleton)
+        /// Singleton instance
+        /// </summary>
+        public static AudioLibrary Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new AudioLibrary();
+                return instance;
+            }
+        } 
+        #endregion
+
+        #region Constructor
+        /// <summary>
+        /// Private constructor (Singleton)
         /// </summary>
         private AudioLibrary()
         {
             sounds = new SoundInstance[NUM_SOUNDS];
-        }
+        } 
+        #endregion
 
+        #region Public Methods
         /// <summary>
-        /// Método que devuelve la única instancia de la clase
-        /// Singleton.
+        /// Initialize all sound components
         /// </summary>
-        /// <returns></returns>
-        public static AudioLibrary GetInstance()
+        public void Initialize()
         {
-            if (instance == null)
-                instance = new AudioLibrary();
-            return instance;
+            sounds[SBALL] = StaticContent.Resources.CreateSound(path + "Treeball").CreateInstance();
+            sounds[SROPE] = StaticContent.Resources.CreateSound(path + "RopeShort").CreateInstance();
+            sounds[SDOLL1] = StaticContent.Resources.CreateSound(path + "DollLove").CreateInstance();
+            sounds[SDOLL2] = StaticContent.Resources.CreateSound(path + "DollLaught").CreateInstance();
+            sounds[SPIPIN] = StaticContent.Resources.CreateSound(path + "Bird").CreateInstance();
+            sounds[STRAIN] = StaticContent.Resources.CreateSound(path + "ToyTrain").CreateInstance();
+            sounds[SBALL2] = StaticContent.Resources.CreateSound(path + "Ball").CreateInstance();
         }
 
         /// <summary>
-        /// Hace sonar el sonido indicado como argumento
+        /// To play the indicated sound
         /// </summary>
-        /// <param name="sound">Sonido</param>
+        /// <param name="sound">sound id</param>
         public void Play(int sound)
         {
-            switch (sound)
-	        {
-		        case SBALL:
-                    if (sounds[SBALL] == null)
-                        sounds[SBALL] = Sound.CreateSound(path + "Treeball").CreateInstance();
-                 break;                
-                case SROPE:
-                 if (sounds[SROPE] == null)
-                     sounds[SROPE] = Sound.CreateSound(path + "RopeShort").CreateInstance();
-                 break;
-                case SDOLL1:
-                 if (sounds[SDOLL1] == null)
-                     sounds[SDOLL1] = Sound.CreateSound(path + "DollLove").CreateInstance();
-                 break;
-                case SDOLL2:
-                 if (sounds[SDOLL2] == null)
-                     sounds[SDOLL2] = Sound.CreateSound(path + "DollLaught").CreateInstance();
-                 break;
-                case SPIPIN:
-                 if (sounds[SPIPIN] == null)
-                     sounds[SPIPIN] = Sound.CreateSound(path + "Bird").CreateInstance();
-                 break;
-                case STRAIN:
-                 if (sounds[STRAIN] == null)
-                     sounds[STRAIN] = Sound.CreateSound(path + "ToyTrain").CreateInstance();
-                 break;
-                case SBALL2:
-                 if (sounds[SBALL2] == null)
-                     sounds[SBALL2] = Sound.CreateSound(path + "Ball").CreateInstance();
-                 break;
-            }
+            if (sound < 0 || sound > sounds.Length)
+                return;
 
             sounds[sound].Play();
         }
@@ -98,7 +94,7 @@ namespace TouchyTales
         }
 
         /// <summary>
-        /// Descarga todos los recursos reservados
+        /// Dispose all sound components
         /// </summary>
         public void Dispose()
         {
@@ -111,7 +107,7 @@ namespace TouchyTales
                 }
             }
             instance = null;
-        }
+        } 
+        #endregion
     }
-    
 }
