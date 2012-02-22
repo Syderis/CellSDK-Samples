@@ -71,15 +71,15 @@
     </Reference>
     <Reference Include="Syderis.CellSDK.WindowsPhone.Common, Version=1.0.0.26983, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(CellSDK)Versions\1.0\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Common.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.1\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Common.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.WindowsPhone.Core, Version=1.0.0.26985, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(CellSDK)Versions\1.0\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Core.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.1\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Core.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.WindowsPhone.Launcher, Version=1.0.0.26986, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(CellSDK)Versions\1.0\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Launcher.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.1\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Launcher.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Private>False</Private>
