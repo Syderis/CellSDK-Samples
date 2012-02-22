@@ -66,7 +66,7 @@ namespace ImageLoader
             searchTextArea.BackgroundImage = ResourceManager.CreateImage("Images/top_search");
             this.searchTextArea.Padding = new Padding(25, 0, 0, 30);
             this.searchTextArea.Size = new Vector2(searchTextArea.BackgroundImage.Size.X, searchTextArea.BackgroundImage.Size.Y);
-            AddComponent(searchTextArea, Preferences.Width / 2 - searchTextArea.Size.X / 2, 0);
+            AddComponent(searchTextArea, securityZone.X / 2 - searchTextArea.Size.X / 2, top);
 
             //Search Button
             searchButton = new Button(ResourceManager.CreateImage("Images/bt_search"), ResourceManager.CreateImage("Images/bt_search_pressed"));
@@ -77,12 +77,12 @@ namespace ImageLoader
                 //Search new images using TextArea text
                 SearchImages(searchTextArea.Text);
             };
-            AddComponent(searchButton, 393 + offset.X, 12);
+            AddComponent(searchButton, 393 + offset.X, top+12);
 
             //Content Tab Panel
             contentTabPanel = new TabPanel(458, 632);
             //AddComponent(contentTabPanel, 0, BUTTON_HEIGHT + SPACING);
-            AddComponent(contentTabPanel, 11 + offset.X, 90);
+            AddComponent(contentTabPanel, 11 + offset.X, top+90);
             //ZoomPanel
             zoomPanel = new ZoomPanel(this);
 

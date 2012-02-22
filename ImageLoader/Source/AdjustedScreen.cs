@@ -25,13 +25,13 @@ namespace ImageLoader
     {
         #region Variables
 
-        private Vector2 securityZone = new Vector2(480, 800);
+        public Vector2 securityZone = new Vector2(480, 800);
 
         public Vector2 adjust;
-		protected float top;
-		protected float bottom;
-		protected float left;
-		protected float right;
+		public float top;
+		public float bottom;
+		public float left;
+		public float right;
 		protected float maxScale;
 		protected Vector2 scale;
 
