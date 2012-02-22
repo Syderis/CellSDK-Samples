@@ -33,7 +33,7 @@ namespace GamePad
         public ThumbStick()
             : base(180, 180)
         {
-            iGamePadSpriteSheet = Image.CreateImage("GamePadSpriteSheet");
+            iGamePadSpriteSheet = StaticContent.Resources.CreateImage("GamePadSpriteSheet");
 
             spriteBatch = StaticContent.SpriteBatch;
             graphicsDevice = StaticContent.Graphics.GraphicsDevice;

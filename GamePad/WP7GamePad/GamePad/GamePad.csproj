@@ -103,6 +103,9 @@
     <Compile Include="..\..\Source\Buttons.cs">
       <Link>Buttons.cs</Link>
     </Compile>
+    <Compile Include="..\..\Source\MainScreen.cs">
+      <Link>MainScreen.cs</Link>
+    </Compile>
     <Compile Include="..\..\Source\ThumbStick.cs">
       <Link>ThumbStick.cs</Link>
     </Compile>
