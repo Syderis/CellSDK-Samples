@@ -80,16 +80,11 @@
     <Compile Include="..\..\Sources\AudioLibrary.cs">
       <Link>AudioLibrary.cs</Link>
     </Compile>
+    <Compile Include="..\..\Sources\MainScreen.cs">
+      <Link>MainScreen.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Sounds\audio_bola_arbol.wav" />
-    <Content Include="Content\Sounds\audio_bote_pelota.wav" />
-    <Content Include="Content\Sounds\audio_cuerda_cort.wav" />
-    <Content Include="Content\Sounds\audio_mu%25F1eca_love.wav" />
-    <Content Include="Content\Sounds\audio_pajaro.wav" />
-    <Content Include="Content\Sounds\audio_pelota.wav" />
-    <Content Include="Content\Sounds\audio_risa_mu%25F1eca.wav" />
-    <Content Include="Content\Sounds\audio_tren_juguete.wav" />
     <Content Include="Content\Images\animated_ball.png" />
     <Content Include="Content\Images\animated_bird.png" />
     <Content Include="Content\Images\blue_ball.png" />
@@ -110,6 +105,13 @@
     <Content Include="Content\Skin\skin_standart.png" />
     <Content Include="Content\Skin\Skin.xml" />
     <Content Include="Content\Skin\StandardFont.xnb" />
+    <Content Include="Content\Sounds\Ball.wav" />
+    <Content Include="Content\Sounds\Bird.wav" />
+    <Content Include="Content\Sounds\DollLaught.wav" />
+    <Content Include="Content\Sounds\DollLove.wav" />
+    <Content Include="Content\Sounds\RopeShort.wav" />
+    <Content Include="Content\Sounds\ToyTrain.wav" />
+    <Content Include="Content\Sounds\Treeball.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
