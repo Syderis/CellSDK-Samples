@@ -43,21 +43,21 @@
     <Reference Include="Mono.Android" />
     <Reference Include="MonoGame.Framework, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\MonoGame.Framework.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.1\Android\Libraries\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK" />
     <Reference Include="mscorlib" />
     <Reference Include="Syderis.CellSDK.Android.Common, Version=1.0.0.19113, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\Syderis.CellSDK.Android.Common.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.1\Android\Libraries\Syderis.CellSDK.Android.Common.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.Android.Core, Version=1.0.0.20158, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\Syderis.CellSDK.Android.Core.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.1\Android\Libraries\Syderis.CellSDK.Android.Core.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.Android.Launcher, Version=1.0.0.20159, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(CellSDK)Versions\1.0\Android\Libraries\Syderis.CellSDK.Android.Launcher.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.1\Android\Libraries\Syderis.CellSDK.Android.Launcher.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -67,6 +67,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\Source\AdjustedScreen.cs">
+      <Link>AdjustedScreen.cs</Link>
+    </Compile>
     <Compile Include="..\..\Source\Application.cs">
       <Link>Application.cs</Link>
     </Compile>
@@ -75,6 +78,9 @@
     </Compile>
     <Compile Include="..\..\Source\ImageItem.cs">
       <Link>ImageItem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Source\MainScreen.cs">
+      <Link>MainScreen.cs</Link>
     </Compile>
     <Compile Include="..\..\Source\ZoomPanel.cs">
       <Link>ZoomPanel.cs</Link>

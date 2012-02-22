@@ -22,7 +22,7 @@ using System.Net;
 
 namespace ImageLoader
 {
-    public class MainScreen: Screen
+    public class MainScreen: AdjustedScreen
     {
 
         #region Consts and Statics
