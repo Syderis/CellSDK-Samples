@@ -69,7 +69,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Syderis.CellSDK.WindowsPhone.IO.AccelerometerSystem">
-      <HintPath>$(CellSDK)Versions\1.0\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.IO.AccelerometerSystem.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.1\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.IO.AccelerometerSystem.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Private>False</Private>
@@ -87,21 +87,24 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Syderis.CellSDK.WindowsPhone.Common">
-      <HintPath>$(CellSDK)Versions\1.0\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Common.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.1\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Syderis.CellSDK.WindowsPhone.Core">
-      <HintPath>$(CellSDK)Versions\1.0\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Core.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.1\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Syderis.CellSDK.WindowsPhone.Launcher">
-      <HintPath>$(CellSDK)Versions\1.0\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Launcher.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.1\WindowsPhone\Libraries\Syderis.CellSDK.WindowsPhone.Launcher.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\Source\Application.cs">
       <Link>Application.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Source\MainScreen.cs">
+      <Link>MainScreen.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="Properties\AppManifest.xml">

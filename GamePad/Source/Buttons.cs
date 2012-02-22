@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Syderis.CellSDK.Core.Controls;
 using Syderis.CellSDK.Core.Graphics;
 using Syderis.CellSDK.Core.Layouts;
+using Syderis.CellSDK.Core;
 #endregion
 
 namespace GamePad
@@ -14,7 +15,7 @@ namespace GamePad
         {
             Size = new Vector2(197, 179);
 
-            Image iGamePadSpriteSheet = Image.CreateImage("GamePadSpriteSheet");
+            Image iGamePadSpriteSheet = StaticContent.Resources.CreateImage("GamePadSpriteSheet");
             BackgroundImage = iGamePadSpriteSheet.SubImage(0, 0, 197, 179);
             Button bA = new Button(iGamePadSpriteSheet.SubImage(181, 181, 97, 95), iGamePadSpriteSheet.SubImage(379, 0, 97, 95));
             Layout.AddComponent(bA, 96, 77);
