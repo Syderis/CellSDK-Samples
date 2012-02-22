@@ -3,7 +3,9 @@
  * Use is subject to license terms.
  */
 
-using Syderis.CellSDK.Core;
+#region Using Statements
+using Syderis.CellSDK.Core; 
+#endregion
 
 namespace ScreenManager
 {
@@ -19,6 +21,11 @@ namespace ScreenManager
         public override void Initialize()
         {
             base.Initialize();
+
+            StaticContent.Graphics.IsFullScreen = true;
+            StaticContent.Graphics.ApplyChanges();
+
+            StaticContent.ScreenManager.GoToScreen(new MainScreen());
       
         }
      
