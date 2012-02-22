@@ -1,5 +1,5 @@
 /*
- * Copyright 2011 Syderis Technologies S.L. All rights reserved.
+ * Copyright 2012 Syderis Technologies S.L. All rights reserved.
  * Use is subject to license terms.
  */
 
@@ -34,7 +34,7 @@ namespace ImageLoader.Components
 
         #region statics
         private static Vector2 imageSize = new Vector2(200, 180);       
-        private static Image BgImage = Image.CreateImage("Images/bg_img");
+        private static Image BgImage = StaticContent.Resources.CreateImage("Images/bg_img");
         
         #endregion
         #region Properties

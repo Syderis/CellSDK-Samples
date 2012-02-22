@@ -1,5 +1,5 @@
 /*
- * Copyright 2011 Syderis Technologies S.L. All rights reserved.
+ * Copyright 2012 Syderis Technologies S.L. All rights reserved.
  * Use is subject to license terms.
  */
 

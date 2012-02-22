@@ -1,5 +1,5 @@
 /*
- * Copyright 2011 Syderis Technologies S.L. All rights reserved.
+ * Copyright 2012 Syderis Technologies S.L. All rights reserved.
  * Use is subject to license terms.
  */
 
@@ -13,6 +13,9 @@ using Syderis.CellSDK.Core.Layouts;
 using ImageLoader;
 using Microsoft.Xna.Framework;
 using Syderis.CellSDK.Core.Graphics;
+using Syderis.CellSDK.Core;
+using Syderis.CellSDK.Common;
+using Syderis.CellSDK.Core.Screens;
 #endregion
 
 namespace ImageLoader.Components
@@ -22,7 +25,7 @@ namespace ImageLoader.Components
         #region Variables
         private Label lblFullImage;
         private Button btnClose;
-        private Application app;
+        private Screen screen;
         #endregion
 
         #region Constructors
@@ -31,21 +34,20 @@ namespace ImageLoader.Components
         /// </summary>
         /// <param name="app">The Application instance</param>
         /// <param name="image">Image to zoom</param>
-        public ZoomPanel(Application app)
+        public ZoomPanel(Screen screen)
             : base(new CoordLayout())
         {
-            //Set the application instance
-            this.app = app;
+            this.screen = screen;
 
             //Get the panel size
             BringToFront = false;
-            Size = new Vector2(app.Width, app.Height);
+            Size = new Vector2(Preferences.Width, Preferences.Height);
             
             //Add a semitransparent background
-            BackgroundImage = Image.CreateImage(new Color(0, 0, 0, 0.6f),app.Width,app.Height);
+            BackgroundImage = Image.CreateImage(new Color(0, 0, 0, 0.6f),Preferences.Width,Preferences.Height);
 
             //Add a close button.
-            btnClose = new Button(Image.CreateImage("Images\\bt_X"), Image.CreateImage("Images\\bt_X_press"));
+            btnClose = new Button(StaticContent.Resources.CreateImage("Images\\bt_X"), StaticContent.Resources.CreateImage("Images\\bt_X_press"));
             btnClose.BringToFront = false;
             btnClose.Released += delegate
             {
@@ -70,9 +72,9 @@ namespace ImageLoader.Components
             lblFullImage = new Label(image) { Draggable = true, Scalable = true, Rotable = true, BringToFront = false };
             
             //Add components to the application layout
-            app.AddComponent(this, 0, 0);
-            app.AddComponent(lblFullImage, Size.X / 2 - image.Width / 2, Size.Y / 2 - image.Height / 2);
-            app.AddComponent(btnClose, app.Width - 16 - btnClose.Size.X, 16);            
+            screen.AddComponent(this, 0, 0);
+            screen.AddComponent(lblFullImage, Size.X / 2 - image.Width / 2, Size.Y / 2 - image.Height / 2);
+            screen.AddComponent(btnClose, Preferences.Width - 16 - btnClose.Size.X, 16);            
         }
 
         /// <summary>
@@ -81,9 +83,9 @@ namespace ImageLoader.Components
         private void Close()
         {
             //Remove all components
-            app.RemoveComponent(btnClose);
-            app.RemoveComponent(lblFullImage);
-            app.RemoveComponent(this);
+            screen.RemoveComponent(btnClose);
+            screen.RemoveComponent(lblFullImage);
+            screen.RemoveComponent(this);
             
             lblFullImage = null;
         }
