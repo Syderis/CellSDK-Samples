@@ -72,9 +72,9 @@ namespace ImageLoader.Components
             lblFullImage = new Label(image) { Draggable = true, Scalable = true, Rotable = true, BringToFront = false };
             
             //Add components to the application layout
-            screen.AddComponent(this, 0, 0);
+            screen.AddComponent(this, ((AdjustedScreen)screen).left, ((AdjustedScreen)screen).top);
             screen.AddComponent(lblFullImage, Size.X / 2 - image.Width / 2, Size.Y / 2 - image.Height / 2);
-            screen.AddComponent(btnClose, Preferences.Width - 16 - btnClose.Size.X, 16);            
+            screen.AddComponent(btnClose, ((AdjustedScreen)screen).securityZone.X - 16 - btnClose.Size.X, 16);            
         }
 
         /// <summary>

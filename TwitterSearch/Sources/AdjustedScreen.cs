@@ -25,7 +25,7 @@ namespace TwitterSearch
     {
         #region Variables
 
-        private Vector2 securityZone = new Vector2(480, 800);
+        protected Vector2 securityZone = new Vector2(480, 800);
 
         public Vector2 adjust;
 		protected float top;
