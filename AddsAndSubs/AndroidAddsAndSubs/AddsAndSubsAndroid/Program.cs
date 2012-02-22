@@ -1,3 +1,8 @@
+/*
+ * Copyright 2012 Syderis Technologies S.L. All rights reserved.
+ * Use is subject to license terms.
+ */
+
 #region Using Statements
 using Android.App;
 using Android.OS;
@@ -12,6 +17,7 @@ namespace AddsAndSubs
     public class Program : AndroidGameActivity
     {
         public static Program Instance;
+        private Kernel kernel;
 
         /// <summary>
         /// The main method which loads Application.
@@ -21,21 +27,47 @@ namespace AddsAndSubs
             base.OnCreate(savedInstanceState);
 
             Kernel.Activity = this;
-            Kernel view = new Kernel(this);
-            SetContentView(view.Window);
+
+            kernel = new Kernel(this);
+            SetContentView(kernel.Window);
 
             Instance = this;
-            Preferences.SkinXMLFileStream = Assets.Open("Content/Skin/Skin.xml");
-            Preferences.ApplicationActivity = this;
+            Syderis.CellSDK.Common.Preferences.SkinXMLFileStream = Assets.Open("Content/Skin/Skin.xml");
+            Syderis.CellSDK.Common.Preferences.ApplicationActivity = this;
+
+
 
             Application application = new Application();
-            view.Application = application;
-            view.Run();
+            kernel.Application = application;
+            kernel.Run();
         }
 
+        /// <summary>
+        /// Exit Method.
+        /// </summary>
         public void Exit()
         {
-            this.Finish();
+            Finish();
+        }
+
+        /// <summary>
+        /// The application's activity pauses the execution
+        /// </summary>
+        protected override void OnPause()
+        {
+            base.OnPause();
+
+            kernel.OnPause();
+        }
+
+        /// <summary>
+        /// The application's activity resumes the execution
+        /// </summary>
+        protected override void OnResume()
+        {
+            base.OnResume();
+
+            kernel.OnResume();
         }
     }
 }
