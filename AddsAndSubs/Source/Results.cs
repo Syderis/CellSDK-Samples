@@ -1,9 +1,15 @@
+/*
+ * Copyright 2012 Syderis Technologies S.L. All rights reserved.
+ * Use is subject to license terms.
+ */
+
 #region Using Statements
 using System;
 using Microsoft.Xna.Framework;
 using Syderis.CellSDK.Core.Controls;
 using Syderis.CellSDK.Core.Graphics;
 using Syderis.CellSDK.Core.Layouts;
+using Syderis.CellSDK.Core;
 #endregion
 
 namespace AddsAndSubs
@@ -25,9 +31,9 @@ namespace AddsAndSubs
             // These images will hold each number pressed independently
             Image[] iPressed = new Image[11];
             // Sprite sheet with released numbers
-            Image iReleasedSheet = Image.CreateImage("Images/ResultsReleased");
+            Image iReleasedSheet = StaticContent.Resources.CreateImage("Images/ResultsReleased");
             // Sprite sheet with pressed numbers
-            Image iPressedSheet = Image.CreateImage("Images/ResultsPressed");
+            Image iPressedSheet = StaticContent.Resources.CreateImage("Images/ResultsPressed");
             // 6 is the amount of sprites per row on the sprite sheet
             int numberX = iReleasedSheet.Width / 6;
             // 2 is the amount of rows
