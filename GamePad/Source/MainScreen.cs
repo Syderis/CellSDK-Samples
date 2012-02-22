@@ -9,7 +9,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Syderis.CellSDK.Core.Screens;
-using System.Xml.Linq;
 using Syderis.CellSDK.Core.Controls;
 using System.Xml.Serialization;
 using Syderis.CellSDK.Core.Storage;
