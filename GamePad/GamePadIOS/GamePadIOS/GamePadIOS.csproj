@@ -60,9 +60,6 @@
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
     <Reference Include="OpenTK" />
-    <Reference Include="FarseerPhysics_331.IOS">
-      <HintPath>/Library\Frameworks\CellSDK.framework\Versions\1.1\Libraries\FarseerPhysics_331.IOS.dll</HintPath>
-    </Reference>
     <Reference Include="Syderis.CellSDK.IOS.Common">
       <HintPath>/Library\Frameworks\CellSDK.framework\Versions\1.1\Libraries\Syderis.CellSDK.IOS.Common.dll</HintPath>
     </Reference>
