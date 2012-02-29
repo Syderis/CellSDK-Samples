@@ -119,7 +119,7 @@ namespace ShareBill
             this.gap = 500;
 			
 			//Use a culture info that uses comma to separate decimal digits (es for instance)
-            this.lTotal.Text = string.Format(CultureInfo.GetCultureInfo("es-es"), "{0:f2}", this.total / (float)this.heads);
+            this.lTotal.Text = string.Format("{0:f2}", this.total / (float)this.heads).Replace('.',',');
         }
 
         /// <summary>
@@ -167,7 +167,7 @@ namespace ShareBill
             this.lessPressed = false;
             this.interval = 0;
             this.gap = 500;
-            this.lTotal.Text = string.Format("{0:f2}", this.total / (float)this.heads);
+            this.lTotal.Text = string.Format("{0:f2}", this.total / (float)this.heads).Replace('.',',');
         }
 	    #endregion
 
