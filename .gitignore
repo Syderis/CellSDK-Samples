@@ -32,3 +32,5 @@ obj/
 [Dd]ebug*/
 [Rr]elease*/
 Ankh.NoLoad
+*.[Cc]ache[Ff]ile
+*.vsdoc
