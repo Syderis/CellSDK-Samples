@@ -40,9 +40,6 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Lidgren.Network.Android">
-      <HintPath>$(CellSDK)Versions\1.1\Android\Libraries\Lidgren.Network.Android.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="MonoGame.Framework">
       <HintPath>$(CellSDK)Versions\1.1\Android\Libraries\MonoGame.Framework.dll</HintPath>
