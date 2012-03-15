@@ -48,6 +48,8 @@ namespace ScreenManager
         public void Exit()
         {
             Finish();
+
+            kernel.KillApp();
         }
 
         /// <summary>

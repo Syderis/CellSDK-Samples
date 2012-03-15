@@ -55,6 +55,8 @@ namespace ShareBill
         public void Exit()
         {
             Finish();
+
+            kernel.KillApp();
         }
 
         /// <summary>

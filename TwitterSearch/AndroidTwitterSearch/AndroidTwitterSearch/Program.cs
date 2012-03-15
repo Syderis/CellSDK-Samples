@@ -50,6 +50,8 @@ namespace TwitterSearch
         public void Exit()
         {
             Finish();
+
+            kernel.KillApp();
         }
 
         /// <summary>

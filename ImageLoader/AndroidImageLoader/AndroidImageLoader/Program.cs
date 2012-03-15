@@ -50,6 +50,8 @@ namespace ImageLoader
         public void Exit()
         {
             Finish();
+
+            kernel.KillApp();
         }
 
         /// <summary>

@@ -55,6 +55,8 @@ namespace GamePad
         public void Exit()
         {
             Finish();
+
+            kernel.KillApp();
         }
 
         /// <summary>

@@ -57,6 +57,7 @@ namespace TwitterSearch
 
             //Search Text Area
             searchTextArea = new TextArea("", 1, 100);
+            searchTextArea.Text = "cellsdk";
             searchTextArea.BackgroundImage = ResourceManager.CreateImage("Resources/top_search");
             searchTextArea.Padding = new Padding(25, 0, 0, 30);
             searchTextArea.Size = new Vector2(searchTextArea.BackgroundImage.Size.X, searchTextArea.BackgroundImage.Size.Y);
@@ -88,10 +89,13 @@ namespace TwitterSearch
         /// <param name="hashtag">Twitter hashtag</param>
         private void SearchTag(string hashtag)
         {
-            string uri = string.Format(TWITTER_REQ_URL_TEMPLATE, hashtag);
+            if (!client.IsBusy)
+            {
+                string uri = string.Format(TWITTER_REQ_URL_TEMPLATE, hashtag);
 
-            // Make the search call           
-            client.OpenReadAsync(new Uri(uri));
+                // Make the search call           
+                client.OpenReadAsync(new Uri(uri));
+            }
         }
 
 

@@ -55,6 +55,8 @@ namespace TouchyTales
         public void Exit()
         {
             Finish();
+
+            kernel.KillApp();
         }
 
         /// <summary>
