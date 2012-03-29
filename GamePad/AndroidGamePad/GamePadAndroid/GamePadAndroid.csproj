@@ -41,18 +41,18 @@
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="MonoGame.Framework">
-      <HintPath>$(CellSDK)Versions\1.1\Android\Libraries\MonoGame.Framework.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.2\Android\Libraries\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK" />
     <Reference Include="mscorlib" />
     <Reference Include="Syderis.CellSDK.Android.Common">
-      <HintPath>$(CellSDK)Versions\1.1\Android\Libraries\Syderis.CellSDK.Android.Common.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.2\Android\Libraries\Syderis.CellSDK.Android.Common.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.Android.Core">
-      <HintPath>$(CellSDK)Versions\1.1\Android\Libraries\Syderis.CellSDK.Android.Core.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.2\Android\Libraries\Syderis.CellSDK.Android.Core.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.Android.Launcher">
-      <HintPath>$(CellSDK)Versions\1.1\Android\Libraries\Syderis.CellSDK.Android.Launcher.dll</HintPath>
+      <HintPath>$(CellSDK)Versions\1.2\Android\Libraries\Syderis.CellSDK.Android.Launcher.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

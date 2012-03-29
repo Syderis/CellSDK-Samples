@@ -64,16 +64,16 @@
     <Reference Include="monotouch" />
     <Reference Include="OpenTK" />
     <Reference Include="MonoGame.Framework">
-      <HintPath>/Library\Frameworks\CellSDK.framework\Versions\1.1\Libraries\MonoGame.Framework.dll</HintPath>
+      <HintPath>/Library\Frameworks\CellSDK.framework\Versions\1.2\Libraries\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.IOS.Common">
-      <HintPath>/Library\Frameworks\CellSDK.framework\Versions\1.1\Libraries\Syderis.CellSDK.IOS.Common.dll</HintPath>
+      <HintPath>/Library\Frameworks\CellSDK.framework\Versions\1.2\Libraries\Syderis.CellSDK.IOS.Common.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.IOS.Core">
-      <HintPath>/Library\Frameworks\CellSDK.framework\Versions\1.1\Libraries\Syderis.CellSDK.IOS.Core.dll</HintPath>
+      <HintPath>/Library\Frameworks\CellSDK.framework\Versions\1.2\Libraries\Syderis.CellSDK.IOS.Core.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.IOS.Launcher">
-      <HintPath>/Library\Frameworks\CellSDK.framework\Versions\1.1\Libraries\Syderis.CellSDK.IOS.Launcher.dll</HintPath>
+      <HintPath>/Library\Frameworks\CellSDK.framework\Versions\1.2\Libraries\Syderis.CellSDK.IOS.Launcher.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel.Web" />
