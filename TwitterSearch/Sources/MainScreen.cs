@@ -39,9 +39,8 @@ namespace TwitterSearch
         private ListBox listBox;
         private TextArea searchTextArea;
         private Button searchButton;
-        //private bool requestFlag;
-        //private Stream result;
         private WebClient client;
+        private List<TwitterXMLItem> entries = null;
         #endregion
 
         public override void Initialize()
@@ -61,7 +60,6 @@ namespace TwitterSearch
             searchTextArea.BackgroundImage = ResourceManager.CreateImage("Resources/top_search");
             searchTextArea.Padding = new Padding(25, 0, 0, 30);
             searchTextArea.Size = new Vector2(searchTextArea.BackgroundImage.Size.X, searchTextArea.BackgroundImage.Size.Y);
-            //AddComponent(this.searchTextArea, Preferences.Width / 2 - searchTextArea.Size.X / 2, 0);
 			AddComponent(searchTextArea,securityZone.X / 2 - searchTextArea.Size.X / 2,top);
 
             //Search Button
@@ -81,6 +79,31 @@ namespace TwitterSearch
             client.OpenReadCompleted += new OpenReadCompletedEventHandler(HandleXmlResponse);
 
       
+        }
+
+        /// <summary>
+        /// Update method. Waits untill the list entries are ready.
+        /// </summary>
+        /// <param name="gameTime">Game Time</param>
+        public override void Update(GameTime gameTime)
+        {
+            base.Update(gameTime);
+
+            // There are tweet entries to add into the listbox
+            if (this.entries != null)
+            {
+                //Clear the listbox
+                listBox.RemoveAllItems();
+
+                foreach (var entry in entries)
+                {
+                    //Create listbox objects and insert them into the listbox control
+                    TwitterListItem item = new TwitterListItem(entry.User.Substring(0, entry.User.IndexOf('(')), entry.Text, entry.IconUrl);
+                    listBox.AddItem(item);
+                }
+
+                this.entries = null;
+            }
         }
 
         /// <summary>
@@ -117,8 +140,8 @@ namespace TwitterSearch
             XNamespace xmlNamespace = "http://www.w3.org/2005/Atom";
 
             // Obtain entry list through a Linq query
-            var entries = (from entry in xmlDoc.Descendants(xmlNamespace + "entry")
-                           select new
+            this.entries = (from entry in xmlDoc.Descendants(xmlNamespace + "entry")
+                           select new TwitterXMLItem
                            {
                                User = entry.Element(xmlNamespace + "author").Element(xmlNamespace + "name").Value,
                                Text = entry.Element(xmlNamespace + "title").Value,
@@ -127,15 +150,15 @@ namespace TwitterSearch
                                           select link.Attribute("href").Value).FirstOrDefault()
                            }).ToList();
 
-            //Clear the listbox
-            listBox.RemoveAllItems();
+            ////Clear the listbox
+            //listBox.RemoveAllItems();
 
-            foreach (var entry in entries)
-            {
-                //Create listbox objects and insert them into the listbox control
-                TwitterListItem item = new TwitterListItem(entry.User.Substring(0, entry.User.IndexOf('(')), entry.Text, entry.IconUrl);
-                listBox.AddItem(item);
-            }
+            //foreach (var entry in entries)
+            //{
+            //    //Create listbox objects and insert them into the listbox control
+            //    TwitterListItem item = new TwitterListItem(entry.User.Substring(0, entry.User.IndexOf('(')), entry.Text, entry.IconUrl);
+            //    listBox.AddItem(item);
+            //}
         }
 
 
@@ -156,6 +179,16 @@ namespace TwitterSearch
         public override void BackButtonPressed()
         {
             base.BackButtonPressed();
+        }
+
+        /// <summary>
+        /// Inner class that represents the twitter xml info we need to store and handle.
+        /// </summary>
+        private class TwitterXMLItem
+        {
+            public string User { get; set; }
+            public string IconUrl { get; set; }
+            public string Text { get; set; }
         }
     }
 }
