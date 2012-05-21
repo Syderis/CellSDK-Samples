@@ -24,16 +24,15 @@ namespace AddsAndSubs
         const int OPERATIONS = 25;
 
         private int currentOperation;
-        private Label lBackground;
-        private Label lTopBackground;
-        private Label lBottomBackground;
-        private Label lFrame;
+        private Sprite sTopBackground;
+        private Sprite sBottomBackground;
+        private Sprite sFrame;
         private Results results;
         private Operation[] operations;
         private OperationBridge[] temporalOperations;
-        private Animation[] animations;
+        private Animation[] opAnimations;
 
-        private Vector2 offset = new Vector2(81, 79);
+        //private Vector2 offset = new Vector2(81, 79);
 
         public override void Initialize()
         {
@@ -41,56 +40,53 @@ namespace AddsAndSubs
 
             #region Background
             // Board background
-            // Instead of calling SetBackground(), I make use of a same image placing it in the middle of the screen
-            // SetBackground could have a parameter like POSITIONING.CENTER
-            lBackground = new Label(ResourceManager.CreateImage("Images/Background")) { Pivot = Vector2.One / 2, BringToFront = false };
-            AddComponent(lBackground, Preferences.Width / 2, Preferences.Height / 2);
+            SetBackground(ResourceManager.CreateImage("Images/Background"), Adjustment.CENTER);
 
             // Top background for masking the operations done
-            lTopBackground = new Label(ResourceManager.CreateImage("Images/BackgroundTop")) { BringToFront = false };
-            AddComponentDeviceAgnostic(lTopBackground, 0, -1);
+            sTopBackground = new Sprite("BackgroundTop", ResourceManager.CreateImage("Images/BackgroundTop")) { Pivot = new Vector2(0.5f, 0), BringToFront = false };
+            AddComponent(sTopBackground, Preferences.ViewportManager.TopCenterAnchor - new Vector2(0, 2.0f));
 
             // Bottom background for masking the following operations
-            lBottomBackground = new Label(ResourceManager.CreateImage("Images/BackgroundBottom")) { BringToFront = false };
-            AddComponentDeviceAgnostic(lBottomBackground, 0, 573);
+            sBottomBackground = new Sprite("BackgroundBottom", ResourceManager.CreateImage("Images/BackgroundBottom")) { Pivot = new Vector2(0.5f, 1), BringToFront = false };
+            AddComponent(sBottomBackground, Preferences.ViewportManager.BottomCenterAnchor - new Vector2(0, 2.0f));
             #endregion Background
 
             // Frame where the operation will take place
-            lFrame = new Label(ResourceManager.CreateImage("Images/Frame")) { BringToFront = false };
-            AddComponentDeviceAgnostic(lFrame, 0, 218);
+            sFrame = new Sprite("Frame", ResourceManager.CreateImage("Images/Frame")) { BringToFront = false };
+            AddComponent(sFrame, 0, 218);
 
             results = new Results() { BringToFront = false };
             results.OnSelect += new Results.ResultsEventHandler(results_OnSelect);
-            AddComponentDeviceAgnostic(results, 22, 612);
+            AddComponent(results, 22, 612);
 
             #region Animations
             // 4 animations will move the operations
-            animations = new Animation[4];
-            Vector2 moveUp = new Vector2(0, -lFrame.Image.Height);
+            opAnimations = new Animation[4];
+            Vector2 moveUp = new Vector2(0, -sFrame.SpriteImage.Height);
 
-            animations[0] = Animation.CreateAnimation(FRAMES);
-            animations[0].AnimationType = AnimationType.Relative;
-            animations[0].AddKey(new KeyFrame(0, Vector2.Zero, 0, 1, .3f));
-            animations[0].AddKey(new KeyFrame(animations[0].NumFrames - 1, moveUp, 0, 1, 0));
-            AddAnimation(animations[0]);
+            opAnimations[0] = Animation.CreateAnimation(FRAMES);
+            opAnimations[0].AnimationType = AnimationType.Relative;
+            opAnimations[0].AddKey(new KeyFrame(0, Vector2.Zero, 0, 1, .3f));
+            opAnimations[0].AddKey(new KeyFrame(opAnimations[0].NumFrames - 1, moveUp, 0, 1, 0));
+            AddAnimation(opAnimations[0]);
 
-            animations[1] = Animation.CreateAnimation(FRAMES);
-            animations[1].AnimationType = AnimationType.Relative;
-            animations[1].AddKey(new KeyFrame(0, Vector2.Zero, 0, 1, 1));
-            animations[1].AddKey(new KeyFrame(animations[1].NumFrames - 1, moveUp, 0, 1, .3f));
-            AddAnimation(animations[1]);
+            opAnimations[1] = Animation.CreateAnimation(FRAMES);
+            opAnimations[1].AnimationType = AnimationType.Relative;
+            opAnimations[1].AddKey(new KeyFrame(0, Vector2.Zero, 0, 1, 1));
+            opAnimations[1].AddKey(new KeyFrame(opAnimations[1].NumFrames - 1, moveUp, 0, 1, .3f));
+            AddAnimation(opAnimations[1]);
 
-            animations[2] = Animation.CreateAnimation(FRAMES);
-            animations[2].AnimationType = AnimationType.Relative;
-            animations[2].AddKey(new KeyFrame(0, Vector2.Zero, 0, 1, .3f));
-            animations[2].AddKey(new KeyFrame(animations[2].NumFrames - 1, moveUp, 0, 1, 1));
-            AddAnimation(animations[2]);
+            opAnimations[2] = Animation.CreateAnimation(FRAMES);
+            opAnimations[2].AnimationType = AnimationType.Relative;
+            opAnimations[2].AddKey(new KeyFrame(0, Vector2.Zero, 0, 1, .3f));
+            opAnimations[2].AddKey(new KeyFrame(opAnimations[2].NumFrames - 1, moveUp, 0, 1, 1));
+            AddAnimation(opAnimations[2]);
 
-            animations[3] = Animation.CreateAnimation(FRAMES);
-            animations[3].AnimationType = AnimationType.Relative;
-            animations[3].AddKey(new KeyFrame(0, Vector2.Zero, 0, 1, 0));
-            animations[3].AddKey(new KeyFrame(animations[3].NumFrames - 1, moveUp, 0, 1, .3f));
-            AddAnimation(animations[3]);
+            opAnimations[3] = Animation.CreateAnimation(FRAMES);
+            opAnimations[3].AnimationType = AnimationType.Relative;
+            opAnimations[3].AddKey(new KeyFrame(0, Vector2.Zero, 0, 1, 0));
+            opAnimations[3].AddKey(new KeyFrame(opAnimations[3].NumFrames - 1, moveUp, 0, 1, .3f));
+            AddAnimation(opAnimations[3]);
             #endregion Animations
 
             #region Operations
@@ -129,7 +125,7 @@ namespace AddsAndSubs
             operations[2].Visible = true;
 
             foreach (var v in operations)
-                AddComponentDeviceAgnostic(v, v.Position.X, v.Position.Y);
+                AddComponent(v, v.Position.X, v.Position.Y);
             #endregion Operations
 
             ReorderComponents();
@@ -156,94 +152,63 @@ namespace AddsAndSubs
             // Focus the operation at index 1
             if (currentOperation == 1)
             {
-                animations[1].Play(operations[0]);
-                animations[2].Play(operations[1]);
-                animations[3].Play(operations[2]);
+                opAnimations[1].Play(operations[0]);
+                opAnimations[2].Play(operations[1]);
+                opAnimations[3].Play(operations[2]);
 
                 operations[3].Visible = true;
-                operations[3].Position = GetAgnosticPosition(0, 589);
+                operations[3].Position = new Vector2(0, 589);
             }
             // Focus the operation at index currentOperation
             else if (currentOperation > 1 && currentOperation < operations.Length - 2)
             {
-                animations[0].Play(operations[currentOperation - 2]);
-                animations[1].Play(operations[currentOperation - 1]);
-                animations[2].Play(operations[currentOperation]);
-                animations[3].Play(operations[currentOperation + 1]);
+                opAnimations[0].Play(operations[currentOperation - 2]);
+                opAnimations[1].Play(operations[currentOperation - 1]);
+                opAnimations[2].Play(operations[currentOperation]);
+                opAnimations[3].Play(operations[currentOperation + 1]);
 
                 //animations[3].EndEvent += new Animation.AnimationHandler(MatePlusAddAndSubScreen_EndEvent);
 
                 operations[currentOperation + 2].Visible = true;
-                operations[currentOperation + 2].Position = GetAgnosticPosition(0, 589);
+                operations[currentOperation + 2].Position = new Vector2(0, 589);
             }
             // Focus the operation just before the last one
             else if (currentOperation == operations.Length - 2)
             {
-                animations[0].Play(operations[currentOperation - 2]);
-                animations[1].Play(operations[currentOperation - 1]);
-                animations[2].Play(operations[currentOperation]);
-                animations[3].Play(operations[currentOperation + 1]);
+                opAnimations[0].Play(operations[currentOperation - 2]);
+                opAnimations[1].Play(operations[currentOperation - 1]);
+                opAnimations[2].Play(operations[currentOperation]);
+                opAnimations[3].Play(operations[currentOperation + 1]);
 
                 //animations[3].EndEvent += new Animation.AnimationHandler(MatePlusAddAndSubScreen_EndEvent);
             }
             // Focus the last operation
             else if (currentOperation == operations.Length - 1)
             {
-                animations[0].Play(operations[currentOperation - 2]);
-                animations[1].Play(operations[currentOperation - 1]);
-                animations[2].Play(operations[currentOperation]);
+                opAnimations[0].Play(operations[currentOperation - 2]);
+                opAnimations[1].Play(operations[currentOperation - 1]);
+                opAnimations[2].Play(operations[currentOperation]);
 
                 //animations[2].EndEvent += new Animation.AnimationHandler(MatePlusAddAndSubScreen_EndEvent);
             }
             // The end, no more operations
             else
             {
-                animations[0].Play(operations[currentOperation - 2]);
-                animations[1].Play(operations[currentOperation - 1]);
+                opAnimations[0].Play(operations[currentOperation - 2]);
+                opAnimations[1].Play(operations[currentOperation - 1]);
             }
         }
 
-        void AddComponentDeviceAgnostic(Component c, float x, float y)
-        { 
-			Vector2 position= new Vector2(x,y);
-
-            position=GetAgnosticPosition(position);
-
-			
-			  AddComponent(c, position.X, position.Y);
-        }
-		
-		
-		
-		private Vector2 GetAgnosticPosition(Vector2 position)
-		{
-#if IPHONE	
-			return position+offset;
-#else
-			return position;
-#endif
-		}
-		
-		private Vector2 GetAgnosticPosition(float x, float y)
-		{
-			Vector2 position= new Vector2(x,y);
-#if IPHONE
-            position=GetAgnosticPosition(position);
-#endif
-			return position;
-			
-		}
-
         void ReorderComponents()
         {
-            SendToFront(lBackground);
+            //SendToFront(lBackground);
 
             foreach (var v in operations)
                 SendToFront(v);
 
-            SendToFront(lTopBackground);
-            SendToFront(lBottomBackground);
-            SendToFront(lFrame);
+            SendToFront(sTopBackground);
+            SendToFront(sBottomBackground);
+            SendToFront(sFrame);
             SendToFront(results);
         }
     }

@@ -17,7 +17,7 @@ namespace AddsAndSubs
         // Y position where the subcomponents will be aligned
         const int Y = 50;
 
-        private Label lResult;
+        private Sprite sResult;
 
         public Operation(OperationBridge operation, Font font, Image[] iNumbers)
             : base(new CoordLayout())
@@ -66,7 +66,7 @@ namespace AddsAndSubs
             #endregion Equal
 
             #region Result
-            lResult = new Label(iNumbers[operation.Result]) 
+            sResult = new Sprite("Result", iNumbers[operation.Result]) 
             { 
                 // 12 is an offset to center the label
                 Position = new Vector2(operation.Result != 10 ? 349 : 313, operation.Result != 10 ? 13 + 12 : 22 + 12) 
@@ -76,7 +76,7 @@ namespace AddsAndSubs
 
         public void AddResult()
         {
-            Layout.AddComponent(lResult, lResult.Position.X, lResult.Position.Y);
+            Layout.AddComponent(sResult, sResult.Position.X, sResult.Position.Y);
         }
     }
 }
