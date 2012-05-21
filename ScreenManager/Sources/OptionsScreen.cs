@@ -16,7 +16,7 @@ using Syderis.CellSDK.Core;
 
 namespace ScreenManager
 {
-    public class OptionsScreen : AdjustedScreen
+    public class OptionsScreen : Screen
     {
         private Image iBackground, iBack, iBack_Pressed;
         private Button bBack;

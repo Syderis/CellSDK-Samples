@@ -4,7 +4,8 @@
  */
 
 #region Using Statements
-using Syderis.CellSDK.Core; 
+using Syderis.CellSDK.Core;
+using Syderis.CellSDK.Common; 
 #endregion
 
 namespace ScreenManager
@@ -24,6 +25,12 @@ namespace ScreenManager
 
             StaticContent.Graphics.IsFullScreen = true;
             StaticContent.Graphics.ApplyChanges();
+
+            //Setup Viewport Manager
+            Preferences.ViewportManager.Adjustment = ViewportAdjustment.FIT;
+            Preferences.ViewportManager.AlignType = ViewportAlignType.TOPCENTER;
+            Preferences.ViewportManager.VirtualWidth = 480;
+            Preferences.ViewportManager.VirtualHeight = 800;
 
             StaticContent.ScreenManager.GoToScreen(new MainScreen());
       

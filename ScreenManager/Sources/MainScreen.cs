@@ -12,7 +12,7 @@ using Syderis.CellSDK.Core;
 
 namespace ScreenManager
 {
-    public class MainScreen: AdjustedScreen
+    public class MainScreen: Screen
     {
 
         private Image iBackground, iStart, iStart_pressed, iOptions, iOptions_pressed, iExit, iExit_pressed;
