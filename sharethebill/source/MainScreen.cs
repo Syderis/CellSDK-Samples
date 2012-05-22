@@ -53,7 +53,7 @@ namespace ShareBill
         private Label lCents;
         private Label lPeople;
         private Label lTotal;
-        private Label lPen;
+        private Sprite sPen;
         private Label lEurosMask;
         private Label lCentsMask;
         private Label lPeopleMask;
@@ -202,7 +202,7 @@ namespace ShareBill
             this.mainContainer = new Container<CoordLayout>(new CoordLayout());
             this.mainContainer.BackgroundImage = this.iMainContainerBackground;
             this.mainContainer.Draggable = false;
-            this.mainContainer.Size = this.iMainContainerBackground.Size;
+            this.mainContainer.Size = new Vector2(Preferences.ViewportManager.VirtualWidth, Preferences.ViewportManager.VirtualHeight);
             this.mainContainer.BringToFront = false;
 
             // Euros Label
@@ -247,7 +247,7 @@ namespace ShareBill
             {
                 this.moneySelected = true;
                 this.eurosSelected = true;
-                this.lPen.Position = this.penRelativePositions[0];
+                this.sPen.Position = this.penRelativePositions[0];
             };
 
             this.lCentsMask = new Label(string.Empty, Color.Transparent, Color.Transparent);
@@ -257,7 +257,7 @@ namespace ShareBill
             {
                 this.moneySelected = true;
                 this.eurosSelected = false;
-                this.lPen.Position = this.penRelativePositions[1];
+                this.sPen.Position = this.penRelativePositions[1];
             };
 
             this.lPeopleMask = new Label(string.Empty, Color.Transparent, Color.Transparent);
@@ -266,7 +266,7 @@ namespace ShareBill
             this.lPeopleMask.Pressed += delegate
             {
                 this.moneySelected = false;
-                this.lPen.Position = this.penRelativePositions[2];
+                this.sPen.Position = this.penRelativePositions[2];
             };
 
             // Main Container Layout
@@ -279,13 +279,14 @@ namespace ShareBill
             this.mainContainer.Layout.AddComponent(this.lPeopleMask, 0f, 351f);
 
             // Pen Label
-            this.lPen = new Label(this.iPen);
-            this.lPen.Pivot = Vector2.One;
-            this.lPen.Touchable = false;
-            this.lPen.Draggable = false;
+            this.sPen = new Sprite("Pen", this.iPen);
+            this.sPen.Pivot = Vector2.One;
+            this.sPen.Touchable = false;
+            this.sPen.Draggable = false;
 
             // Plus Button
             this.bPlus = new Button(this.iButtonPlusReleased, this.iButtonPlusPressed);
+            this.bPlus.Pivot = Vector2.One;
             this.bPlus.Draggable = false;
             this.bPlus.Pressed -= new Component.ComponentEventHandler(this.HandleBplusPressed);
             this.bPlus.Pressed += new Component.ComponentEventHandler(this.HandleBplusPressed);
@@ -294,6 +295,7 @@ namespace ShareBill
 
             // Minus Button
             this.bMinus = new Button(this.iButtonMinusReleased, this.iButtonMinusPressed);
+            this.bMinus.Pivot = new Vector2(0.0f, 1.0f);
             this.bMinus.Draggable = false;
             this.bMinus.Pressed -= new Component.ComponentEventHandler(this.HandleBminusPressed);
             this.bMinus.Pressed += new Component.ComponentEventHandler(this.HandleBminusPressed);
@@ -301,15 +303,15 @@ namespace ShareBill
             this.bMinus.Released += new Component.ComponentEventHandler(this.HandleBminusReleased);
 
             // Application Layout
-            base.AddComponent(this.mainContainer, (float)(Preferences.Width / 2) - this.mainContainer.Size.X / 2f, (float)(Preferences.Height / 2) - this.mainContainer.Size.Y / 2f);
-            base.AddComponent(this.bPlus, (float)Preferences.Width - this.bPlus.Size.X, (float)Preferences.Height - this.bPlus.Size.Y);
-            base.AddComponent(this.bMinus, 0f, (float)Preferences.Height - this.bMinus.Size.Y);
+            base.AddComponent(this.mainContainer, (float)(Preferences.ViewportManager.VirtualScreenWidth / 2) - this.mainContainer.Size.X / 2f, (float)(Preferences.ViewportManager.VirtualScreenHeight / 2) - this.mainContainer.Size.Y / 2f);
+            base.AddComponent(this.bPlus, Preferences.ViewportManager.BottomRightAnchor);
+            base.AddComponent(this.bMinus, Preferences.ViewportManager.BottomLeftAnchor);
 
             this.penRelativePositions[0] = new Vector2(this.mainContainer.Position.X + 109f, this.lEuros.Position.Y + this.lEuros.Size.Y / 2f - 30f);
             this.penRelativePositions[1] = new Vector2(this.mainContainer.Position.X + 109f, this.lCents.Position.Y + this.lCents.Size.Y / 2f - 30f);
             this.penRelativePositions[2] = new Vector2(this.mainContainer.Position.X + 109f, this.lPeople.Position.Y + this.lPeople.Size.Y / 2f - 30f);
 
-            base.AddComponent(this.lPen, this.penRelativePositions[0].X, this.penRelativePositions[0].Y);
+            base.AddComponent(this.sPen, this.penRelativePositions[0].X, this.penRelativePositions[0].Y);
         }
 
         /// <summary>

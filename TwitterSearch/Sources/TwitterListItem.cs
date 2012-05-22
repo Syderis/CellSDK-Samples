@@ -38,8 +38,8 @@ namespace TwitterSearch
 
         #region Variables
 
-        private Label backIconLabel;
-        private Label iconLabel;        
+        private Sprite backIconLabel;
+        private Sprite iconSprite;        
         private Stream imageStream;
         private WebClient client;
         private string User;
@@ -99,7 +99,6 @@ namespace TwitterSearch
             }
             
         }
-       
         #endregion
 
         #region Private Methods
@@ -138,16 +137,16 @@ namespace TwitterSearch
             Layout.AddComponent(contentLabel, 128, 0);
 
             //Creation of the background icon Label;
-            this.backIconLabel = new Label(StaticContent.Resources.CreateImage("Resources/bg_photo"));
+            this.backIconLabel = new Sprite("Background", StaticContent.Resources.CreateImage("Resources/bg_photo"));
             Layout.AddComponent(this.backIconLabel, 0, 0);
 
             //Creation of the icon label (with a default pic)
             Texture2D imageTexture;
             imageTexture = Texture2D.FromStream(StaticContent.SpriteBatch.GraphicsDevice, imageStream);
             Image image = Image.CreateImage(imageTexture);
-            this.iconLabel = new Label(image);
-            this.iconLabel.Size = new Vector2(114, 113);
-            Layout.AddComponent(this.iconLabel, 15, 15);
+            this.iconSprite = new Sprite("icon", image);
+            this.iconSprite.Size = new Vector2(114, 113);
+            Layout.AddComponent(this.iconSprite, 15, 15);
 
             //Creation of the label of the twitter user name
             Label userLabel = new Label(User);

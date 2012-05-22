@@ -18,6 +18,7 @@ using Syderis.CellSDK.Core.Graphics;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using System.Xml.Linq;
+using Syderis.CellSDK.Common;
 #endregion
 
 namespace TwitterSearch
@@ -35,7 +36,13 @@ namespace TwitterSearch
             StaticContent.Graphics.IsFullScreen = true;
             StaticContent.Graphics.ApplyChanges();
 
-            StaticContent.ScreenManager.GoToScreen(new MainScreen());           
+            //Setup Viewport Manager
+            Preferences.ViewportManager.Adjustment = ViewportAdjustment.FIT;
+            Preferences.ViewportManager.AlignType = ViewportAlignType.TOPCENTER;
+            Preferences.ViewportManager.VirtualWidth = 480;
+            Preferences.ViewportManager.VirtualHeight = 800;
+
+            StaticContent.ScreenManager.GoToScreen(new MainScreen());
         }
 
         /// <summary>

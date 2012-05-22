@@ -21,7 +21,7 @@ using System.Xml.Linq;
 
 namespace TwitterSearch
 {
-    public class MainScreen: AdjustedScreen
+    public class MainScreen: Screen
     {
         #region consts and statics
         private const string TWITTER_REQ_URL_TEMPLATE = "http://search.twitter.com/search.atom?q={0};";
@@ -58,20 +58,21 @@ namespace TwitterSearch
             searchTextArea = new TextArea("", 1, 100);
             searchTextArea.Text = "cellsdk";
             searchTextArea.BackgroundImage = ResourceManager.CreateImage("Resources/top_search");
-            searchTextArea.Padding = new Padding(25, 0, 0, 30);
+            //searchTextArea.Pivot = new Vector2(0.5f, 0f);
+            searchTextArea.Padding = new Padding(25, 0, 0, 70);
             searchTextArea.Size = new Vector2(searchTextArea.BackgroundImage.Size.X, searchTextArea.BackgroundImage.Size.Y);
-			AddComponent(searchTextArea,securityZone.X / 2 - searchTextArea.Size.X / 2,top);
+			AddComponent(searchTextArea, -80.0f, Preferences.ViewportManager.TopAnchor);
 
             //Search Button
             searchButton = new Button(ResourceManager.CreateImage("Resources/bt_search"), ResourceManager.CreateImage("Resources/bt_search_press"));
             searchButton.Align = Label.AlignType.MIDDLECENTER;
             searchButton.Pressed -= HandleButtonPressed;
             searchButton.Pressed += new Component.ComponentEventHandler(HandleButtonPressed);
-            AddComponent(this.searchButton, 414 + offset.X, top+13);
+            AddComponent(this.searchButton, 414, 13);
 
             //Listbox
-            listBox = new ListBox(Preferences.Width, (Preferences.Height - BUTTON_HEIGHT - SPACING), ListBox.Orientation.VERTICAL);
-            AddComponent(this.listBox, offset.X, top+searchTextArea.Position.Y + searchTextArea.Size.Y);
+            listBox = new ListBox(ViewportManager.ScreenWidth, (ViewportManager.ScreenHeight - BUTTON_HEIGHT - SPACING), ListBox.Orientation.VERTICAL);
+            AddComponent(this.listBox, offset.X, searchTextArea.Position.Y + searchTextArea.Size.Y);
 
             // Set the response handler and send the request
             client = new WebClient();
@@ -149,16 +150,6 @@ namespace TwitterSearch
                                           where link.Attribute("type").Value.Contains("image/")
                                           select link.Attribute("href").Value).FirstOrDefault()
                            }).ToList();
-
-            ////Clear the listbox
-            //listBox.RemoveAllItems();
-
-            //foreach (var entry in entries)
-            //{
-            //    //Create listbox objects and insert them into the listbox control
-            //    TwitterListItem item = new TwitterListItem(entry.User.Substring(0, entry.User.IndexOf('(')), entry.Text, entry.IconUrl);
-            //    listBox.AddItem(item);
-            //}
         }
 
 

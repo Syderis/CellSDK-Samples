@@ -22,7 +22,7 @@ using System.Net;
 
 namespace ImageLoader
 {
-    public class MainScreen: AdjustedScreen
+    public class MainScreen: Screen
     {
 
         #region Consts and Statics
@@ -62,11 +62,11 @@ namespace ImageLoader
             pendingUrlImages = new List<string>();
 
             //Search Text Area
-            searchTextArea = new TextArea(SEARCH_TEXTAREA_TEXT, 1, 100);
-            searchTextArea.BackgroundImage = ResourceManager.CreateImage("Images/top_search");
-            this.searchTextArea.Padding = new Padding(25, 0, 0, 30);
+            this.searchTextArea = new TextArea(SEARCH_TEXTAREA_TEXT, 1, 100);
+            this.searchTextArea.BackgroundImage = ResourceManager.CreateImage("Images/top_search");
+            this.searchTextArea.Padding = new Padding(25, 0, 0, 70);
             this.searchTextArea.Size = new Vector2(searchTextArea.BackgroundImage.Size.X, searchTextArea.BackgroundImage.Size.Y);
-            AddComponent(searchTextArea, securityZone.X / 2 - searchTextArea.Size.X / 2, top);
+            AddComponent(searchTextArea, -80.0f, Preferences.ViewportManager.TopAnchor);
 
             //Search Button
             searchButton = new Button(ResourceManager.CreateImage("Images/bt_search"), ResourceManager.CreateImage("Images/bt_search_pressed"));
@@ -77,12 +77,12 @@ namespace ImageLoader
                 //Search new images using TextArea text
                 SearchImages(searchTextArea.Text);
             };
-            AddComponent(searchButton, 393 + offset.X, top+12);
+            AddComponent(searchButton, Preferences.ViewportManager.TopLeftAnchor +  new Vector2(393, 12));
 
             //Content Tab Panel
             contentTabPanel = new TabPanel(458, 632);
             //AddComponent(contentTabPanel, 0, BUTTON_HEIGHT + SPACING);
-            AddComponent(contentTabPanel, 11 + offset.X, top+90);
+            AddComponent(contentTabPanel, 11, 90);
             //ZoomPanel
             zoomPanel = new ZoomPanel(this);
 

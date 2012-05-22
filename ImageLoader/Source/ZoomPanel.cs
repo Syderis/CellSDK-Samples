@@ -41,14 +41,15 @@ namespace ImageLoader.Components
 
             //Get the panel size
             BringToFront = false;
-            Size = new Vector2(Preferences.Width, Preferences.Height);
+            Size = new Vector2(ViewportManager.ScreenWidth, ViewportManager.ScreenHeight);
             
             //Add a semitransparent background
-            BackgroundImage = Image.CreateImage(new Color(0, 0, 0, 0.6f),Preferences.Width,Preferences.Height);
+            BackgroundImage = Image.CreateImage(new Color(0, 0, 0, 0.6f), ViewportManager.ScreenWidth, ViewportManager.ScreenHeight);
 
             //Add a close button.
             btnClose = new Button(StaticContent.Resources.CreateImage("Images\\bt_X"), StaticContent.Resources.CreateImage("Images\\bt_X_press"));
             btnClose.BringToFront = false;
+            btnClose.Pivot = new Vector2(1, 0);
             btnClose.Released += delegate
             {
                 //Close the panel if the cancel button is released
@@ -69,12 +70,12 @@ namespace ImageLoader.Components
                 return;
 
             //Instantiate the label with the image
-            lblFullImage = new Label(image) { Draggable = true, Scalable = true, Rotable = true, BringToFront = false };
+            lblFullImage = new Label(image) { Pivot = new Vector2(0.5f, 0.5f), Draggable = true, Scalable = true, Rotable = true, BringToFront = false };
             
             //Add components to the application layout
-            screen.AddComponent(this, ((AdjustedScreen)screen).left, ((AdjustedScreen)screen).top);
-            screen.AddComponent(lblFullImage, Size.X / 2 - image.Width / 2, Size.Y / 2 - image.Height / 2);
-            screen.AddComponent(btnClose, ((AdjustedScreen)screen).securityZone.X - 16 - btnClose.Size.X, 16);            
+            screen.AddComponent(this, Preferences.ViewportManager.TopLeftAnchor);
+            screen.AddComponent(lblFullImage, Preferences.ViewportManager.MiddleCenterAnchor);
+            screen.AddComponent(btnClose, Preferences.ViewportManager.TopRightAnchor);            
         }
 
         /// <summary>
