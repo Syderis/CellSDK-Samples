@@ -85,9 +85,6 @@
     <Compile Include="..\..\Sources\OptionsScreen.cs">
       <Link>OptionsScreen.cs</Link>
     </Compile>
-    <Compile Include="..\..\Sources\AdjustedScreen.cs">
-      <Link>AdjustedScreen.cs</Link>
-    </Compile>
     <Compile Include="..\..\Sources\MainScreen.cs">
       <Link>MainScreen.cs</Link>
     </Compile>
