@@ -7,12 +7,15 @@
 using System;
 
 using Syderis.CellSDK.WindowsPhone.Launcher;
+using Microsoft.Xna.Framework;
 #endregion
 
 namespace GamePad
 {
     public class Program : Kernel
     {
+        private const DisplayOrientation SUPPORTED_ORIENTATION = DisplayOrientation.LandscapeLeft | DisplayOrientation.LandscapeRight;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -21,6 +24,7 @@ namespace GamePad
             Application application = new Application();
             FramesPerSecond = 50;
             base.Application = application;
+            application.SupportedOrientation = SUPPORTED_ORIENTATION;
             base.Initialize();
         }
     }

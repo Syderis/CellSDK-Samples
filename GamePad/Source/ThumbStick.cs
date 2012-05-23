@@ -15,9 +15,8 @@ namespace GamePad
 
         private SpriteBatch spriteBatch;
         private GraphicsDevice graphicsDevice;
-        private Image iGamePadSpriteSheet;
-        private Rectangle padBackground;
-        private Rectangle pad;
+     
+        private Image bgPadImage, padImage;
         private Vector2 padPosition;
 
         public float X
@@ -33,13 +32,12 @@ namespace GamePad
         public ThumbStick()
             : base(180, 180)
         {
-            iGamePadSpriteSheet = StaticContent.Resources.CreateImage("GamePadSpriteSheet");
+            SpriteSheet ssGamePadSpriteSheet = StaticContent.Resources.CreateSpriteSheet("GamePadSpriteSheet");
+            bgPadImage = ssGamePadSpriteSheet["bg_pad"];
+            padImage = ssGamePadSpriteSheet["pad"];
 
             spriteBatch = StaticContent.SpriteBatch;
             graphicsDevice = StaticContent.Graphics.GraphicsDevice;
-
-            padBackground = new Rectangle(198, 0, 180, 180);
-            pad = new Rectangle(0, 180, 180, 180);
 
             padPosition = Vector2.Zero;
         }
@@ -48,8 +46,8 @@ namespace GamePad
         {
             graphicsDevice.Clear(Color.Transparent);
             spriteBatch.Begin();
-            spriteBatch.Draw(iGamePadSpriteSheet.Texture, Vector2.Zero, padBackground, Color.White);
-            spriteBatch.Draw(iGamePadSpriteSheet.Texture, padPosition, pad, Color.White);
+            spriteBatch.Draw(bgPadImage.Texture, Vector2.Zero, bgPadImage.Rectangle, Color.White);
+            spriteBatch.Draw(padImage.Texture, padPosition, padImage.Rectangle, Color.White);
             spriteBatch.End();
 
             base.CanvasDraw();

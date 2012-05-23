@@ -61,6 +61,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="GamePadSpriteSheet.xml">
+      <Name>GamePadSpriteSheet</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Skin\DefaultSkinFont.xnb">
       <Name>DefaultSkinFont</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -13,14 +13,14 @@ namespace GamePad
         public Buttons()
             : base(new CoordLayout())
         {
-            Size = new Vector2(197, 179);
+            SpriteSheet iGamePadSpriteSheet = StaticContent.Resources.CreateSpriteSheet("GamePadSpriteSheet");
+            BackgroundImage = iGamePadSpriteSheet["bg_bt"];
+            Button bA = new Button(iGamePadSpriteSheet["bt_A"], iGamePadSpriteSheet["bt_A_pressed"]);
+            Layout.AddComponent(bA, 6, 96);
+            Button bB = new Button(iGamePadSpriteSheet["bt_B"], iGamePadSpriteSheet["bt_B_pressed"]);
+            Layout.AddComponent(bB, 77, 6);
 
-            Image iGamePadSpriteSheet = StaticContent.Resources.CreateImage("GamePadSpriteSheet");
-            BackgroundImage = iGamePadSpriteSheet.SubImage(0, 0, 197, 179);
-            Button bA = new Button(iGamePadSpriteSheet.SubImage(181, 181, 97, 95), iGamePadSpriteSheet.SubImage(379, 0, 97, 95));
-            Layout.AddComponent(bA, 96, 77);
-            Button bB = new Button(iGamePadSpriteSheet.SubImage(181, 277, 97, 95), iGamePadSpriteSheet.SubImage(279, 181, 97, 95));
-            Layout.AddComponent(bB, 6, 6);
+            Size = new Vector2(179, 197);
         }
     }
 }

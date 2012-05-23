@@ -25,7 +25,7 @@ namespace GamePad
     {
         #region Variables
         private ThumbStick thumbStick;
-        private Label lMoi;
+        private Sprite lMoi;
         private AnimatedImage aiMoi;
         private MoiAnimationStates moiAnimationPreviousState = MoiAnimationStates.FrontRight;
         private enum MoiAnimationStates
@@ -44,9 +44,7 @@ namespace GamePad
         public override void Initialize()
         {
             base.Initialize();
-
-            Label lBackground = new Label(ResourceManager.CreateImage("Background")) { Pivot = Vector2.One / 2, BringToFront = false, Rotation = MathHelper.PiOver2 };
-            AddComponentPercentage(lBackground, .5f, .5f);
+            SetBackground(ResourceManager.CreateImage("Background"), Adjustment.CENTER);
 
             #region Moi
             aiMoi = ResourceManager.CreateAnimatedImage("MoiWalkingStripAnimation");
@@ -62,18 +60,21 @@ namespace GamePad
             aiMoi.AddAnimation("MoiWalkingRearRight", saMoiWalkingRearRight);
             StripAnimation saMoiWalkingRearLeft = new StripAnimation(width, height, width / 4, height / 4, 4, 0, height / 4 * 3);
             aiMoi.AddAnimation("MoiWalkingRearLeft", saMoiWalkingRearLeft);
-            lMoi = new Label(aiMoi) { Pivot = Vector2.One / 2, Rotation = MathHelper.PiOver2, BringToFront = false };
-            AddComponentPercentage(lMoi, .5f, .5f);
+            lMoi = new Sprite("Moi", aiMoi) { Pivot = Vector2.One / 2, BringToFront = false };
+            AddComponent(lMoi, Preferences.ViewportManager.MiddleCenterAnchor);
             #endregion Moi
 
             #region Game pad
-            thumbStick = new ThumbStick() { /*Pivot = Vector2.One / 2, Rotation = MathHelper.PiOver2*/ };
-            AddComponentPercentage(thumbStick, .027f, .022f);
+            
+            thumbStick = new ThumbStick();
+            thumbStick.Pivot = new Vector2(0, 1);
+            Vector2 margin = new Vector2(5, -5);
+            AddComponent(thumbStick, Preferences.ViewportManager.BottomLeftAnchor + margin);
 
             Buttons buttons = new Buttons();
-            AddComponent(buttons, .015f * Preferences.Width, Preferences.Height - .015f * Preferences.Height - buttons.Size.Y);
+            margin = new Vector2(-5, -5) - buttons.Size;
+            AddComponent(buttons, Preferences.ViewportManager.BottomRightAnchor + margin);
             #endregion Game pad
-
 
         }
 

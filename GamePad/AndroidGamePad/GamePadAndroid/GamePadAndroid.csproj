@@ -97,6 +97,11 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\Content\Skin\StandardFont.xnb" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\GamePadSpriteSheet.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.

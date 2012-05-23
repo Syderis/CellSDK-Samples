@@ -10,12 +10,27 @@ using System.Linq;
 using System.Text;
 
 using Syderis.CellSDK.Core;
+using Syderis.CellSDK.Common;
+using Microsoft.Xna.Framework;
 #endregion
 
 namespace GamePad
 {
     public class Application : MobileApplication
     {
+        public override DisplayOrientation SupportedOrientation
+        {
+            get
+            {
+                return base.SupportedOrientation;
+            }
+            set
+            {
+                base.SupportedOrientation = value;
+                Program.Instance.SupportedOrientation = value;
+            }
+        }
+
         /// <summary>
         /// Loads the main screen
         /// </summary>
@@ -25,6 +40,13 @@ namespace GamePad
 
             StaticContent.Graphics.IsFullScreen = true;
             StaticContent.Graphics.ApplyChanges();
+
+            //Setup Viewport Manager
+            Preferences.ViewportManager.Adjustment = ViewportAdjustment.FIT;
+            Preferences.ViewportManager.AlignType = ViewportAlignType.TOPCENTER;
+            Preferences.ViewportManager.VirtualWidth = 800;
+            Preferences.ViewportManager.VirtualHeight = 480;
+
 
             // NOTE: Starting from Cell SDK 1.1 all the resources load within this method are done on a specific Screen object.
             // For instance, the Hello World Label is created on MainScreen
