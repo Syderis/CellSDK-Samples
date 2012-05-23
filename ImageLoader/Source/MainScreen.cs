@@ -70,6 +70,7 @@ namespace ImageLoader
 
             //Search Button
             searchButton = new Button(ResourceManager.CreateImage("Images/bt_search"), ResourceManager.CreateImage("Images/bt_search_pressed"));
+			searchButton.Pivot = new Vector2(1, 0);
             searchButton.Released += delegate
             {
                 //Clear previous images
@@ -77,7 +78,7 @@ namespace ImageLoader
                 //Search new images using TextArea text
                 SearchImages(searchTextArea.Text);
             };
-            AddComponent(searchButton, Preferences.ViewportManager.TopLeftAnchor +  new Vector2(393, 12));
+            AddComponent(searchButton, Preferences.ViewportManager.TopRightAnchor +  new Vector2( -12, 12));
 
             //Content Tab Panel
             contentTabPanel = new TabPanel(458, 632);
