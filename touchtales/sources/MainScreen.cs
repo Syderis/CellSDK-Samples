@@ -88,7 +88,7 @@ namespace TouchyTales
         /// <param name="source"></param>
         void Ball_Released(Component source)
         {
-            AudioLibrary.Instance.Play(AudioLibrary.SBALL);
+            AudioLibrary.Instance.Play(AudioLibrary.STRAIN);
             aball.Play(source);
         }
 
@@ -124,20 +124,20 @@ namespace TouchyTales
 
             random = new Random();
 
-            SetBackground(ResourceManager.CreateImage(imagePath + "bg"), Adjustment.NONE);
+            SetBackground(ResourceManager.CreateImage(imagePath + "bg"), Adjustment.CENTER);
 
             //Rope
             rope = new Label(ResourceManager.CreateImage(imagePath + "rope"));
             rope.Released += new Component.ComponentEventHandler(rope_Released);
             rope.Draggable = false;
             rope.BringToFront = false;
-            Add(rope, 0.2f, 0.527f);
+            AddComponent(rope, 422, 384);
 
             //Doll
             doll = new Label(ResourceManager.CreateImage(imagePath + "doll"));
             doll.BringToFront = false;
             doll.Draggable = false;
-            Add(doll, 0.535f, 0.557f);
+            AddComponent(doll, 446, 223);
 
             //Ball
             AnimatedImage img = ResourceManager.CreateAnimatedImage(imagePath + "animated_ball");
@@ -148,33 +148,33 @@ namespace TouchyTales
             ball = new Label(img);
             ball.BringToFront = false;
             ball.Released += new Component.ComponentEventHandler(ball_Released);
-            Add(ball, 0.691f, 0.315f);
+            AddComponent(ball, 252, 148);
 
             //Inked Balls          
             orangeBall = new Label(ResourceManager.CreateImage(imagePath + "yellow_ball"));
             orangeBall.Released += new Component.ComponentEventHandler(Ball_Released);
             orangeBall.Draggable = false;
-            Add(orangeBall, 0.739f, -0.028f);
+            AddComponent(orangeBall, -23, 125);
 
             blueBall = new Label(ResourceManager.CreateImage(imagePath + "blue_ball"));
             blueBall.Released += new Component.ComponentEventHandler(Ball_Released);
             blueBall.Draggable = false;
-            Add(blueBall, 0.881f, 0.096f);
+            AddComponent(blueBall, 77, 57);
 
             purpleBall = new Label(ResourceManager.CreateImage(imagePath + "purpel_ball"));
             purpleBall.Released += new Component.ComponentEventHandler(Ball_Released);
             purpleBall.Draggable = false;
-            Add(purpleBall, 0.991f, 0f);
+            AddComponent(purpleBall, 0, 4);
 
             redBall = new Label(ResourceManager.CreateImage(imagePath + "red_ball"));
             redBall.Released += new Component.ComponentEventHandler(Ball_Released);
             redBall.Draggable = false;
-            Add(redBall, 0.572f, 0.01f);
+            AddComponent(redBall, 8, 205);
 
             greenBall = new Label(ResourceManager.CreateImage(imagePath + "green_ball"));
             greenBall.Released += new Component.ComponentEventHandler(Ball_Released);
             greenBall.Draggable = false;
-            Add(greenBall, 0.791f, 0.0625f);
+            AddComponent(greenBall, 50, 100);
 
             //Bird
             AnimatedImage pipin = ResourceManager.CreateAnimatedImage(imagePath + "animated_bird");
@@ -185,7 +185,7 @@ namespace TouchyTales
             lpipin = new Label(pipin);
             lpipin.Draggable = false;
             lpipin.Released += new Component.ComponentEventHandler(lpipin_Released);
-            Add(lpipin, 0.912f, 0.6125f);
+            AddComponent(lpipin, 490, 42);
 
             //Train 
             itrain_off = ResourceManager.CreateImage(imagePath + "train_off");
@@ -193,7 +193,7 @@ namespace TouchyTales
             train = new Label(itrain_off);
             train.Released += new Component.ComponentEventHandler(train_Released);
             train.Draggable = false;
-            Add(train, 0.345f, 0.15625f);
+            AddComponent(train, 125, 314);
 
             //Animations 
             //- > Ball
@@ -211,9 +211,9 @@ namespace TouchyTales
             atrain = Animation.CreateAnimation(250);
             atrain.AnimationType = AnimationType.Relative;
             atrain.AddKey(new KeyFrame(0, Vector2.Zero, 0, 1, 1));
-            atrain.AddKey(new KeyFrame(49, new Vector2(TransformXCoordinate(0.781f), TransformYCoordinate(0.345f)), 0, 1.5f, 1));
-            atrain.AddKey(new KeyFrame(50, new Vector2(TransformXCoordinate(-1.702f), TransformYCoordinate(-0.44375f)), 0, 0.8f, 1));
-            atrain.AddKey(new KeyFrame(150, new Vector2(TransformXCoordinate(-1.702f), TransformYCoordinate(-0.44375f)), 0, 0.8f, 1));
+            atrain.AddKey(new KeyFrame(49, new Vector2( (0.3f) * 800, 0.345f * 480), 0, 1.5f, 1));
+            atrain.AddKey(new KeyFrame(50, new Vector2(-0.702f * 800, -0.44375f * 480), 0, 0.8f, 1));
+            atrain.AddKey(new KeyFrame(150, new Vector2(-0.702f * 800, -0.44375f * 480), 0, 0.8f, 1));
             atrain.AddKey(new KeyFrame(atrain.NumFrames - 1, Vector2.Zero, 0, 1, 1));
             atrain.EndEvent += new Animation.AnimationHandler(atrain_EndEvent);
             AddAnimation(atrain);
@@ -222,28 +222,13 @@ namespace TouchyTales
             arope = Animation.CreateAnimation(75);
             arope.AnimationType = AnimationType.Relative;
             arope.AddKey(new KeyFrame(0, Vector2.Zero));
-            arope.AddKey(new KeyFrame(10, new Vector2(TransformXCoordinate(-0.0833f), 0), true));
+            arope.AddKey(new KeyFrame(10, new Vector2(-40, 0), true));
             arope.AddKey(new KeyFrame(arope.NumFrames - 1, Vector2.Zero));
             arope.KeyEvent += new Animation.AnimationHandler(arope_KeyEvent);
             AddAnimation(arope);
 
             //Initialize sound library
             AudioLibrary.Instance.Initialize();
-
-        }
-
-        /// <summary>
-        /// Adds a component to the screen rotating it and in the correcto position
-        /// </summary>
-        /// <param name="comp">Component to add</param>
-        /// <param name="x">X position expressed in percentage between 0 and 1</param>
-        /// <param name="y">Y position expressed in percentage between 0 and 1</param>
-        public void Add(Component comp, float x, float y)
-        {
-
-            comp.LocalWorld *= Matrix3x3.CreateRotation((float)Math.PI / 2);
-            AddComponent(comp, TransformXCoordinate(x),
-                                TransformYCoordinate(y));
 
         }
 
@@ -255,28 +240,6 @@ namespace TouchyTales
         {
             base.BackButtonPressed();
         } 
-        #endregion
-
-        #region Private Methods
-        /// <summary>
-        /// Transforms a float x coordinate between 0 and 1 to the correspondent pixel position in the screen
-        /// </summary>
-        /// <param name="x"></param>
-        /// <returns></returns>
-        private float TransformXCoordinate(float x)
-        {
-            return x * Preferences.Width;
-        }
-
-        /// <summary>
-        /// Transforms a float y coordinate between 0 and 1 to the correspondent pixel position in the screen
-        /// </summary>
-        /// <param name="y"></param>
-        /// <returns></returns>
-        private float TransformYCoordinate(float y)
-        {
-            return y * Preferences.Height;
-        }
         #endregion
     }
 }
