@@ -22,35 +22,34 @@ using Syderis.CellSDK.IO.AccelerometerSystem;
 
 namespace PigeonsAttack
 {
-    public class MainScreen: AdjustedScreen
+    public class MainScreen: Screen
     {
         #region Variables
         private TimeSpan PLAYING_TIME = TimeSpan.FromSeconds(60);
         private const int INTERVAL_BETWEEN_SHITS = 2;
 
         private bool accelerometerDetected;
-        private Container<CoordLayout> cCar;
-        private float offset;
-        private Label lLeftTire;
-        private Label lRightTire;
+        private Sprite lLeftTire;
+        private Sprite lRightTire;
         private TimeSpan elapsedGameTime;
-        private Label lRed;
-        private Label lAmber;
-        private Label lGreen;
+        private Sprite lRed;
+        private Sprite lAmber;
+        private Sprite lGreen;
         private bool isAmber = false, isGreen = false;
         private Random random;
         private TimeSpan elapsedTimeBetweenShits;
         private Animation aShitFalling;
-        private Label lShit;
+        private Sprite lShit;
         private Vector2[] shitPositions;
 #if DEBUG
         private Label lLog;
 #endif
         private int impacts;
-        private Label lCar;
+        private Sprite cCar;
+        private Sprite lCar;
         private float maxClamp, minClamp;
         private Label lImpacts;
-        private Label lImpactsBrand; 
+        private Sprite lImpactsBrand; 
         #endregion
 
         #region Public Methods
@@ -62,26 +61,16 @@ namespace PigeonsAttack
             base.Initialize();
 
             // Background
-            /*Label lBackground = new Label(ResourceManager.CreateImage("Images/background_ios"))
-            {
-                Pivot = Vector2.One / 2,
-                BringToFront = false
-            };
-            AddComponent(lBackground, Preferences.Width / 2, Preferences.Height / 2);*/
 			SetBackground(ResourceManager.CreateImage("Images/background_ios"), Screen.Adjustment.CENTER);
 			
             // Sprite sheet image
-            Image iSpriteSheet = ResourceManager.CreateImage("Images/spritesheet");
+            SpriteSheet iSpriteSheet = ResourceManager.CreateSpriteSheet("Images/PigeonsAttackSpriteSheet");
 
             // Pigeons
             Label[] lPigeons = new Label[5];
-            Image iPigeonLookingAtLeft = iSpriteSheet.SubImage(0, 240, 67, 79);
-            Image iPigeonLookingAtRight = iSpriteSheet.SubImage(0, 240, 67, 79);
-            iPigeonLookingAtRight.Effect = Image.EffectType.FLIP_VERTICAL;
+            Image iPigeonLookingAtLeft = iSpriteSheet["pigeon_1"];
+            Image iPigeonLookingAtRight = iSpriteSheet["pigeon_2"];
             random = new Random();
-
-            //for (int i = 0; i < lPigeons.Length; i++)
-            //    lPigeons[i] = new Label(random.Next(0, 2) == 0 ? iPigeonLookingAtLeft : iPigeonLookingAtRight);
 
             lPigeons[0] = new Label(iPigeonLookingAtLeft);
             lPigeons[1] = new Label(iPigeonLookingAtLeft);
@@ -89,28 +78,30 @@ namespace PigeonsAttack
             lPigeons[3] = new Label(iPigeonLookingAtLeft);
             lPigeons[4] = new Label(iPigeonLookingAtRight);
 
-            AddComponent(lPigeons[0], 401, 79);
-            AddComponent(lPigeons[1], 398, 207);
-            AddComponent(lPigeons[2], 397, 345);
-            AddComponent(lPigeons[3], 397, 495);
-            AddComponent(lPigeons[4], 406, 634);
+            AddComponent(lPigeons[0], 79, 12);
+            AddComponent(lPigeons[1], 207, 15);
+            AddComponent(lPigeons[2], 345, 16);
+            AddComponent(lPigeons[3], 495, 16);
+            AddComponent(lPigeons[4], 634, 7);
 
-            // Car component
-            cCar = new Container<CoordLayout>(new CoordLayout())
-            {
-                BackgroundColor = Color.Transparent,
-                BringToFront = false
-            };
+            // Car 
+            cCar = new Sprite("cCar", Image.CreateImage(Color.Transparent, 238, 164));
+
             // Car itself
-            lCar = new Label(iSpriteSheet.SubImage(0, 0, 164, 238));
-            cCar.Layout.AddComponent(lCar, 0, 0);
+            lCar = new Sprite("car", iSpriteSheet["car"]);
+            cCar.AddChild(lCar);
+            
             // Tires
-            Image iTire = iSpriteSheet.SubImage(69, 240, 52, 51);
-            lLeftTire = new Label(iTire);
-            cCar.Layout.AddComponent(lLeftTire, 0, 44);
-            lRightTire = new Label(iTire);
-            cCar.Layout.AddComponent(lRightTire, 0, 137);
-            AddComponent(cCar, 24, 11);
+            Image iTire = iSpriteSheet["steel"];
+            lLeftTire = new Sprite("lLeftTire", iTire) { Position = new Vector2(70, 138), Pivot = Vector2.One / 2};
+            cCar.AddChild(lLeftTire);
+
+            lRightTire = new Sprite("lRightTire", iTire) { Position = new Vector2(162, 138), Pivot = Vector2.One / 2 };
+            cCar.AddChild(lRightTire);
+            
+
+
+            AddComponent(cCar, 11, 480 - 164 - 24);
 
             if (AccelerometerSensor.Instance.IsConnected)
             {
@@ -119,17 +110,18 @@ namespace PigeonsAttack
             }
 
             #region Shits
-            Image iShit = iSpriteSheet.SubImage(0, 321, 44, 23);
-            lShit = new Label(iShit);
+            Image iShit = iSpriteSheet["shit"];
+            lShit = new Sprite("shit", iShit) { Pivot = Vector2.One / 2};
             // The shit will be hidden since the very begining, so doesn't matter where to place it
             AddComponent(lShit, -100, -100);
             lShit.Visible = false;
 
             shitPositions = new Vector2[5];
-            shitPositions[0] = new Vector2(390, 124) + adjust;
-            shitPositions[2] = new Vector2(390, 356) + adjust;
-            shitPositions[3] = new Vector2(389, 540) + adjust;
-            shitPositions[4] = new Vector2(403, 647) + adjust;
+            shitPositions[0] = new Vector2(135, 63);
+            shitPositions[1] = new Vector2(267, 70);
+            shitPositions[2] = new Vector2(367, 70);
+            shitPositions[3] = new Vector2(553, 70);
+            shitPositions[4] = new Vector2(657, 63);
 
             elapsedTimeBetweenShits = TimeSpan.Zero;
 
@@ -137,27 +129,27 @@ namespace PigeonsAttack
             aShitFalling = Animation.CreateAnimation(75);
             aShitFalling.AnimationType = AnimationType.Relative;
             aShitFalling.AddKey(new KeyFrame(0, Vector2.Zero));
-            aShitFalling.AddKey(new KeyFrame(aShitFalling.NumFrames - 1, new Vector2(-400, 0)));
+            aShitFalling.AddKey(new KeyFrame(aShitFalling.NumFrames - 1, new Vector2(0, 400)));
             // Once the shit touches the road it must dissapear
             aShitFalling.EndEvent += delegate { lShit.Visible = false; };
             AddAnimation(aShitFalling);
             #endregion Shits
 
             // Semaphore lights
-            lRed = new Label(iSpriteSheet.SubImage(0, 346, 28, 32));
-            AddComponent(lRed, 265, 716);
-            lAmber = new Label(iSpriteSheet.SubImage(123, 240, 27, 32));
-            AddComponent(lAmber, 238, 715);
-            lGreen = new Label(iSpriteSheet.SubImage(69, 293, 27, 33));
-            AddComponent(lGreen, 212, 717);
+            lRed = new Sprite("red", iSpriteSheet["red"]);
+            AddComponent(lRed, 716, 187);
+            lAmber = new Sprite("amber", iSpriteSheet["amber"]);
+            AddComponent(lAmber, 715, 215);
+            lGreen = new Sprite("green", iSpriteSheet["green"]);
+            AddComponent(lGreen, 717, 241);
             lAmber.Visible = lGreen.Visible = false;
 
             // This var will hold the playing time
             elapsedGameTime = TimeSpan.Zero;
 
 #if DEBUG
-            lLog = new Label("N/A", Color.Black, Color.White) { Rotation = MathHelper.PiOver2 };
-            AddComponent(lLog, Preferences.Width, 0);
+            lLog = new Label("N/A", Color.Black, Color.White);
+            AddComponent(lLog, Preferences.ViewportManager.TopLeftAnchor);
 #endif
 
             impacts = 0;
@@ -166,11 +158,11 @@ namespace PigeonsAttack
             maxClamp = 545;
 
             Font fImpacts = ResourceManager.CreateFont("Fonts/spritefont_0_9");
-            lImpacts = new Label("0", Color.White, Color.Transparent) { Font = fImpacts, Rotation = MathHelper.PiOver2 };
-            AddComponent(lImpacts, 312, 107);
+            lImpacts = new Label("0", Color.White, Color.Transparent) { Font = fImpacts};
+            AddComponent(lImpacts, 107, 155);
             lImpacts.Visible = false;
-            lImpactsBrand = new Label(iSpriteSheet.SubImage(166, 0, 130, 492));
-            AddComponent(lImpactsBrand, 175, 201);
+            lImpactsBrand = new Sprite("impacts", iSpriteSheet["impacts"]);
+            AddComponent(lImpactsBrand, 197, 160);
             lImpactsBrand.Visible = false;
         }
 
@@ -180,15 +172,16 @@ namespace PigeonsAttack
 
             if (accelerometerDetected)
             {
-                offset = -AccelerometerSensor.Instance.Data3.Y;
-                Vector2 temp = cCar.Position;
-                temp.Y = MathHelper.Clamp(temp.Y + offset * 25, minClamp, maxClamp);
+                float offset = -AccelerometerSensor.Instance.Data3.Y;
+                
+                Vector2 temp = lCar.Position;
+                float carPosX = MathHelper.Clamp(temp.X + offset * 25, minClamp, maxClamp);
+                temp.X = carPosX;
                 cCar.Position = temp;
 
-                //if (offset >= 0)
-                //    lLeftTire.Rotation = lRightTire.Rotation += .1f;
-                //else
-                //    lLeftTire.Rotation = lRightTire.Rotation -= .1f;
+                //Tire rotation
+                lLeftTire.Rotation = carPosX * 0.05f;
+                lRightTire.Rotation = carPosX * 0.05f;
             }
 
             elapsedGameTime += gameTime.ElapsedGameTime;
@@ -230,7 +223,7 @@ namespace PigeonsAttack
                 aShitFalling.Stop();
             }
 
-            if (!lImpacts.Visible && isGreen && lCar.Position.Y >= Preferences.Height + 100)
+            if (!lImpacts.Visible && isGreen && lCar.Position.X >= Preferences.ViewportManager.VirtualScreenWidth - lCar.Size.X + 100)
             {
                 lImpacts.Text = impacts > 9 ? "9" : impacts.ToString();
                 lImpacts.Visible = lImpactsBrand.Visible = true;

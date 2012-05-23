@@ -22,11 +22,30 @@ using Syderis.CellSDK.Core;
 
 namespace PigeonsAttack
 {
-    [Activity(Label = "AndroidPigeonsAttack", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "AndroidPigeonsAttack", MainLauncher = true, Icon = "@drawable/icon", ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation)]
     public class Program : AndroidGameActivity
     {
+        private const DisplayOrientation SUPPORTED_ORIENTATION = DisplayOrientation.LandscapeLeft | DisplayOrientation.LandscapeRight;
+
         public static Program Instance;
         private Kernel kernel;
+
+        /// <summary>
+        /// Sets the orientations that the application can handle
+        /// </summary>
+        /// <param name="supportedOrientation"></param>
+        public DisplayOrientation SupportedOrientation
+        {
+            get
+            {
+                return this.kernel.SupportedOrientation;
+            }
+
+            set
+            {
+                this.kernel.SupportedOrientation = value;
+            }
+        }
 
         /// <summary>
         /// The main method which loads Application.
@@ -46,6 +65,7 @@ namespace PigeonsAttack
 
             Application application = new Application();
             kernel.Application = application;
+            application.SupportedOrientation = SUPPORTED_ORIENTATION;
             kernel.Run();
         }
 

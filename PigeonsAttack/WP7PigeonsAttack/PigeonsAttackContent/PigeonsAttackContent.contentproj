@@ -60,6 +60,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Images\PigeonsAttackSpriteSheet.png">
+      <Name>PigeonsAttackSpriteSheet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Content Include="Images\PigeonsAttackSpriteSheet.xml">
+      <Name>PigeonsAttackSpriteSheet</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Skin\DefaultSkinFont.xnb">
       <Name>DefaultSkinFont</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

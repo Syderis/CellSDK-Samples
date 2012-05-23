@@ -65,9 +65,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Source\AdjustedScreen.cs">
-      <Link>AdjustedScreen.cs</Link>
-    </Compile>
     <Compile Include="..\..\Source\Application.cs">
       <Link>Application.cs</Link>
     </Compile>
@@ -96,6 +93,8 @@
     <AndroidAsset Include="Assets\Content\Fonts\spritefont_0_9.xnb" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Images\PigeonsAttackSpriteSheet.png" />
+    <AndroidAsset Include="Assets\Content\Images\PigeonsAttackSpriteSheet.xml" />
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

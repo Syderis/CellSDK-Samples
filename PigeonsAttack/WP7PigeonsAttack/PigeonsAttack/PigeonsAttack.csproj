@@ -100,9 +100,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Source\AdjustedScreen.cs">
-      <Link>AdjustedScreen.cs</Link>
-    </Compile>
     <Compile Include="..\..\Source\Application.cs">
       <Link>Application.cs</Link>
     </Compile>
