@@ -66,7 +66,7 @@
     <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="MonoGame.Framework">
-      <HintPath>/Library\Frameworks\CellSDK.framework\Versions\1.3\Libraries\iOS\MonoGame.Framework.dll</HintPath>
+      <HintPath>/Library\Frameworks\CellSDK.framework\Versions\1.3\Libraries\iOS\MonoGame.Framework.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Syderis.CellSDK.IOS.Common">
       <HintPath>/Library\Frameworks\CellSDK.framework\Versions\1.3\Libraries\iOS\Syderis.CellSDK.IOS.Common.dll</HintPath>
@@ -89,9 +89,6 @@
     </Compile>
     <Compile Include="..\..\Sources\MainScreen.cs">
       <Link>MainScreen.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Sources\AdjustedScreen.cs">
-      <Link>AdjustedScreen.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>
