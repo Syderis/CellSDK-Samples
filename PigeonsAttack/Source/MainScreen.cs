@@ -172,7 +172,7 @@ namespace PigeonsAttack
 
             if (accelerometerDetected)
             {
-                float offset = -AccelerometerSensor.Instance.Data3.Y;
+                float offset = AccelerometerSensor.Instance.Data3.X;
                 
                 Vector2 temp = lCar.Position;
                 float carPosX = MathHelper.Clamp(temp.X + offset * 25, minClamp, maxClamp);
