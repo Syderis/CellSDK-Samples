@@ -69,7 +69,7 @@
     <Reference Include="Syderis.CellSDK.IOS.Launcher">
       <HintPath>/Library\Frameworks\CellSDK.framework\Versions\1.3\Libraries\iOS\Syderis.CellSDK.IOS.Launcher.dll</HintPath>
     </Reference>
-    <Reference Include="MonoGame.Framework">
+    <Reference Include="MonoGame.Framework.iOS">
       <HintPath>/Library\Frameworks\CellSDK.framework\Versions\1.3\Libraries\iOS\MonoGame.Framework.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
@@ -99,6 +99,7 @@
     <Content Include="Content\Skin\skin_standart.png" />
     <Content Include="Content\Skin\Skin.xml" />
     <Content Include="Content\Skin\StandardFont.xnb" />
+    <Content Include="Content\GamePadSpriteSheet.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

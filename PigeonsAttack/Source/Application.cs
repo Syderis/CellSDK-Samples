@@ -44,7 +44,7 @@ namespace PigeonsAttack
 
             //Setup Viewport Manager
             Preferences.ViewportManager.Adjustment = ViewportAdjustment.FIT;
-            Preferences.ViewportManager.AlignType = ViewportAlignType.TOPCENTER;
+            Preferences.ViewportManager.AlignType = ViewportAlignType.MIDDLECENTER;
             Preferences.ViewportManager.VirtualWidth = 800;
             Preferences.ViewportManager.VirtualHeight = 480;
 

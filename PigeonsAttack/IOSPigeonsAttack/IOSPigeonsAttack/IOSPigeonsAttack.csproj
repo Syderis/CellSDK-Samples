@@ -83,12 +83,8 @@
     <Compile Include="..\..\Source\MainScreen.cs">
       <Link>MainScreen.cs</Link>
     </Compile>
-    <Compile Include="..\..\Source\AdjustedScreen.cs">
-      <Link>AdjustedScreen.cs</Link>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Images\spritesheet.png" />
     <Content Include="Content\Images\background_ios.jpg" />
     <Content Include="Content\Fonts\spritefont_0_9.xnb" />
     <Content Include="Content\Skin\skin_standart.png" />
@@ -97,6 +93,8 @@
     <Content Include="App_Icon_57x57.png" />
     <Content Include="App_Icon_72x72.png" />
     <Content Include="App_Icon_114x114.png" />
+    <Content Include="Content\Images\PigeonsAttackSpriteSheet.png" />
+    <Content Include="Content\Images\PigeonsAttackSpriteSheet.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

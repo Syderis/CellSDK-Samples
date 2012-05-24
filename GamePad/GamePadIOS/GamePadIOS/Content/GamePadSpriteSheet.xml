@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:977767bed89774dd6514559d72243d78$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="GamePadSpriteSheet" width="512" height="512">
+    <sprite n="bg_bt" x="2" y="283" w="179" h="197"/>
+    <sprite n="bg_pad" x="184" y="101" w="180" h="180"/>
+    <sprite n="bt_A" x="99" y="2" w="95" h="97"/>
+    <sprite n="bt_A_pressed" x="196" y="2" w="95" h="97"/>
+    <sprite n="bt_B" x="2" y="2" w="95" h="97"/>
+    <sprite n="bt_B_pressed" x="293" y="2" w="95" h="97"/>
+    <sprite n="pad" x="2" y="101" w="180" h="180"/>
+</TextureAtlas>

@@ -8,6 +8,7 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
 using Syderis.CellSDK.IOS.Launcher;
+using Microsoft.Xna.Framework;
 #endregion
 
 namespace PigeonsAttack
@@ -15,8 +16,27 @@ namespace PigeonsAttack
 	[Register("AppDelegate")]
 	class Program : UIApplicationDelegate
 	{
+		private const DisplayOrientation SUPPORTED_ORIENTATION = DisplayOrientation.LandscapeLeft | DisplayOrientation.LandscapeRight;
+		
 		public static Program Instance;
 		private Kernel kernel;
+		
+		/// <summary>
+        /// Sets the orientations that the application can handle
+        /// </summary>
+        /// <param name="supportedOrientation"></param>
+        public DisplayOrientation SupportedOrientation
+        {
+            get
+            {
+                return this.kernel.SupportedOrientation;
+            }
+
+            set
+            {
+                this.kernel.SupportedOrientation = value;
+            }
+        }
 		
 		static void Main (string[] args)
 		{
@@ -29,6 +49,8 @@ namespace PigeonsAttack
 			Application application = new Application ();
 			kernel = new Kernel (application);
 			kernel.Run ();
+			application.SupportedOrientation = SUPPORTED_ORIENTATION;
+
 		}
 
 		public void Exit ()

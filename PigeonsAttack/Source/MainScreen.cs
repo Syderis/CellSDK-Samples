@@ -67,16 +67,16 @@ namespace PigeonsAttack
             SpriteSheet iSpriteSheet = ResourceManager.CreateSpriteSheet("Images/PigeonsAttackSpriteSheet");
 
             // Pigeons
-            Label[] lPigeons = new Label[5];
+            Sprite[] lPigeons = new Sprite[5];
             Image iPigeonLookingAtLeft = iSpriteSheet["pigeon_1"];
             Image iPigeonLookingAtRight = iSpriteSheet["pigeon_2"];
             random = new Random();
 
-            lPigeons[0] = new Label(iPigeonLookingAtLeft);
-            lPigeons[1] = new Label(iPigeonLookingAtLeft);
-            lPigeons[2] = new Label(iPigeonLookingAtRight);
-            lPigeons[3] = new Label(iPigeonLookingAtLeft);
-            lPigeons[4] = new Label(iPigeonLookingAtRight);
+            lPigeons[0] = new Sprite("pigeon", iPigeonLookingAtLeft);
+            lPigeons[1] = new Sprite("pigeon", iPigeonLookingAtLeft);
+            lPigeons[2] = new Sprite("pigeon", iPigeonLookingAtRight);
+            lPigeons[3] = new Sprite("pigeon", iPigeonLookingAtLeft);
+            lPigeons[4] = new Sprite("pigeon", iPigeonLookingAtRight);
 
             AddComponent(lPigeons[0], 79, 12);
             AddComponent(lPigeons[1], 207, 15);

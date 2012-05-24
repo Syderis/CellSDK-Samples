@@ -88,7 +88,7 @@ namespace TouchyTales
         /// <param name="source"></param>
         void Ball_Released(Component source)
         {
-            AudioLibrary.Instance.Play(AudioLibrary.STRAIN);
+            AudioLibrary.Instance.Play(AudioLibrary.SBALL);
             aball.Play(source);
         }
 
@@ -137,6 +137,7 @@ namespace TouchyTales
             doll = new Label(ResourceManager.CreateImage(imagePath + "doll"));
             doll.BringToFront = false;
             doll.Draggable = false;
+			doll.Touchable = false;
             AddComponent(doll, 446, 223);
 
             //Ball
@@ -211,9 +212,9 @@ namespace TouchyTales
             atrain = Animation.CreateAnimation(250);
             atrain.AnimationType = AnimationType.Relative;
             atrain.AddKey(new KeyFrame(0, Vector2.Zero, 0, 1, 1));
-            atrain.AddKey(new KeyFrame(49, new Vector2( (0.3f) * 800, 0.345f * 480), 0, 1.5f, 1));
-            atrain.AddKey(new KeyFrame(50, new Vector2(-0.702f * 800, -0.44375f * 480), 0, 0.8f, 1));
-            atrain.AddKey(new KeyFrame(150, new Vector2(-0.702f * 800, -0.44375f * 480), 0, 0.8f, 1));
+            atrain.AddKey(new KeyFrame(49, new Vector2( 320, 170), 0, 1.5f, 1));
+            atrain.AddKey(new KeyFrame(50, new Vector2(-562, -213), 0, 0.8f, 1));
+            atrain.AddKey(new KeyFrame(150, new Vector2(-562, -213), 0, 0.8f, 1));
             atrain.AddKey(new KeyFrame(atrain.NumFrames - 1, Vector2.Zero, 0, 1, 1));
             atrain.EndEvent += new Animation.AnimationHandler(atrain_EndEvent);
             AddAnimation(atrain);
