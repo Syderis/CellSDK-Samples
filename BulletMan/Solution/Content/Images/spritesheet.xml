@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:30ed79d4a1abefea925295159e4452fc$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="spritesheet.png" width="256" height="512">
+    <sprite n="angle_slide_bar_bottom" x="2" y="14" w="11" h="11"/>
+    <sprite n="angle_slide_bar_center" x="15" y="14" w="2" h="11"/>
+    <sprite n="angle_slide_bar_top" x="19" y="14" w="11" h="11"/>
+    <sprite n="body" x="2" y="87" w="51" h="53"/>
+    <sprite n="bt_reset" x="2" y="154" w="61" h="65"/>
+    <sprite n="bt_reset_pressed" x="166" y="87" w="61" h="65"/>
+    <sprite n="bullet" x="89" y="38" w="35" h="36"/>
+    <sprite n="canyon" x="55" y="87" w="109" h="61"/>
+    <sprite n="clown" x="65" y="154" w="52" h="105"/>
+    <sprite n="head" x="179" y="38" w="58" h="47"/>
+    <sprite n="left_arm" x="32" y="14" w="40" h="19"/>
+    <sprite n="left_leg" x="116" y="14" w="30" h="21"/>
+    <sprite n="pedestal" x="2" y="38" w="85" h="31"/>
+    <sprite n="power_bar_empty" x="123" y="2" w="119" h="10"/>
+    <sprite n="power_bar_full" x="2" y="2" w="119" h="10"/>
+    <sprite n="right_arm" x="74" y="14" w="40" h="20"/>
+    <sprite n="right_leg" x="148" y="14" w="30" h="22"/>
+    <sprite n="smoke" x="126" y="38" w="51" h="40"/>
+</TextureAtlas>
