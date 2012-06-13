@@ -34,3 +34,4 @@ obj/
 Ankh.NoLoad
 *.[Cc]ache[Ff]ile
 *.vsdoc
+.DS_Store
